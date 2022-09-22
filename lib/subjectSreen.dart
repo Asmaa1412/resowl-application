@@ -24,1183 +24,581 @@ class _SubjectScreenFState extends State<SubjectScreenF> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-        child: Scaffold(
-      appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 255, 252, 242),
-        leading: IconButton(
-          onPressed: () {},
-          icon: Icon(Icons.list),
-        ),
-        actions: [
-          Image.asset(
-            'assets/image/5.png',
-//scale: 2,
+      child: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Color.fromARGB(255, 255, 252, 242),
+          leading: IconButton(
+            onPressed: () {},
+            icon: Icon(Icons.list),
           ),
-        ],
-      ),
-      body: Stack(children: [
-        Container(
-          color: Color.fromARGB(255, 255, 252, 242),
+          actions: [
+            Image.asset(
+              'assets/image/5.png',
+            ),
+          ],
         ),
-        Center(
-          child: Container(
-            height: 650,
-            width: 450,
-            decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage('assets/image/green.jpg'),
-                  fit: BoxFit.cover,
-                ),
-                borderRadius: BorderRadius.circular(30)),
-            child: SingleChildScrollView(
-              child: Wrap(
-                runSpacing: 20.0,
-                alignment: WrapAlignment.spaceAround,
-                children: [
-                  Container(
-                    child: SizedBox(
-                      width: 400,
-                      height: 1,
-                    ),
-                  ),
-                  Stack(
+        body: Stack(
+          children: [
+            Container(
+              color: Color.fromARGB(255, 255, 252, 242),
+              child: SingleChildScrollView(
+                child: Wrap(
+                    direction: Axis.horizontal,
+                    runSpacing: 20.0,
+                    alignment: WrapAlignment.spaceAround,
                     children: [
-                      Padding(
-                        padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
-                        child: Container(
-                          width: 93,
-                          height: 110,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(8),
-                            image: DecorationImage(
-                                image: AssetImage('assets/image/book.jfif'),
-                                fit: BoxFit.cover),
-                          ),
-                          child: Stack(children: [
-                            Align(
-                              alignment: Alignment.bottomCenter,
-                              child: Container(
-                                  width: 93,
-                                  height: 9,
-                                  decoration: BoxDecoration(boxShadow: [
-                                    BoxShadow(
-                                      color: Colors.black,
-                                      blurRadius: 15.0,
-                                    )
-                                  ])),
-                            ),
-                            Align(
-                              alignment: Alignment.bottomCenter,
-                              child: Text(
-                                'Flutter Sub',
-                                style: TextStyle(
-                                    color: Colors.white, fontSize: 14),
-                              ),
-                            ),
-                          ]),
+                      Container(
+                        child: SizedBox(
+                          width: 400,
+                          height: 1,
                         ),
                       ),
-                    ],
-                  ),
-                  Stack(
-                    children: [
-                      Padding(
-                        padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
-                        child: Container(
-                          width: 93,
-                          height: 110,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(8),
-                            image: DecorationImage(
-                                image: AssetImage('image/book.jfif'),
-                                fit: BoxFit.cover),
-                          ),
-                          child: Stack(children: [
-                            Align(
-                              alignment: Alignment.bottomCenter,
-                              child: Container(
-                                  width: 93,
-                                  height: 9,
-                                  decoration: BoxDecoration(boxShadow: [
-                                    BoxShadow(
-                                      color: Colors.black,
-                                      blurRadius: 15.0,
-                                    )
-                                  ])),
-                            ),
-                            Align(
-                              alignment: Alignment.bottomCenter,
-                              child: Text(
-                                'Flutter Sub',
-                                style: TextStyle(
-                                    color: Colors.white, fontSize: 14),
+                      Column(
+                        children: [
+                          Stack(
+                            children: [
+                              Padding(
+                                padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
+                                child: Container(
+                                  width: 115,
+                                  height: 150,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(8),
+                                    image: DecorationImage(
+                                        image: AssetImage(
+                                            'assets/image/book.jfif'),
+                                        fit: BoxFit.cover),
+                                  ),
+                                  child: Stack(children: [
+                                    Align(
+                                      alignment: Alignment.bottomCenter,
+                                      child: Container(
+                                          width: 93,
+                                          height: 9,
+                                          decoration: BoxDecoration(boxShadow: [
+                                            BoxShadow(
+                                              color: Colors.black,
+                                              blurRadius: 15.0,
+                                            )
+                                          ])),
+                                    ),
+                                    Align(
+                                      alignment: Alignment.bottomLeft,
+                                      child: Text(
+                                        ' Free',
+                                        style: TextStyle(
+                                            color: Colors.white, fontSize: 14),
+                                      ),
+                                    ),
+                                  ]),
+                                ),
                               ),
-                            ),
-                          ]),
-                        ),
-                      ),
-                    ],
-                  ),
-                  Stack(
-                    children: [
-                      Padding(
-                        padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
-                        child: Container(
-                          width: 93,
-                          height: 110,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(8),
-                            image: DecorationImage(
-                                image: AssetImage('image/book.jfif'),
-                                fit: BoxFit.cover),
+                            ],
                           ),
-                          child: Stack(children: [
-                            Align(
-                              alignment: Alignment.bottomCenter,
-                              child: Container(
-                                  width: 93,
-                                  height: 9,
-                                  decoration: BoxDecoration(boxShadow: [
-                                    BoxShadow(
-                                      color: Colors.black,
-                                      blurRadius: 15.0,
-                                    )
-                                  ])),
-                            ),
-                            Align(
-                              alignment: Alignment.bottomCenter,
-                              child: Text(
-                                'Flutter Sub',
-                                style: TextStyle(
-                                    color: Colors.white, fontSize: 14),
-                              ),
-                            ),
-                          ]),
-                        ),
-                      ),
-                    ],
-                  ),
-                  Stack(
-                    children: [
-                      Padding(
-                        padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
-                        child: Container(
-                          width: 93,
-                          height: 110,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(8),
-                            image: DecorationImage(
-                                image: AssetImage('image/book.jfif'),
-                                fit: BoxFit.cover),
+                          SizedBox(
+                            height: 10,
                           ),
-                          child: Stack(children: [
-                            Align(
-                              alignment: Alignment.bottomCenter,
-                              child: Container(
-                                  width: 93,
-                                  height: 9,
-                                  decoration: BoxDecoration(boxShadow: [
-                                    BoxShadow(
-                                      color: Colors.black,
-                                      blurRadius: 15.0,
-                                    )
-                                  ])),
+                          Padding(
+                            padding: EdgeInsets.fromLTRB(0, 3, 10, 0),
+                            child: Text(
+                              'Flutter Sub',
+                              style: TextStyle(fontSize: 17),
                             ),
-                            Align(
-                              alignment: Alignment.bottomCenter,
-                              child: Text(
-                                'Flutter Sub',
-                                style: TextStyle(
-                                    color: Colors.white, fontSize: 14),
-                              ),
-                            ),
-                          ]),
-                        ),
+                          )
+                        ],
                       ),
-                    ],
-                  ),
-                  Stack(
-                    children: [
-                      Padding(
-                        padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
-                        child: Container(
-                          width: 93,
-                          height: 110,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(8),
-                            image: DecorationImage(
-                                image: AssetImage('image/book.jfif'),
-                                fit: BoxFit.cover),
+                      Column(
+                        children: [
+                          Stack(
+                            children: [
+                              Padding(
+                                padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
+                                child: Container(
+                                  width: 115,
+                                  height: 150,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(8),
+                                    image: DecorationImage(
+                                        image: AssetImage(
+                                            'assets/image/book.jfif'),
+                                        fit: BoxFit.cover),
+                                  ),
+                                  child: Stack(children: [
+                                    Align(
+                                      alignment: Alignment.bottomCenter,
+                                      child: Container(
+                                          width: 93,
+                                          height: 9,
+                                          decoration: BoxDecoration(boxShadow: [
+                                            BoxShadow(
+                                              color: Colors.black,
+                                              blurRadius: 15.0,
+                                            )
+                                          ])),
+                                    ),
+                                    Align(
+                                      alignment: Alignment.bottomLeft,
+                                      child: Text(
+                                        ' Free',
+                                        style: TextStyle(
+                                            color: Colors.white, fontSize: 14),
+                                      ),
+                                    ),
+                                  ]),
+                                ),
+                              ),
+                            ],
                           ),
-                          child: Stack(children: [
-                            Align(
-                              alignment: Alignment.bottomCenter,
-                              child: Container(
-                                  width: 93,
-                                  height: 9,
-                                  decoration: BoxDecoration(boxShadow: [
-                                    BoxShadow(
-                                      color: Colors.black,
-                                      blurRadius: 15.0,
-                                    )
-                                  ])),
-                            ),
-                            Align(
-                              alignment: Alignment.bottomCenter,
-                              child: Text(
-                                'Flutter Sub',
-                                style: TextStyle(
-                                    color: Colors.white, fontSize: 14),
-                              ),
-                            ),
-                          ]),
-                        ),
-                      ),
-                    ],
-                  ),
-                  Stack(
-                    children: [
-                      Padding(
-                        padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
-                        child: Container(
-                          width: 93,
-                          height: 110,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(8),
-                            image: DecorationImage(
-                                image: AssetImage('image/book.jfif'),
-                                fit: BoxFit.cover),
+                          SizedBox(
+                            height: 10,
                           ),
-                          child: Stack(children: [
-                            Align(
-                              alignment: Alignment.bottomCenter,
-                              child: Container(
-                                  width: 93,
-                                  height: 9,
-                                  decoration: BoxDecoration(boxShadow: [
-                                    BoxShadow(
-                                      color: Colors.black,
-                                      blurRadius: 15.0,
-                                    )
-                                  ])),
+                          Padding(
+                            padding: EdgeInsets.fromLTRB(0, 3, 10, 0),
+                            child: Text(
+                              'Flutter Sub',
+                              style: TextStyle(fontSize: 17),
                             ),
-                            Align(
-                              alignment: Alignment.bottomCenter,
-                              child: Text(
-                                'Flutter Sub',
-                                style: TextStyle(
-                                    color: Colors.white, fontSize: 14),
-                              ),
-                            ),
-                          ]),
-                        ),
+                          )
+                        ],
                       ),
-                    ],
-                  ),
-                  Stack(
-                    children: [
-                      Padding(
-                        padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
-                        child: Container(
-                          width: 93,
-                          height: 110,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(8),
-                            image: DecorationImage(
-                                image: AssetImage('image/book.jfif'),
-                                fit: BoxFit.cover),
+                      Column(
+                        children: [
+                          Stack(
+                            children: [
+                              Padding(
+                                padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
+                                child: Container(
+                                  width: 115,
+                                  height: 150,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(8),
+                                    image: DecorationImage(
+                                        image: AssetImage(
+                                            'assets/image/book.jfif'),
+                                        fit: BoxFit.cover),
+                                  ),
+                                  child: Stack(children: [
+                                    Align(
+                                      alignment: Alignment.bottomCenter,
+                                      child: Container(
+                                          width: 93,
+                                          height: 9,
+                                          decoration: BoxDecoration(boxShadow: [
+                                            BoxShadow(
+                                              color: Colors.black,
+                                              blurRadius: 15.0,
+                                            )
+                                          ])),
+                                    ),
+                                    Align(
+                                      alignment: Alignment.bottomLeft,
+                                      child: Text(
+                                        ' Free',
+                                        style: TextStyle(
+                                            color: Colors.white, fontSize: 14),
+                                      ),
+                                    ),
+                                  ]),
+                                ),
+                              ),
+                            ],
                           ),
-                          child: Stack(children: [
-                            Align(
-                              alignment: Alignment.bottomCenter,
-                              child: Container(
-                                  width: 93,
-                                  height: 9,
-                                  decoration: BoxDecoration(boxShadow: [
-                                    BoxShadow(
-                                      color: Colors.black,
-                                      blurRadius: 15.0,
-                                    )
-                                  ])),
-                            ),
-                            Align(
-                              alignment: Alignment.bottomCenter,
-                              child: Text(
-                                'Flutter Sub',
-                                style: TextStyle(
-                                    color: Colors.white, fontSize: 14),
-                              ),
-                            ),
-                          ]),
-                        ),
-                      ),
-                    ],
-                  ),
-                  Stack(
-                    children: [
-                      Padding(
-                        padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
-                        child: Container(
-                          width: 93,
-                          height: 110,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(8),
-                            image: DecorationImage(
-                                image: AssetImage('image/book.jfif'),
-                                fit: BoxFit.cover),
+                          SizedBox(
+                            height: 10,
                           ),
-                          child: Stack(children: [
-                            Align(
-                              alignment: Alignment.bottomCenter,
-                              child: Container(
-                                  width: 93,
-                                  height: 9,
-                                  decoration: BoxDecoration(boxShadow: [
-                                    BoxShadow(
-                                      color: Colors.black,
-                                      blurRadius: 15.0,
-                                    )
-                                  ])),
+                          Padding(
+                            padding: EdgeInsets.fromLTRB(0, 3, 10, 0),
+                            child: Text(
+                              'Flutter Sub',
+                              style: TextStyle(fontSize: 17),
                             ),
-                            Align(
-                              alignment: Alignment.bottomCenter,
-                              child: Text(
-                                'Flutter Sub',
-                                style: TextStyle(
-                                    color: Colors.white, fontSize: 14),
-                              ),
-                            ),
-                          ]),
-                        ),
+                          )
+                        ],
                       ),
-                    ],
-                  ),
-                  Stack(
-                    children: [
-                      Padding(
-                        padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
-                        child: Container(
-                          width: 93,
-                          height: 110,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(8),
-                            image: DecorationImage(
-                                image: AssetImage('image/book.jfif'),
-                                fit: BoxFit.cover),
+                      Column(
+                        children: [
+                          Stack(
+                            children: [
+                              Padding(
+                                padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
+                                child: Container(
+                                  width: 115,
+                                  height: 150,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(8),
+                                    image: DecorationImage(
+                                        image: AssetImage(
+                                            'assets/image/book.jfif'),
+                                        fit: BoxFit.cover),
+                                  ),
+                                  child: Stack(children: [
+                                    Align(
+                                      alignment: Alignment.bottomCenter,
+                                      child: Container(
+                                          width: 93,
+                                          height: 9,
+                                          decoration: BoxDecoration(boxShadow: [
+                                            BoxShadow(
+                                              color: Colors.black,
+                                              blurRadius: 15.0,
+                                            )
+                                          ])),
+                                    ),
+                                    Align(
+                                      alignment: Alignment.bottomLeft,
+                                      child: Text(
+                                        ' Free',
+                                        style: TextStyle(
+                                            color: Colors.white, fontSize: 14),
+                                      ),
+                                    ),
+                                  ]),
+                                ),
+                              ),
+                            ],
                           ),
-                          child: Stack(children: [
-                            Align(
-                              alignment: Alignment.bottomCenter,
-                              child: Container(
-                                  width: 93,
-                                  height: 9,
-                                  decoration: BoxDecoration(boxShadow: [
-                                    BoxShadow(
-                                      color: Colors.black,
-                                      blurRadius: 15.0,
-                                    )
-                                  ])),
-                            ),
-                            Align(
-                              alignment: Alignment.bottomCenter,
-                              child: Text(
-                                'Flutter Sub',
-                                style: TextStyle(
-                                    color: Colors.white, fontSize: 14),
-                              ),
-                            ),
-                          ]),
-                        ),
-                      ),
-                    ],
-                  ),
-                  Stack(
-                    children: [
-                      Padding(
-                        padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
-                        child: Container(
-                          width: 93,
-                          height: 110,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(8),
-                            image: DecorationImage(
-                                image: AssetImage('image/book.jfif'),
-                                fit: BoxFit.cover),
+                          SizedBox(
+                            height: 10,
                           ),
-                          child: Stack(children: [
-                            Align(
-                              alignment: Alignment.bottomCenter,
-                              child: Container(
-                                  width: 93,
-                                  height: 9,
-                                  decoration: BoxDecoration(boxShadow: [
-                                    BoxShadow(
-                                      color: Colors.black,
-                                      blurRadius: 15.0,
-                                    )
-                                  ])),
+                          Padding(
+                            padding: EdgeInsets.fromLTRB(0, 3, 10, 0),
+                            child: Text(
+                              'Flutter Sub',
+                              style: TextStyle(fontSize: 17),
                             ),
-                            Align(
-                              alignment: Alignment.bottomCenter,
-                              child: Text(
-                                'Flutter Sub',
-                                style: TextStyle(
-                                    color: Colors.white, fontSize: 14),
-                              ),
-                            ),
-                          ]),
-                        ),
+                          )
+                        ],
                       ),
-                    ],
-                  ),
-                  Stack(
-                    children: [
-                      Padding(
-                        padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
-                        child: Container(
-                          width: 93,
-                          height: 110,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(8),
-                            image: DecorationImage(
-                                image: AssetImage('image/book.jfif'),
-                                fit: BoxFit.cover),
+                      Column(
+                        children: [
+                          Stack(
+                            children: [
+                              Padding(
+                                padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
+                                child: Container(
+                                  width: 115,
+                                  height: 150,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(8),
+                                    image: DecorationImage(
+                                        image: AssetImage(
+                                            'assets/image/book.jfif'),
+                                        fit: BoxFit.cover),
+                                  ),
+                                  child: Stack(children: [
+                                    Align(
+                                      alignment: Alignment.bottomCenter,
+                                      child: Container(
+                                          width: 93,
+                                          height: 9,
+                                          decoration: BoxDecoration(boxShadow: [
+                                            BoxShadow(
+                                              color: Colors.black,
+                                              blurRadius: 15.0,
+                                            )
+                                          ])),
+                                    ),
+                                    Align(
+                                      alignment: Alignment.bottomLeft,
+                                      child: Text(
+                                        ' Free',
+                                        style: TextStyle(
+                                            color: Colors.white, fontSize: 14),
+                                      ),
+                                    ),
+                                  ]),
+                                ),
+                              ),
+                            ],
                           ),
-                          child: Stack(children: [
-                            Align(
-                              alignment: Alignment.bottomCenter,
-                              child: Container(
-                                  width: 93,
-                                  height: 9,
-                                  decoration: BoxDecoration(boxShadow: [
-                                    BoxShadow(
-                                      color: Colors.black,
-                                      blurRadius: 15.0,
-                                    )
-                                  ])),
-                            ),
-                            Align(
-                              alignment: Alignment.bottomCenter,
-                              child: Text(
-                                'Flutter Sub',
-                                style: TextStyle(
-                                    color: Colors.white, fontSize: 14),
-                              ),
-                            ),
-                          ]),
-                        ),
-                      ),
-                    ],
-                  ),
-                  Stack(
-                    children: [
-                      Padding(
-                        padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
-                        child: Container(
-                          width: 93,
-                          height: 110,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(8),
-                            image: DecorationImage(
-                                image: AssetImage('image/book.jfif'),
-                                fit: BoxFit.cover),
+                          SizedBox(
+                            height: 10,
                           ),
-                          child: Stack(children: [
-                            Align(
-                              alignment: Alignment.bottomCenter,
-                              child: Container(
-                                  width: 93,
-                                  height: 9,
-                                  decoration: BoxDecoration(boxShadow: [
-                                    BoxShadow(
-                                      color: Colors.black,
-                                      blurRadius: 15.0,
-                                    )
-                                  ])),
+                          Padding(
+                            padding: EdgeInsets.fromLTRB(0, 3, 10, 0),
+                            child: Text(
+                              'Flutter Sub',
+                              style: TextStyle(fontSize: 17),
                             ),
-                            Align(
-                              alignment: Alignment.bottomCenter,
-                              child: Text(
-                                'Flutter Sub',
-                                style: TextStyle(
-                                    color: Colors.white, fontSize: 14),
-                              ),
-                            ),
-                          ]),
-                        ),
+                          )
+                        ],
                       ),
-                    ],
-                  ),
-                  Stack(
-                    children: [
-                      Padding(
-                        padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
-                        child: Container(
-                          width: 93,
-                          height: 110,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(8),
-                            image: DecorationImage(
-                                image: AssetImage('image/book.jfif'),
-                                fit: BoxFit.cover),
+                      Column(
+                        children: [
+                          Stack(
+                            children: [
+                              Padding(
+                                padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
+                                child: Container(
+                                  width: 115,
+                                  height: 150,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(8),
+                                    image: DecorationImage(
+                                        image: AssetImage(
+                                            'assets/image/book.jfif'),
+                                        fit: BoxFit.cover),
+                                  ),
+                                  child: Stack(children: [
+                                    Align(
+                                      alignment: Alignment.bottomCenter,
+                                      child: Container(
+                                          width: 93,
+                                          height: 9,
+                                          decoration: BoxDecoration(boxShadow: [
+                                            BoxShadow(
+                                              color: Colors.black,
+                                              blurRadius: 15.0,
+                                            )
+                                          ])),
+                                    ),
+                                    Align(
+                                      alignment: Alignment.bottomLeft,
+                                      child: Text(
+                                        ' Free',
+                                        style: TextStyle(
+                                            color: Colors.white, fontSize: 14),
+                                      ),
+                                    ),
+                                  ]),
+                                ),
+                              ),
+                            ],
                           ),
-                          child: Stack(children: [
-                            Align(
-                              alignment: Alignment.bottomCenter,
-                              child: Container(
-                                  width: 93,
-                                  height: 9,
-                                  decoration: BoxDecoration(boxShadow: [
-                                    BoxShadow(
-                                      color: Colors.black,
-                                      blurRadius: 15.0,
-                                    )
-                                  ])),
-                            ),
-                            Align(
-                              alignment: Alignment.bottomCenter,
-                              child: Text(
-                                'Flutter Sub',
-                                style: TextStyle(
-                                    color: Colors.white, fontSize: 14),
-                              ),
-                            ),
-                          ]),
-                        ),
-                      ),
-                    ],
-                  ),
-                  Stack(
-                    children: [
-                      Padding(
-                        padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
-                        child: Container(
-                          width: 93,
-                          height: 110,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(8),
-                            image: DecorationImage(
-                                image: AssetImage('image/book.jfif'),
-                                fit: BoxFit.cover),
+                          SizedBox(
+                            height: 10,
                           ),
-                          child: Stack(children: [
-                            Align(
-                              alignment: Alignment.bottomCenter,
-                              child: Container(
-                                  width: 93,
-                                  height: 9,
-                                  decoration: BoxDecoration(boxShadow: [
-                                    BoxShadow(
-                                      color: Colors.black,
-                                      blurRadius: 15.0,
-                                    )
-                                  ])),
+                          Padding(
+                            padding: EdgeInsets.fromLTRB(0, 3, 10, 0),
+                            child: Text(
+                              'Flutter Sub',
+                              style: TextStyle(fontSize: 17),
                             ),
-                            Align(
-                              alignment: Alignment.bottomCenter,
-                              child: Text(
-                                'Flutter Sub',
-                                style: TextStyle(
-                                    color: Colors.white, fontSize: 14),
-                              ),
-                            ),
-                          ]),
-                        ),
+                          )
+                        ],
                       ),
-                    ],
-                  ),
-                  Stack(
-                    children: [
-                      Padding(
-                        padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
-                        child: Container(
-                          width: 93,
-                          height: 110,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(8),
-                            image: DecorationImage(
-                                image: AssetImage('image/book.jfif'),
-                                fit: BoxFit.cover),
+                      Column(
+                        children: [
+                          Stack(
+                            children: [
+                              Padding(
+                                padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
+                                child: Container(
+                                  width: 115,
+                                  height: 150,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(8),
+                                    image: DecorationImage(
+                                        image: AssetImage(
+                                            'assets/image/book.jfif'),
+                                        fit: BoxFit.cover),
+                                  ),
+                                  child: Stack(children: [
+                                    Align(
+                                      alignment: Alignment.bottomCenter,
+                                      child: Container(
+                                          width: 93,
+                                          height: 9,
+                                          decoration: BoxDecoration(boxShadow: [
+                                            BoxShadow(
+                                              color: Colors.black,
+                                              blurRadius: 15.0,
+                                            )
+                                          ])),
+                                    ),
+                                    Align(
+                                      alignment: Alignment.bottomLeft,
+                                      child: Text(
+                                        ' Free',
+                                        style: TextStyle(
+                                            color: Colors.white, fontSize: 14),
+                                      ),
+                                    ),
+                                  ]),
+                                ),
+                              ),
+                            ],
                           ),
-                          child: Stack(children: [
-                            Align(
-                              alignment: Alignment.bottomCenter,
-                              child: Container(
-                                  width: 93,
-                                  height: 9,
-                                  decoration: BoxDecoration(boxShadow: [
-                                    BoxShadow(
-                                      color: Colors.black,
-                                      blurRadius: 15.0,
-                                    )
-                                  ])),
-                            ),
-                            Align(
-                              alignment: Alignment.bottomCenter,
-                              child: Text(
-                                'Flutter Sub',
-                                style: TextStyle(
-                                    color: Colors.white, fontSize: 14),
-                              ),
-                            ),
-                          ]),
-                        ),
-                      ),
-                    ],
-                  ),
-                  Stack(
-                    children: [
-                      Padding(
-                        padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
-                        child: Container(
-                          width: 93,
-                          height: 110,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(8),
-                            image: DecorationImage(
-                                image: AssetImage('image/book.jfif'),
-                                fit: BoxFit.cover),
+                          SizedBox(
+                            height: 10,
                           ),
-                          child: Stack(children: [
-                            Align(
-                              alignment: Alignment.bottomCenter,
-                              child: Container(
-                                  width: 93,
-                                  height: 9,
-                                  decoration: BoxDecoration(boxShadow: [
-                                    BoxShadow(
-                                      color: Colors.black,
-                                      blurRadius: 15.0,
-                                    )
-                                  ])),
+                          Padding(
+                            padding: EdgeInsets.fromLTRB(0, 3, 10, 0),
+                            child: Text(
+                              'Flutter Sub',
+                              style: TextStyle(fontSize: 17),
                             ),
-                            Align(
-                              alignment: Alignment.bottomCenter,
-                              child: Text(
-                                'Flutter Sub',
-                                style: TextStyle(
-                                    color: Colors.white, fontSize: 14),
-                              ),
-                            ),
-                          ]),
-                        ),
+                          )
+                        ],
                       ),
-                    ],
-                  ),
-                  Stack(
-                    children: [
-                      Padding(
-                        padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
-                        child: Container(
-                          width: 93,
-                          height: 110,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(8),
-                            image: DecorationImage(
-                                image: AssetImage('image/book.jfif'),
-                                fit: BoxFit.cover),
+                      Column(
+                        children: [
+                          Stack(
+                            children: [
+                              Padding(
+                                padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
+                                child: Container(
+                                  width: 115,
+                                  height: 150,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(8),
+                                    image: DecorationImage(
+                                        image: AssetImage(
+                                            'assets/image/book.jfif'),
+                                        fit: BoxFit.cover),
+                                  ),
+                                  child: Stack(children: [
+                                    Align(
+                                      alignment: Alignment.bottomCenter,
+                                      child: Container(
+                                          width: 93,
+                                          height: 9,
+                                          decoration: BoxDecoration(boxShadow: [
+                                            BoxShadow(
+                                              color: Colors.black,
+                                              blurRadius: 15.0,
+                                            )
+                                          ])),
+                                    ),
+                                    Align(
+                                      alignment: Alignment.bottomLeft,
+                                      child: Text(
+                                        ' Free',
+                                        style: TextStyle(
+                                            color: Colors.white, fontSize: 14),
+                                      ),
+                                    ),
+                                  ]),
+                                ),
+                              ),
+                            ],
                           ),
-                          child: Stack(children: [
-                            Align(
-                              alignment: Alignment.bottomCenter,
-                              child: Container(
-                                  width: 93,
-                                  height: 9,
-                                  decoration: BoxDecoration(boxShadow: [
-                                    BoxShadow(
-                                      color: Colors.black,
-                                      blurRadius: 15.0,
-                                    )
-                                  ])),
-                            ),
-                            Align(
-                              alignment: Alignment.bottomCenter,
-                              child: Text(
-                                'Flutter Sub',
-                                style: TextStyle(
-                                    color: Colors.white, fontSize: 14),
-                              ),
-                            ),
-                          ]),
-                        ),
-                      ),
-                    ],
-                  ),
-                  Stack(
-                    children: [
-                      Padding(
-                        padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
-                        child: Container(
-                          width: 93,
-                          height: 110,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(8),
-                            image: DecorationImage(
-                                image: AssetImage('image/book.jfif'),
-                                fit: BoxFit.cover),
+                          SizedBox(
+                            height: 10,
                           ),
-                          child: Stack(children: [
-                            Align(
-                              alignment: Alignment.bottomCenter,
-                              child: Container(
-                                  width: 93,
-                                  height: 9,
-                                  decoration: BoxDecoration(boxShadow: [
-                                    BoxShadow(
-                                      color: Colors.black,
-                                      blurRadius: 15.0,
-                                    )
-                                  ])),
+                          Padding(
+                            padding: EdgeInsets.fromLTRB(0, 3, 10, 0),
+                            child: Text(
+                              'Flutter Sub',
+                              style: TextStyle(fontSize: 17),
                             ),
-                            Align(
-                              alignment: Alignment.bottomCenter,
-                              child: Text(
-                                'Flutter Sub',
-                                style: TextStyle(
-                                    color: Colors.white, fontSize: 14),
-                              ),
-                            ),
-                          ]),
-                        ),
+                          )
+                        ],
                       ),
-                    ],
-                  ),
-                  Stack(
-                    children: [
-                      Padding(
-                        padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
-                        child: Container(
-                          width: 93,
-                          height: 110,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(8),
-                            image: DecorationImage(
-                                image: AssetImage('image/book.jfif'),
-                                fit: BoxFit.cover),
+                      Column(
+                        children: [
+                          Stack(
+                            children: [
+                              Padding(
+                                padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
+                                child: Container(
+                                  width: 115,
+                                  height: 150,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(8),
+                                    image: DecorationImage(
+                                        image: AssetImage(
+                                            'assets/image/book.jfif'),
+                                        fit: BoxFit.cover),
+                                  ),
+                                  child: Stack(children: [
+                                    Align(
+                                      alignment: Alignment.bottomCenter,
+                                      child: Container(
+                                          width: 93,
+                                          height: 9,
+                                          decoration: BoxDecoration(boxShadow: [
+                                            BoxShadow(
+                                              color: Colors.black,
+                                              blurRadius: 15.0,
+                                            )
+                                          ])),
+                                    ),
+                                    Align(
+                                      alignment: Alignment.bottomLeft,
+                                      child: Text(
+                                        ' Free',
+                                        style: TextStyle(
+                                            color: Colors.white, fontSize: 14),
+                                      ),
+                                    ),
+                                  ]),
+                                ),
+                              ),
+                            ],
                           ),
-                          child: Stack(children: [
-                            Align(
-                              alignment: Alignment.bottomCenter,
-                              child: Container(
-                                  width: 93,
-                                  height: 9,
-                                  decoration: BoxDecoration(boxShadow: [
-                                    BoxShadow(
-                                      color: Colors.black,
-                                      blurRadius: 15.0,
-                                    )
-                                  ])),
-                            ),
-                            Align(
-                              alignment: Alignment.bottomCenter,
-                              child: Text(
-                                'Flutter Sub',
-                                style: TextStyle(
-                                    color: Colors.white, fontSize: 14),
-                              ),
-                            ),
-                          ]),
-                        ),
-                      ),
-                    ],
-                  ),
-                  Stack(
-                    children: [
-                      Padding(
-                        padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
-                        child: Container(
-                          width: 93,
-                          height: 110,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(8),
-                            image: DecorationImage(
-                                image: AssetImage('image/book.jfif'),
-                                fit: BoxFit.cover),
+                          SizedBox(
+                            height: 10,
                           ),
-                          child: Stack(children: [
-                            Align(
-                              alignment: Alignment.bottomCenter,
-                              child: Container(
-                                  width: 93,
-                                  height: 9,
-                                  decoration: BoxDecoration(boxShadow: [
-                                    BoxShadow(
-                                      color: Colors.black,
-                                      blurRadius: 15.0,
-                                    )
-                                  ])),
+                          Padding(
+                            padding: EdgeInsets.fromLTRB(0, 3, 10, 0),
+                            child: Text(
+                              'Flutter Sub',
+                              style: TextStyle(fontSize: 17),
                             ),
-                            Align(
-                              alignment: Alignment.bottomCenter,
-                              child: Text(
-                                'Flutter Sub',
-                                style: TextStyle(
-                                    color: Colors.white, fontSize: 14),
-                              ),
-                            ),
-                          ]),
-                        ),
+                          )
+                        ],
                       ),
-                    ],
-                  ),
-                  Stack(
-                    children: [
-                      Padding(
-                        padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
-                        child: Container(
-                          width: 93,
-                          height: 110,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(8),
-                            image: DecorationImage(
-                                image: AssetImage('image/book.jfif'),
-                                fit: BoxFit.cover),
+                      Column(
+                        children: [
+                          Stack(
+                            children: [
+                              Padding(
+                                padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
+                                child: Container(
+                                  width: 115,
+                                  height: 150,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(8),
+                                    image: DecorationImage(
+                                        image: AssetImage(
+                                            'assets/image/book.jfif'),
+                                        fit: BoxFit.cover),
+                                  ),
+                                  child: Stack(children: [
+                                    Align(
+                                      alignment: Alignment.bottomCenter,
+                                      child: Container(
+                                          width: 93,
+                                          height: 9,
+                                          decoration: BoxDecoration(boxShadow: [
+                                            BoxShadow(
+                                              color: Colors.black,
+                                              blurRadius: 15.0,
+                                            )
+                                          ])),
+                                    ),
+                                    Align(
+                                      alignment: Alignment.bottomLeft,
+                                      child: Text(
+                                        ' Free',
+                                        style: TextStyle(
+                                            color: Colors.white, fontSize: 14),
+                                      ),
+                                    ),
+                                  ]),
+                                ),
+                              ),
+                            ],
                           ),
-                          child: Stack(children: [
-                            Align(
-                              alignment: Alignment.bottomCenter,
-                              child: Container(
-                                  width: 93,
-                                  height: 9,
-                                  decoration: BoxDecoration(boxShadow: [
-                                    BoxShadow(
-                                      color: Colors.black,
-                                      blurRadius: 15.0,
-                                    )
-                                  ])),
-                            ),
-                            Align(
-                              alignment: Alignment.bottomCenter,
-                              child: Text(
-                                'Flutter Sub',
-                                style: TextStyle(
-                                    color: Colors.white, fontSize: 14),
-                              ),
-                            ),
-                          ]),
-                        ),
-                      ),
-                    ],
-                  ),
-                  Stack(
-                    children: [
-                      Padding(
-                        padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
-                        child: Container(
-                          width: 93,
-                          height: 110,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(8),
-                            image: DecorationImage(
-                                image: AssetImage('image/book.jfif'),
-                                fit: BoxFit.cover),
+                          SizedBox(
+                            height: 10,
                           ),
-                          child: Stack(children: [
-                            Align(
-                              alignment: Alignment.bottomCenter,
-                              child: Container(
-                                  width: 93,
-                                  height: 9,
-                                  decoration: BoxDecoration(boxShadow: [
-                                    BoxShadow(
-                                      color: Colors.black,
-                                      blurRadius: 15.0,
-                                    )
-                                  ])),
+                          Padding(
+                            padding: EdgeInsets.fromLTRB(0, 3, 10, 0),
+                            child: Text(
+                              'Flutter Sub',
+                              style: TextStyle(fontSize: 17),
                             ),
-                            Align(
-                              alignment: Alignment.bottomCenter,
-                              child: Text(
-                                'Flutter Sub',
-                                style: TextStyle(
-                                    color: Colors.white, fontSize: 14),
-                              ),
-                            ),
-                          ]),
-                        ),
+                          )
+                        ],
                       ),
-                    ],
-                  ),
-                  Stack(
-                    children: [
-                      Padding(
-                        padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
-                        child: Container(
-                          width: 93,
-                          height: 110,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(8),
-                            image: DecorationImage(
-                                image: AssetImage('image/book.jfif'),
-                                fit: BoxFit.cover),
-                          ),
-                          child: Stack(children: [
-                            Align(
-                              alignment: Alignment.bottomCenter,
-                              child: Container(
-                                  width: 93,
-                                  height: 9,
-                                  decoration: BoxDecoration(boxShadow: [
-                                    BoxShadow(
-                                      color: Colors.black,
-                                      blurRadius: 15.0,
-                                    )
-                                  ])),
-                            ),
-                            Align(
-                              alignment: Alignment.bottomCenter,
-                              child: Text(
-                                'Flutter Sub',
-                                style: TextStyle(
-                                    color: Colors.white, fontSize: 14),
-                              ),
-                            ),
-                          ]),
-                        ),
-                      ),
-                    ],
-                  ),
-                  Stack(
-                    children: [
-                      Padding(
-                        padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
-                        child: Container(
-                          width: 93,
-                          height: 110,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(8),
-                            image: DecorationImage(
-                                image: AssetImage('image/book.jfif'),
-                                fit: BoxFit.cover),
-                          ),
-                          child: Stack(children: [
-                            Align(
-                              alignment: Alignment.bottomCenter,
-                              child: Container(
-                                  width: 93,
-                                  height: 9,
-                                  decoration: BoxDecoration(boxShadow: [
-                                    BoxShadow(
-                                      color: Colors.black,
-                                      blurRadius: 15.0,
-                                    )
-                                  ])),
-                            ),
-                            Align(
-                              alignment: Alignment.bottomCenter,
-                              child: Text(
-                                'Flutter Sub',
-                                style: TextStyle(
-                                    color: Colors.white, fontSize: 14),
-                              ),
-                            ),
-                          ]),
-                        ),
-                      ),
-                    ],
-                  ),
-                  Stack(
-                    children: [
-                      Padding(
-                        padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
-                        child: Container(
-                          width: 93,
-                          height: 110,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(8),
-                            image: DecorationImage(
-                                image: AssetImage('image/book.jfif'),
-                                fit: BoxFit.cover),
-                          ),
-                          child: Stack(children: [
-                            Align(
-                              alignment: Alignment.bottomCenter,
-                              child: Container(
-                                  width: 93,
-                                  height: 9,
-                                  decoration: BoxDecoration(boxShadow: [
-                                    BoxShadow(
-                                      color: Colors.black,
-                                      blurRadius: 15.0,
-                                    )
-                                  ])),
-                            ),
-                            Align(
-                              alignment: Alignment.bottomCenter,
-                              child: Text(
-                                'Flutter Sub',
-                                style: TextStyle(
-                                    color: Colors.white, fontSize: 14),
-                              ),
-                            ),
-                          ]),
-                        ),
-                      ),
-                    ],
-                  ),
-                  Stack(
-                    children: [
-                      Padding(
-                        padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
-                        child: Container(
-                          width: 93,
-                          height: 110,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(8),
-                            image: DecorationImage(
-                                image: AssetImage('image/book.jfif'),
-                                fit: BoxFit.cover),
-                          ),
-                          child: Stack(children: [
-                            Align(
-                              alignment: Alignment.bottomCenter,
-                              child: Container(
-                                  width: 93,
-                                  height: 9,
-                                  decoration: BoxDecoration(boxShadow: [
-                                    BoxShadow(
-                                      color: Colors.black,
-                                      blurRadius: 15.0,
-                                    )
-                                  ])),
-                            ),
-                            Align(
-                              alignment: Alignment.bottomCenter,
-                              child: Text(
-                                'Flutter Sub',
-                                style: TextStyle(
-                                    color: Colors.white, fontSize: 14),
-                              ),
-                            ),
-                          ]),
-                        ),
-                      ),
-                    ],
-                  ),
-                  Stack(
-                    children: [
-                      Padding(
-                        padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
-                        child: Container(
-                          width: 93,
-                          height: 110,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(8),
-                            image: DecorationImage(
-                                image: AssetImage('image/book.jfif'),
-                                fit: BoxFit.cover),
-                          ),
-                          child: Stack(children: [
-                            Align(
-                              alignment: Alignment.bottomCenter,
-                              child: Container(
-                                  width: 93,
-                                  height: 9,
-                                  decoration: BoxDecoration(boxShadow: [
-                                    BoxShadow(
-                                      color: Colors.black,
-                                      blurRadius: 15.0,
-                                    )
-                                  ])),
-                            ),
-                            Align(
-                              alignment: Alignment.bottomCenter,
-                              child: Text(
-                                'Flutter Sub',
-                                style: TextStyle(
-                                    color: Colors.white, fontSize: 14),
-                              ),
-                            ),
-                          ]),
-                        ),
-                      ),
-                    ],
-                  ),
-                  Stack(
-                    children: [
-                      Padding(
-                        padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
-                        child: Container(
-                          width: 93,
-                          height: 110,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(8),
-                            image: DecorationImage(
-                                image: AssetImage('image/book.jfif'),
-                                fit: BoxFit.cover),
-                          ),
-                          child: Stack(children: [
-                            Align(
-                              alignment: Alignment.bottomCenter,
-                              child: Container(
-                                  width: 93,
-                                  height: 9,
-                                  decoration: BoxDecoration(boxShadow: [
-                                    BoxShadow(
-                                      color: Colors.black,
-                                      blurRadius: 15.0,
-                                    )
-                                  ])),
-                            ),
-                            Align(
-                              alignment: Alignment.bottomCenter,
-                              child: Text(
-                                'Flutter Sub',
-                                style: TextStyle(
-                                    color: Colors.white, fontSize: 14),
-                              ),
-                            ),
-                          ]),
-                        ),
-                      ),
-                    ],
-                  ),
-                  Stack(
-                    children: [
-                      Padding(
-                        padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
-                        child: Container(
-                          width: 93,
-                          height: 110,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(8),
-                            image: DecorationImage(
-                                image: AssetImage('image/book.jfif'),
-                                fit: BoxFit.cover),
-                          ),
-                          child: Stack(children: [
-                            Align(
-                              alignment: Alignment.bottomCenter,
-                              child: Container(
-                                  width: 93,
-                                  height: 9,
-                                  decoration: BoxDecoration(boxShadow: [
-                                    BoxShadow(
-                                      color: Colors.black,
-                                      blurRadius: 15.0,
-                                    )
-                                  ])),
-                            ),
-                            Align(
-                              alignment: Alignment.bottomCenter,
-                              child: Text(
-                                'Flutter Sub',
-                                style: TextStyle(
-                                    color: Colors.white, fontSize: 14),
-                              ),
-                            ),
-                          ]),
-                        ),
-                      ),
-                    ],
-                  ),
-                ],
-                direction: Axis.horizontal,
+                    ]),
               ),
             ),
-          ),
+          ],
         ),
-      ]),
-    ));
+      ),
+    );
   }
 }

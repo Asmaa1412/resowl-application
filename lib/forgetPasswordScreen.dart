@@ -33,7 +33,7 @@ class _ForgetPasswordScreenFState extends State<ForgetPasswordScreenF> {
               ),
               actions: [
                 Image.asset(
-                  'image/5.png',
+                  ('assets/image/5.png'),
                   scale: 2,
                 ),
               ],
@@ -48,18 +48,18 @@ class _ForgetPasswordScreenFState extends State<ForgetPasswordScreenF> {
                     height: 250,
                     decoration: BoxDecoration(
                       image: DecorationImage(
-                          image: AssetImage('image/green.jpg'),
+                          image: AssetImage('assets/image/green.jpg'),
                           fit: BoxFit.cover),
                     ),
                     child: Center(
                       child: Text(
                         'Forget Password',
-                        style: TextStyle(color: Colors.white, fontSize: 25),
+                        style: TextStyle(color: Colors.white, fontSize: 30),
                       ),
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.fromLTRB(25, 25, 300, 0),
+                    padding: const EdgeInsets.fromLTRB(25, 25, 200, 0),
                     child: Text(
                       'Enter Your Email :',
                       style: TextStyle(fontSize: 17),
@@ -69,11 +69,11 @@ class _ForgetPasswordScreenFState extends State<ForgetPasswordScreenF> {
                     height: 15,
                   ),
                   SizedBox(
-                    width: 440,
+                    width: 330,
                     child: TextField(
                         decoration: InputDecoration(
                             filled: true,
-                            fillColor: Color.fromARGB(150, 109, 139, 116),
+                            fillColor: Color.fromARGB(255, 255, 252, 242),
                             enabledBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(20),
                             ))),
