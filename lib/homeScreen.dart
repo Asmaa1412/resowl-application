@@ -33,7 +33,7 @@ class _HomeScreenFState extends State<HomeScreenF> {
               ),
               actions: [
                 Image.asset(
-                  'assets/image/5.png',
+                  'assets/image/comp.png',
                   scale: 2,
                 ),
               ],
@@ -644,18 +644,3 @@ class _HomeScreenFState extends State<HomeScreenF> {
   }
 }
 
-
-/* Container(
-                      decoration: BoxDecoration(
-                          color: Color.fromRGBO(245, 236, 224, 1),
-                          border: Border.all(
-                            color: Color.fromRGBO(245, 236, 224, 1),
-                          ),
-                          borderRadius: BorderRadius.circular(30)),
-                      width: 45,
-                      height: 45,
-                      child: FavoriteButton(
-                        iconSize: 30.0,
-                        isFavorite: true,
-                        valueChanged: (_isFavorite) {},
-                      )), */

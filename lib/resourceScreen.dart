@@ -1,7 +1,8 @@
-import 'dart:ffi';
-import 'dart:ui';
+import 'package:favorite_button/favorite_button.dart';
 
 import 'package:flutter/material.dart';
+
+int indexx = 0;
 
 class ResourceSacreen extends StatelessWidget {
   const ResourceSacreen({Key? key}) : super(key: key);
@@ -24,6 +25,12 @@ class ResourceSacreenF extends StatefulWidget {
 }
 
 class _ResourceSacreenFState extends State<ResourceSacreenF> {
+  void Findexx(int ind) {
+    setState(() {
+      indexx = ind;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -97,15 +104,38 @@ class _ResourceSacreenFState extends State<ResourceSacreenF> {
               SizedBox(
                 height: 5,
               ),
-              Container(
-                width: 190,
-                height: 190,
-                decoration: BoxDecoration(
-                    image: DecorationImage(
-                        image: AssetImage('assets/image/book.jfif'),
-                        fit: BoxFit.cover),
-                    color: Colors.red,
-                    borderRadius: BorderRadius.circular(20)),
+              Stack(
+                children: [
+                  Center(
+                    child: Container(
+                      width: 190,
+                      height: 190,
+                      decoration: BoxDecoration(
+                          image: DecorationImage(
+                              image: AssetImage('assets/image/book.jfif'),
+                              fit: BoxFit.cover),
+                          color: Colors.red,
+                          borderRadius: BorderRadius.circular(20)),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(270, 165, 0, 0),
+                    child: Container(
+                        decoration: BoxDecoration(
+                            color: Color.fromRGBO(245, 236, 224, 1),
+                            border: Border.all(
+                              color: Color.fromRGBO(245, 236, 224, 1),
+                            ),
+                            borderRadius: BorderRadius.circular(30)),
+                        width: 35,
+                        height: 35,
+                        child: FavoriteButton(
+                          iconSize: 30.0,
+                          isFavorite: true,
+                          valueChanged: (_isFavorite) {},
+                        )),
+                  ),
+                ],
               ),
               Column(
                 children: [

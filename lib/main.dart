@@ -4,6 +4,7 @@ import 'package:resowl/splashScreen.dart';
 import 'HomeScreen.dart';
 import 'aboutUsScreen.dart';
 import 'editProfileScreen.dart';
+import 'favoredScreen.dart';
 import 'forgetPasswordScreen.dart';
 import 'noviceScreen.dart';
 import 'registrationScreen.dart';
@@ -16,9 +17,9 @@ import 'verCodeScreen.dart';
   runApp(const RegistrationScreen());
 }*/
 
-/*void main() {
+void main() {
   runApp(const HomeScreen());
-}*/
+} 
 
 /* void main() {
   runApp(const SubjectScreen());
@@ -27,8 +28,8 @@ import 'verCodeScreen.dart';
 
 /* void main() {
   runApp(const AboutUsScreen());
-}
- */
+} */
+ 
 /* void main() {
   runApp(const ForgetPasswordScreen());
 } */
@@ -37,14 +38,14 @@ import 'verCodeScreen.dart';
   runApp(const SubLevelScreen());
 }*/
 
-void main() {
+/* void main() {
   runApp(const NoviceScreen());
 }
-
-/*void main() {
+ */
+/* void main() {
   runApp(const ResourceSacreen());
-}
-}*/
+} */
+
 /*void main() {
   runApp(const EditProfileScreen());
 }*/
@@ -52,3 +53,7 @@ void main() {
 /* void main() {
   runApp(const VerCodeScreen());
 } */
+
+ /* void main() {
+  runApp(const FavoredScreen());
+}  */
