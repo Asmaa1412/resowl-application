@@ -1,4 +1,8 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import 'HomeScreen.dart';
+import 'sub-levelScreen.dart';
 
 class SubjectScreen extends StatelessWidget {
   const SubjectScreen({Key? key}) : super(key: key);
@@ -28,12 +32,21 @@ class _SubjectScreenFState extends State<SubjectScreenF> {
         appBar: AppBar(
           backgroundColor: Color.fromARGB(255, 255, 252, 242),
           leading: IconButton(
-            onPressed: () {},
-            icon: Icon(Icons.list),
+            onPressed: () {
+              Navigator.of(context, rootNavigator: true).pop(context);
+            },
+            icon: Icon(Icons.arrow_back_ios),
           ),
           actions: [
-            Image.asset(
-              'assets/image/5.png',
+            GestureDetector(
+              onTap: () {
+                Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => HomeScreen()));
+              },
+              child: Image.asset(
+                'assets/image/5.png',
+                scale: 2,
+              ),
             ),
           ],
         ),
@@ -59,38 +72,48 @@ class _SubjectScreenFState extends State<SubjectScreenF> {
                             children: [
                               Padding(
                                 padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
-                                child: Container(
-                                  width: 115,
-                                  height: 150,
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(8),
-                                    image: DecorationImage(
-                                        image: AssetImage(
-                                            'assets/image/book.jfif'),
-                                        fit: BoxFit.cover),
-                                  ),
-                                  child: Stack(children: [
-                                    Align(
-                                      alignment: Alignment.bottomCenter,
-                                      child: Container(
-                                          width: 93,
-                                          height: 9,
-                                          decoration: BoxDecoration(boxShadow: [
-                                            BoxShadow(
-                                              color: Colors.black,
-                                              blurRadius: 15.0,
-                                            )
-                                          ])),
+                                child: GestureDetector(
+                                  onTap: () {
+                                    Navigator.of(context).push(
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                SubLevelScreen()));
+                                  },
+                                  child: Container(
+                                    width: 115,
+                                    height: 150,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(8),
+                                      image: DecorationImage(
+                                          image: AssetImage(
+                                              'assets/image/book.jfif'),
+                                          fit: BoxFit.cover),
                                     ),
-                                    Align(
-                                      alignment: Alignment.bottomLeft,
-                                      child: Text(
-                                        ' Free',
-                                        style: TextStyle(
-                                            color: Colors.white, fontSize: 14),
+                                    child: Stack(children: [
+                                      Align(
+                                        alignment: Alignment.bottomCenter,
+                                        child: Container(
+                                            width: 93,
+                                            height: 9,
+                                            decoration:
+                                                BoxDecoration(boxShadow: [
+                                              BoxShadow(
+                                                color: Colors.black,
+                                                blurRadius: 15.0,
+                                              )
+                                            ])),
                                       ),
-                                    ),
-                                  ]),
+                                      Align(
+                                        alignment: Alignment.bottomLeft,
+                                        child: Text(
+                                          ' Free',
+                                          style: TextStyle(
+                                              color: Colors.white,
+                                              fontSize: 14),
+                                        ),
+                                      ),
+                                    ]),
+                                  ),
                                 ),
                               ),
                             ],
@@ -113,38 +136,48 @@ class _SubjectScreenFState extends State<SubjectScreenF> {
                             children: [
                               Padding(
                                 padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
-                                child: Container(
-                                  width: 115,
-                                  height: 150,
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(8),
-                                    image: DecorationImage(
-                                        image: AssetImage(
-                                            'assets/image/book.jfif'),
-                                        fit: BoxFit.cover),
-                                  ),
-                                  child: Stack(children: [
-                                    Align(
-                                      alignment: Alignment.bottomCenter,
-                                      child: Container(
-                                          width: 93,
-                                          height: 9,
-                                          decoration: BoxDecoration(boxShadow: [
-                                            BoxShadow(
-                                              color: Colors.black,
-                                              blurRadius: 15.0,
-                                            )
-                                          ])),
+                                child: GestureDetector(
+                                  onTap: () {
+                                    Navigator.of(context).push(
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                SubLevelScreen()));
+                                  },
+                                  child: Container(
+                                    width: 115,
+                                    height: 150,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(8),
+                                      image: DecorationImage(
+                                          image: AssetImage(
+                                              'assets/image/book.jfif'),
+                                          fit: BoxFit.cover),
                                     ),
-                                    Align(
-                                      alignment: Alignment.bottomLeft,
-                                      child: Text(
-                                        ' Free',
-                                        style: TextStyle(
-                                            color: Colors.white, fontSize: 14),
+                                    child: Stack(children: [
+                                      Align(
+                                        alignment: Alignment.bottomCenter,
+                                        child: Container(
+                                            width: 93,
+                                            height: 9,
+                                            decoration:
+                                                BoxDecoration(boxShadow: [
+                                              BoxShadow(
+                                                color: Colors.black,
+                                                blurRadius: 15.0,
+                                              )
+                                            ])),
                                       ),
-                                    ),
-                                  ]),
+                                      Align(
+                                        alignment: Alignment.bottomLeft,
+                                        child: Text(
+                                          ' Free',
+                                          style: TextStyle(
+                                              color: Colors.white,
+                                              fontSize: 14),
+                                        ),
+                                      ),
+                                    ]),
+                                  ),
                                 ),
                               ),
                             ],
@@ -167,38 +200,48 @@ class _SubjectScreenFState extends State<SubjectScreenF> {
                             children: [
                               Padding(
                                 padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
-                                child: Container(
-                                  width: 115,
-                                  height: 150,
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(8),
-                                    image: DecorationImage(
-                                        image: AssetImage(
-                                            'assets/image/book.jfif'),
-                                        fit: BoxFit.cover),
-                                  ),
-                                  child: Stack(children: [
-                                    Align(
-                                      alignment: Alignment.bottomCenter,
-                                      child: Container(
-                                          width: 93,
-                                          height: 9,
-                                          decoration: BoxDecoration(boxShadow: [
-                                            BoxShadow(
-                                              color: Colors.black,
-                                              blurRadius: 15.0,
-                                            )
-                                          ])),
+                                child: GestureDetector(
+                                  onTap: () {
+                                    Navigator.of(context).push(
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                SubLevelScreen()));
+                                  },
+                                  child: Container(
+                                    width: 115,
+                                    height: 150,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(8),
+                                      image: DecorationImage(
+                                          image: AssetImage(
+                                              'assets/image/book.jfif'),
+                                          fit: BoxFit.cover),
                                     ),
-                                    Align(
-                                      alignment: Alignment.bottomLeft,
-                                      child: Text(
-                                        ' Free',
-                                        style: TextStyle(
-                                            color: Colors.white, fontSize: 14),
+                                    child: Stack(children: [
+                                      Align(
+                                        alignment: Alignment.bottomCenter,
+                                        child: Container(
+                                            width: 93,
+                                            height: 9,
+                                            decoration:
+                                                BoxDecoration(boxShadow: [
+                                              BoxShadow(
+                                                color: Colors.black,
+                                                blurRadius: 15.0,
+                                              )
+                                            ])),
                                       ),
-                                    ),
-                                  ]),
+                                      Align(
+                                        alignment: Alignment.bottomLeft,
+                                        child: Text(
+                                          ' Free',
+                                          style: TextStyle(
+                                              color: Colors.white,
+                                              fontSize: 14),
+                                        ),
+                                      ),
+                                    ]),
+                                  ),
                                 ),
                               ),
                             ],
@@ -221,38 +264,48 @@ class _SubjectScreenFState extends State<SubjectScreenF> {
                             children: [
                               Padding(
                                 padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
-                                child: Container(
-                                  width: 115,
-                                  height: 150,
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(8),
-                                    image: DecorationImage(
-                                        image: AssetImage(
-                                            'assets/image/book.jfif'),
-                                        fit: BoxFit.cover),
-                                  ),
-                                  child: Stack(children: [
-                                    Align(
-                                      alignment: Alignment.bottomCenter,
-                                      child: Container(
-                                          width: 93,
-                                          height: 9,
-                                          decoration: BoxDecoration(boxShadow: [
-                                            BoxShadow(
-                                              color: Colors.black,
-                                              blurRadius: 15.0,
-                                            )
-                                          ])),
+                                child: GestureDetector(
+                                  onTap: () {
+                                    Navigator.of(context).push(
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                SubLevelScreen()));
+                                  },
+                                  child: Container(
+                                    width: 115,
+                                    height: 150,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(8),
+                                      image: DecorationImage(
+                                          image: AssetImage(
+                                              'assets/image/book.jfif'),
+                                          fit: BoxFit.cover),
                                     ),
-                                    Align(
-                                      alignment: Alignment.bottomLeft,
-                                      child: Text(
-                                        ' Free',
-                                        style: TextStyle(
-                                            color: Colors.white, fontSize: 14),
+                                    child: Stack(children: [
+                                      Align(
+                                        alignment: Alignment.bottomCenter,
+                                        child: Container(
+                                            width: 93,
+                                            height: 9,
+                                            decoration:
+                                                BoxDecoration(boxShadow: [
+                                              BoxShadow(
+                                                color: Colors.black,
+                                                blurRadius: 15.0,
+                                              )
+                                            ])),
                                       ),
-                                    ),
-                                  ]),
+                                      Align(
+                                        alignment: Alignment.bottomLeft,
+                                        child: Text(
+                                          ' Free',
+                                          style: TextStyle(
+                                              color: Colors.white,
+                                              fontSize: 14),
+                                        ),
+                                      ),
+                                    ]),
+                                  ),
                                 ),
                               ),
                             ],
@@ -275,38 +328,48 @@ class _SubjectScreenFState extends State<SubjectScreenF> {
                             children: [
                               Padding(
                                 padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
-                                child: Container(
-                                  width: 115,
-                                  height: 150,
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(8),
-                                    image: DecorationImage(
-                                        image: AssetImage(
-                                            'assets/image/book.jfif'),
-                                        fit: BoxFit.cover),
-                                  ),
-                                  child: Stack(children: [
-                                    Align(
-                                      alignment: Alignment.bottomCenter,
-                                      child: Container(
-                                          width: 93,
-                                          height: 9,
-                                          decoration: BoxDecoration(boxShadow: [
-                                            BoxShadow(
-                                              color: Colors.black,
-                                              blurRadius: 15.0,
-                                            )
-                                          ])),
+                                child: GestureDetector(
+                                  onTap: () {
+                                    Navigator.of(context).push(
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                SubLevelScreen()));
+                                  },
+                                  child: Container(
+                                    width: 115,
+                                    height: 150,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(8),
+                                      image: DecorationImage(
+                                          image: AssetImage(
+                                              'assets/image/book.jfif'),
+                                          fit: BoxFit.cover),
                                     ),
-                                    Align(
-                                      alignment: Alignment.bottomLeft,
-                                      child: Text(
-                                        ' Free',
-                                        style: TextStyle(
-                                            color: Colors.white, fontSize: 14),
+                                    child: Stack(children: [
+                                      Align(
+                                        alignment: Alignment.bottomCenter,
+                                        child: Container(
+                                            width: 93,
+                                            height: 9,
+                                            decoration:
+                                                BoxDecoration(boxShadow: [
+                                              BoxShadow(
+                                                color: Colors.black,
+                                                blurRadius: 15.0,
+                                              )
+                                            ])),
                                       ),
-                                    ),
-                                  ]),
+                                      Align(
+                                        alignment: Alignment.bottomLeft,
+                                        child: Text(
+                                          ' Free',
+                                          style: TextStyle(
+                                              color: Colors.white,
+                                              fontSize: 14),
+                                        ),
+                                      ),
+                                    ]),
+                                  ),
                                 ),
                               ),
                             ],
@@ -329,38 +392,48 @@ class _SubjectScreenFState extends State<SubjectScreenF> {
                             children: [
                               Padding(
                                 padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
-                                child: Container(
-                                  width: 115,
-                                  height: 150,
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(8),
-                                    image: DecorationImage(
-                                        image: AssetImage(
-                                            'assets/image/book.jfif'),
-                                        fit: BoxFit.cover),
-                                  ),
-                                  child: Stack(children: [
-                                    Align(
-                                      alignment: Alignment.bottomCenter,
-                                      child: Container(
-                                          width: 93,
-                                          height: 9,
-                                          decoration: BoxDecoration(boxShadow: [
-                                            BoxShadow(
-                                              color: Colors.black,
-                                              blurRadius: 15.0,
-                                            )
-                                          ])),
+                                child: GestureDetector(
+                                  onTap: () {
+                                    Navigator.of(context).push(
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                SubLevelScreen()));
+                                  },
+                                  child: Container(
+                                    width: 115,
+                                    height: 150,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(8),
+                                      image: DecorationImage(
+                                          image: AssetImage(
+                                              'assets/image/book.jfif'),
+                                          fit: BoxFit.cover),
                                     ),
-                                    Align(
-                                      alignment: Alignment.bottomLeft,
-                                      child: Text(
-                                        ' Free',
-                                        style: TextStyle(
-                                            color: Colors.white, fontSize: 14),
+                                    child: Stack(children: [
+                                      Align(
+                                        alignment: Alignment.bottomCenter,
+                                        child: Container(
+                                            width: 93,
+                                            height: 9,
+                                            decoration:
+                                                BoxDecoration(boxShadow: [
+                                              BoxShadow(
+                                                color: Colors.black,
+                                                blurRadius: 15.0,
+                                              )
+                                            ])),
                                       ),
-                                    ),
-                                  ]),
+                                      Align(
+                                        alignment: Alignment.bottomLeft,
+                                        child: Text(
+                                          ' Free',
+                                          style: TextStyle(
+                                              color: Colors.white,
+                                              fontSize: 14),
+                                        ),
+                                      ),
+                                    ]),
+                                  ),
                                 ),
                               ),
                             ],
@@ -383,38 +456,48 @@ class _SubjectScreenFState extends State<SubjectScreenF> {
                             children: [
                               Padding(
                                 padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
-                                child: Container(
-                                  width: 115,
-                                  height: 150,
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(8),
-                                    image: DecorationImage(
-                                        image: AssetImage(
-                                            'assets/image/book.jfif'),
-                                        fit: BoxFit.cover),
-                                  ),
-                                  child: Stack(children: [
-                                    Align(
-                                      alignment: Alignment.bottomCenter,
-                                      child: Container(
-                                          width: 93,
-                                          height: 9,
-                                          decoration: BoxDecoration(boxShadow: [
-                                            BoxShadow(
-                                              color: Colors.black,
-                                              blurRadius: 15.0,
-                                            )
-                                          ])),
+                                child: GestureDetector(
+                                  onTap: () {
+                                    Navigator.of(context).push(
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                SubLevelScreen()));
+                                  },
+                                  child: Container(
+                                    width: 115,
+                                    height: 150,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(8),
+                                      image: DecorationImage(
+                                          image: AssetImage(
+                                              'assets/image/book.jfif'),
+                                          fit: BoxFit.cover),
                                     ),
-                                    Align(
-                                      alignment: Alignment.bottomLeft,
-                                      child: Text(
-                                        ' Free',
-                                        style: TextStyle(
-                                            color: Colors.white, fontSize: 14),
+                                    child: Stack(children: [
+                                      Align(
+                                        alignment: Alignment.bottomCenter,
+                                        child: Container(
+                                            width: 93,
+                                            height: 9,
+                                            decoration:
+                                                BoxDecoration(boxShadow: [
+                                              BoxShadow(
+                                                color: Colors.black,
+                                                blurRadius: 15.0,
+                                              )
+                                            ])),
                                       ),
-                                    ),
-                                  ]),
+                                      Align(
+                                        alignment: Alignment.bottomLeft,
+                                        child: Text(
+                                          ' Free',
+                                          style: TextStyle(
+                                              color: Colors.white,
+                                              fontSize: 14),
+                                        ),
+                                      ),
+                                    ]),
+                                  ),
                                 ),
                               ),
                             ],
@@ -437,38 +520,48 @@ class _SubjectScreenFState extends State<SubjectScreenF> {
                             children: [
                               Padding(
                                 padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
-                                child: Container(
-                                  width: 115,
-                                  height: 150,
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(8),
-                                    image: DecorationImage(
-                                        image: AssetImage(
-                                            'assets/image/book.jfif'),
-                                        fit: BoxFit.cover),
-                                  ),
-                                  child: Stack(children: [
-                                    Align(
-                                      alignment: Alignment.bottomCenter,
-                                      child: Container(
-                                          width: 93,
-                                          height: 9,
-                                          decoration: BoxDecoration(boxShadow: [
-                                            BoxShadow(
-                                              color: Colors.black,
-                                              blurRadius: 15.0,
-                                            )
-                                          ])),
+                                child: GestureDetector(
+                                  onTap: () {
+                                    Navigator.of(context).push(
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                SubLevelScreen()));
+                                  },
+                                  child: Container(
+                                    width: 115,
+                                    height: 150,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(8),
+                                      image: DecorationImage(
+                                          image: AssetImage(
+                                              'assets/image/book.jfif'),
+                                          fit: BoxFit.cover),
                                     ),
-                                    Align(
-                                      alignment: Alignment.bottomLeft,
-                                      child: Text(
-                                        ' Free',
-                                        style: TextStyle(
-                                            color: Colors.white, fontSize: 14),
+                                    child: Stack(children: [
+                                      Align(
+                                        alignment: Alignment.bottomCenter,
+                                        child: Container(
+                                            width: 93,
+                                            height: 9,
+                                            decoration:
+                                                BoxDecoration(boxShadow: [
+                                              BoxShadow(
+                                                color: Colors.black,
+                                                blurRadius: 15.0,
+                                              )
+                                            ])),
                                       ),
-                                    ),
-                                  ]),
+                                      Align(
+                                        alignment: Alignment.bottomLeft,
+                                        child: Text(
+                                          ' Free',
+                                          style: TextStyle(
+                                              color: Colors.white,
+                                              fontSize: 14),
+                                        ),
+                                      ),
+                                    ]),
+                                  ),
                                 ),
                               ),
                             ],
@@ -491,38 +584,48 @@ class _SubjectScreenFState extends State<SubjectScreenF> {
                             children: [
                               Padding(
                                 padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
-                                child: Container(
-                                  width: 115,
-                                  height: 150,
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(8),
-                                    image: DecorationImage(
-                                        image: AssetImage(
-                                            'assets/image/book.jfif'),
-                                        fit: BoxFit.cover),
-                                  ),
-                                  child: Stack(children: [
-                                    Align(
-                                      alignment: Alignment.bottomCenter,
-                                      child: Container(
-                                          width: 93,
-                                          height: 9,
-                                          decoration: BoxDecoration(boxShadow: [
-                                            BoxShadow(
-                                              color: Colors.black,
-                                              blurRadius: 15.0,
-                                            )
-                                          ])),
+                                child: GestureDetector(
+                                  onTap: () {
+                                    Navigator.of(context).push(
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                SubLevelScreen()));
+                                  },
+                                  child: Container(
+                                    width: 115,
+                                    height: 150,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(8),
+                                      image: DecorationImage(
+                                          image: AssetImage(
+                                              'assets/image/book.jfif'),
+                                          fit: BoxFit.cover),
                                     ),
-                                    Align(
-                                      alignment: Alignment.bottomLeft,
-                                      child: Text(
-                                        ' Free',
-                                        style: TextStyle(
-                                            color: Colors.white, fontSize: 14),
+                                    child: Stack(children: [
+                                      Align(
+                                        alignment: Alignment.bottomCenter,
+                                        child: Container(
+                                            width: 93,
+                                            height: 9,
+                                            decoration:
+                                                BoxDecoration(boxShadow: [
+                                              BoxShadow(
+                                                color: Colors.black,
+                                                blurRadius: 15.0,
+                                              )
+                                            ])),
                                       ),
-                                    ),
-                                  ]),
+                                      Align(
+                                        alignment: Alignment.bottomLeft,
+                                        child: Text(
+                                          ' Free',
+                                          style: TextStyle(
+                                              color: Colors.white,
+                                              fontSize: 14),
+                                        ),
+                                      ),
+                                    ]),
+                                  ),
                                 ),
                               ),
                             ],
@@ -545,38 +648,48 @@ class _SubjectScreenFState extends State<SubjectScreenF> {
                             children: [
                               Padding(
                                 padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
-                                child: Container(
-                                  width: 115,
-                                  height: 150,
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(8),
-                                    image: DecorationImage(
-                                        image: AssetImage(
-                                            'assets/image/book.jfif'),
-                                        fit: BoxFit.cover),
-                                  ),
-                                  child: Stack(children: [
-                                    Align(
-                                      alignment: Alignment.bottomCenter,
-                                      child: Container(
-                                          width: 93,
-                                          height: 9,
-                                          decoration: BoxDecoration(boxShadow: [
-                                            BoxShadow(
-                                              color: Colors.black,
-                                              blurRadius: 15.0,
-                                            )
-                                          ])),
+                                child: GestureDetector(
+                                  onTap: () {
+                                    Navigator.of(context).push(
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                SubLevelScreen()));
+                                  },
+                                  child: Container(
+                                    width: 115,
+                                    height: 150,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(8),
+                                      image: DecorationImage(
+                                          image: AssetImage(
+                                              'assets/image/book.jfif'),
+                                          fit: BoxFit.cover),
                                     ),
-                                    Align(
-                                      alignment: Alignment.bottomLeft,
-                                      child: Text(
-                                        ' Free',
-                                        style: TextStyle(
-                                            color: Colors.white, fontSize: 14),
+                                    child: Stack(children: [
+                                      Align(
+                                        alignment: Alignment.bottomCenter,
+                                        child: Container(
+                                            width: 93,
+                                            height: 9,
+                                            decoration:
+                                                BoxDecoration(boxShadow: [
+                                              BoxShadow(
+                                                color: Colors.black,
+                                                blurRadius: 15.0,
+                                              )
+                                            ])),
                                       ),
-                                    ),
-                                  ]),
+                                      Align(
+                                        alignment: Alignment.bottomLeft,
+                                        child: Text(
+                                          ' Free',
+                                          style: TextStyle(
+                                              color: Colors.white,
+                                              fontSize: 14),
+                                        ),
+                                      ),
+                                    ]),
+                                  ),
                                 ),
                               ),
                             ],

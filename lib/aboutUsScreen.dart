@@ -139,7 +139,12 @@ class _AboutUsScreenFState extends State<AboutUsScreenF> {
               ),
             ],
           ),
-        )
+        ),
+        IconButton(
+            onPressed: () {
+              Navigator.of(context, rootNavigator: true).pop(context);
+            },
+            icon: Icon(Icons.arrow_back_ios)),
       ])),
     );
   }

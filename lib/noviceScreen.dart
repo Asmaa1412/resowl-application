@@ -1,6 +1,10 @@
 import 'package:favorite_button/favorite_button.dart';
 
 import 'package:flutter/material.dart';
+import 'package:resowl/resourceScreen.dart';
+
+import 'HomeScreen.dart';
+import 'sub-levelScreen.dart';
 
 int indexx = 0;
 
@@ -39,13 +43,22 @@ class _NoviceScreenFState extends State<NoviceScreenF> {
               elevation: 0.0,
               backgroundColor: Color.fromARGB(255, 174, 199, 167),
               leading: IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => SubLevelScreen()));
+                },
                 icon: Icon(Icons.arrow_back_ios),
               ),
               actions: [
-                Image.asset(
-                  'assets/image/5.png',
-                  scale: 2,
+                GestureDetector(
+                  onTap: () {
+                    Navigator.of(context).push(
+                        MaterialPageRoute(builder: (context) => HomeScreen()));
+                  },
+                  child: Image.asset(
+                    'assets/image/5.png',
+                    scale: 2,
+                  ),
                 ),
               ],
             ),
@@ -113,54 +126,42 @@ class _NoviceScreenFState extends State<NoviceScreenF> {
                               children: [
                                 Padding(
                                   padding: EdgeInsets.fromLTRB(4, 50, 0, 0),
-                                  child: Container(
-                                    height: 75,
-                                    width: 345,
-                                    decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(20),
-                                      color: Color.fromARGB(255, 217, 217, 217),
-                                    ),
-                                    child: ListTile(
-                                      leading: Image.asset(
-                                        'assets/image/flutter.png',
-                                        width: 50,
+                                  child: GestureDetector(
+                                    onTap: () {
+                                      Navigator.of(context).push(
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  ResourceSacreen()));
+                                    },
+                                    child: Container(
+                                      height: 75,
+                                      width: 345,
+                                      decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(20),
+                                        color:
+                                            Color.fromARGB(255, 217, 217, 217),
                                       ),
-                                      title: const Text(
-                                        'Book : Flutter Apprentice (First Edition)',
-                                        style: TextStyle(fontSize: 15),
-                                      ),
-                                      subtitle: Text('400 Pages'),
-                                      trailing: Column(
-                                        children: [
-                                          SizedBox(height: 40),
-                                          Text(
-                                            'Free >',
-                                          ),
-                                        ],
+                                      child: ListTile(
+                                        leading: Image.asset(
+                                          'assets/image/flutter.png',
+                                          width: 50,
+                                        ),
+                                        title: const Text(
+                                          'Book : Flutter Apprentice (First Edition)',
+                                          style: TextStyle(fontSize: 15),
+                                        ),
+                                        subtitle: Text('400 Pages'),
+                                        trailing: Column(
+                                          children: [
+                                            SizedBox(height: 40),
+                                            Text(
+                                              'Free >',
+                                            ),
+                                          ],
+                                        ),
                                       ),
                                     ),
                                   ),
-                                ),
-                                Padding(
-                                  padding:
-                                      const EdgeInsets.fromLTRB(324, 37, 0, 0),
-                                  child: Container(
-                                      decoration: BoxDecoration(
-                                          color:
-                                              Color.fromRGBO(245, 236, 224, 1),
-                                          border: Border.all(
-                                            color: Color.fromRGBO(
-                                                245, 236, 224, 1),
-                                          ),
-                                          borderRadius:
-                                              BorderRadius.circular(30)),
-                                      width: 35,
-                                      height: 35,
-                                      child: FavoriteButton(
-                                        iconSize: 30.0,
-                                        isFavorite: true,
-                                        valueChanged: (_isFavorite) {},
-                                      )),
                                 ),
                               ],
                             ),
@@ -168,54 +169,42 @@ class _NoviceScreenFState extends State<NoviceScreenF> {
                               children: [
                                 Padding(
                                   padding: EdgeInsets.fromLTRB(4, 30, 0, 0),
-                                  child: Container(
-                                    height: 75,
-                                    width: 345,
-                                    decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(20),
-                                      color: Color.fromARGB(255, 217, 217, 217),
-                                    ),
-                                    child: ListTile(
-                                      leading: Image.asset(
-                                        'assets/image/flutter.png',
-                                        width: 50,
+                                  child: GestureDetector(
+                                    onTap: () {
+                                      Navigator.of(context).push(
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  ResourceSacreen()));
+                                    },
+                                    child: Container(
+                                      height: 75,
+                                      width: 345,
+                                      decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(20),
+                                        color:
+                                            Color.fromARGB(255, 217, 217, 217),
                                       ),
-                                      title: const Text(
-                                        'Book : Flutter Apprentice (First Edition)',
-                                        style: TextStyle(fontSize: 15),
-                                      ),
-                                      subtitle: Text('400 Pages'),
-                                      trailing: Column(
-                                        children: [
-                                          SizedBox(height: 40),
-                                          Text(
-                                            'Free >',
-                                          ),
-                                        ],
+                                      child: ListTile(
+                                        leading: Image.asset(
+                                          'assets/image/flutter.png',
+                                          width: 50,
+                                        ),
+                                        title: const Text(
+                                          'Book : Flutter Apprentice (First Edition)',
+                                          style: TextStyle(fontSize: 15),
+                                        ),
+                                        subtitle: Text('400 Pages'),
+                                        trailing: Column(
+                                          children: [
+                                            SizedBox(height: 40),
+                                            Text(
+                                              'Free >',
+                                            ),
+                                          ],
+                                        ),
                                       ),
                                     ),
                                   ),
-                                ),
-                                Padding(
-                                  padding:
-                                      const EdgeInsets.fromLTRB(324, 14, 0, 0),
-                                  child: Container(
-                                      decoration: BoxDecoration(
-                                          color:
-                                              Color.fromRGBO(245, 236, 224, 1),
-                                          border: Border.all(
-                                            color: Color.fromRGBO(
-                                                245, 236, 224, 1),
-                                          ),
-                                          borderRadius:
-                                              BorderRadius.circular(30)),
-                                      width: 35,
-                                      height: 35,
-                                      child: FavoriteButton(
-                                        iconSize: 30.0,
-                                        isFavorite: true,
-                                        valueChanged: (_isFavorite) {},
-                                      )),
                                 ),
                               ],
                             ),
@@ -223,54 +212,42 @@ class _NoviceScreenFState extends State<NoviceScreenF> {
                               children: [
                                 Padding(
                                   padding: EdgeInsets.fromLTRB(4, 30, 0, 0),
-                                  child: Container(
-                                    height: 75,
-                                    width: 345,
-                                    decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(20),
-                                      color: Color.fromARGB(255, 217, 217, 217),
-                                    ),
-                                    child: ListTile(
-                                      leading: Image.asset(
-                                        'assets/image/flutter.png',
-                                        width: 50,
+                                  child: GestureDetector(
+                                    onTap: () {
+                                      Navigator.of(context).push(
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  ResourceSacreen()));
+                                    },
+                                    child: Container(
+                                      height: 75,
+                                      width: 345,
+                                      decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(20),
+                                        color:
+                                            Color.fromARGB(255, 217, 217, 217),
                                       ),
-                                      title: const Text(
-                                        'Book : Flutter Apprentice (First Edition)',
-                                        style: TextStyle(fontSize: 15),
-                                      ),
-                                      subtitle: Text('400 Pages'),
-                                      trailing: Column(
-                                        children: [
-                                          SizedBox(height: 40),
-                                          Text(
-                                            'Free >',
-                                          ),
-                                        ],
+                                      child: ListTile(
+                                        leading: Image.asset(
+                                          'assets/image/flutter.png',
+                                          width: 50,
+                                        ),
+                                        title: const Text(
+                                          'Book : Flutter Apprentice (First Edition)',
+                                          style: TextStyle(fontSize: 15),
+                                        ),
+                                        subtitle: Text('400 Pages'),
+                                        trailing: Column(
+                                          children: [
+                                            SizedBox(height: 40),
+                                            Text(
+                                              'Free >',
+                                            ),
+                                          ],
+                                        ),
                                       ),
                                     ),
                                   ),
-                                ),
-                                Padding(
-                                  padding:
-                                      const EdgeInsets.fromLTRB(324, 14, 0, 0),
-                                  child: Container(
-                                      decoration: BoxDecoration(
-                                          color:
-                                              Color.fromRGBO(245, 236, 224, 1),
-                                          border: Border.all(
-                                            color: Color.fromRGBO(
-                                                245, 236, 224, 1),
-                                          ),
-                                          borderRadius:
-                                              BorderRadius.circular(30)),
-                                      width: 35,
-                                      height: 35,
-                                      child: FavoriteButton(
-                                        iconSize: 30.0,
-                                        isFavorite: true,
-                                        valueChanged: (_isFavorite) {},
-                                      )),
                                 ),
                               ],
                             ),
@@ -278,54 +255,42 @@ class _NoviceScreenFState extends State<NoviceScreenF> {
                               children: [
                                 Padding(
                                   padding: EdgeInsets.fromLTRB(4, 30, 0, 0),
-                                  child: Container(
-                                    height: 75,
-                                    width: 345,
-                                    decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(20),
-                                      color: Color.fromARGB(255, 217, 217, 217),
-                                    ),
-                                    child: ListTile(
-                                      leading: Image.asset(
-                                        'assets/image/flutter.png',
-                                        width: 50,
+                                  child: GestureDetector(
+                                    onTap: () {
+                                      Navigator.of(context).push(
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  ResourceSacreen()));
+                                    },
+                                    child: Container(
+                                      height: 75,
+                                      width: 345,
+                                      decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(20),
+                                        color:
+                                            Color.fromARGB(255, 217, 217, 217),
                                       ),
-                                      title: const Text(
-                                        'Book : Flutter Apprentice (First Edition)',
-                                        style: TextStyle(fontSize: 15),
-                                      ),
-                                      subtitle: Text('400 Pages'),
-                                      trailing: Column(
-                                        children: [
-                                          SizedBox(height: 40),
-                                          Text(
-                                            'Free >',
-                                          ),
-                                        ],
+                                      child: ListTile(
+                                        leading: Image.asset(
+                                          'assets/image/flutter.png',
+                                          width: 50,
+                                        ),
+                                        title: const Text(
+                                          'Book : Flutter Apprentice (First Edition)',
+                                          style: TextStyle(fontSize: 15),
+                                        ),
+                                        subtitle: Text('400 Pages'),
+                                        trailing: Column(
+                                          children: [
+                                            SizedBox(height: 40),
+                                            Text(
+                                              'Free >',
+                                            ),
+                                          ],
+                                        ),
                                       ),
                                     ),
                                   ),
-                                ),
-                                Padding(
-                                  padding:
-                                      const EdgeInsets.fromLTRB(324, 14, 0, 0),
-                                  child: Container(
-                                      decoration: BoxDecoration(
-                                          color:
-                                              Color.fromRGBO(245, 236, 224, 1),
-                                          border: Border.all(
-                                            color: Color.fromRGBO(
-                                                245, 236, 224, 1),
-                                          ),
-                                          borderRadius:
-                                              BorderRadius.circular(30)),
-                                      width: 35,
-                                      height: 35,
-                                      child: FavoriteButton(
-                                        iconSize: 30.0,
-                                        isFavorite: true,
-                                        valueChanged: (_isFavorite) {},
-                                      )),
                                 ),
                               ],
                             ),
@@ -333,219 +298,42 @@ class _NoviceScreenFState extends State<NoviceScreenF> {
                               children: [
                                 Padding(
                                   padding: EdgeInsets.fromLTRB(4, 30, 0, 0),
-                                  child: Container(
-                                    height: 75,
-                                    width: 345,
-                                    decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(20),
-                                      color: Color.fromARGB(255, 217, 217, 217),
-                                    ),
-                                    child: ListTile(
-                                      leading: Image.asset(
-                                        'assets/image/flutter.png',
-                                        width: 50,
+                                  child: GestureDetector(
+                                    onTap: () {
+                                      Navigator.of(context).push(
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  ResourceSacreen()));
+                                    },
+                                    child: Container(
+                                      height: 75,
+                                      width: 345,
+                                      decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(20),
+                                        color:
+                                            Color.fromARGB(255, 217, 217, 217),
                                       ),
-                                      title: const Text(
-                                        'Book : Flutter Apprentice (First Edition)',
-                                        style: TextStyle(fontSize: 15),
-                                      ),
-                                      subtitle: Text('400 Pages'),
-                                      trailing: Column(
-                                        children: [
-                                          SizedBox(height: 40),
-                                          Text(
-                                            'Free >',
-                                          ),
-                                        ],
+                                      child: ListTile(
+                                        leading: Image.asset(
+                                          'assets/image/flutter.png',
+                                          width: 50,
+                                        ),
+                                        title: const Text(
+                                          'Book : Flutter Apprentice (First Edition)',
+                                          style: TextStyle(fontSize: 15),
+                                        ),
+                                        subtitle: Text('400 Pages'),
+                                        trailing: Column(
+                                          children: [
+                                            SizedBox(height: 40),
+                                            Text(
+                                              'Free >',
+                                            ),
+                                          ],
+                                        ),
                                       ),
                                     ),
                                   ),
-                                ),
-                                Padding(
-                                  padding:
-                                      const EdgeInsets.fromLTRB(324, 14, 0, 0),
-                                  child: Container(
-                                      decoration: BoxDecoration(
-                                          color:
-                                              Color.fromRGBO(245, 236, 224, 1),
-                                          border: Border.all(
-                                            color: Color.fromRGBO(
-                                                245, 236, 224, 1),
-                                          ),
-                                          borderRadius:
-                                              BorderRadius.circular(30)),
-                                      width: 35,
-                                      height: 35,
-                                      child: FavoriteButton(
-                                        iconSize: 30.0,
-                                        isFavorite: true,
-                                        valueChanged: (_isFavorite) {},
-                                      )),
-                                ),
-                              ],
-                            ),
-                            Stack(
-                              children: [
-                                Padding(
-                                  padding: EdgeInsets.fromLTRB(4, 30, 0, 0),
-                                  child: Container(
-                                    height: 75,
-                                    width: 345,
-                                    decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(20),
-                                      color: Color.fromARGB(255, 217, 217, 217),
-                                    ),
-                                    child: ListTile(
-                                      leading: Image.asset(
-                                        'assets/image/flutter.png',
-                                        width: 50,
-                                      ),
-                                      title: const Text(
-                                        'Book : Flutter Apprentice (First Edition)',
-                                        style: TextStyle(fontSize: 15),
-                                      ),
-                                      subtitle: Text('400 Pages'),
-                                      trailing: Column(
-                                        children: [
-                                          SizedBox(height: 40),
-                                          Text(
-                                            'Free >',
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                                Padding(
-                                  padding:
-                                      const EdgeInsets.fromLTRB(324, 14, 0, 0),
-                                  child: Container(
-                                      decoration: BoxDecoration(
-                                          color:
-                                              Color.fromRGBO(245, 236, 224, 1),
-                                          border: Border.all(
-                                            color: Color.fromRGBO(
-                                                245, 236, 224, 1),
-                                          ),
-                                          borderRadius:
-                                              BorderRadius.circular(30)),
-                                      width: 35,
-                                      height: 35,
-                                      child: FavoriteButton(
-                                        iconSize: 30.0,
-                                        isFavorite: true,
-                                        valueChanged: (_isFavorite) {},
-                                      )),
-                                ),
-                              ],
-                            ),
-                            Stack(
-                              children: [
-                                Padding(
-                                  padding: EdgeInsets.fromLTRB(4, 30, 0, 0),
-                                  child: Container(
-                                    height: 75,
-                                    width: 345,
-                                    decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(20),
-                                      color: Color.fromARGB(255, 217, 217, 217),
-                                    ),
-                                    child: ListTile(
-                                      leading: Image.asset(
-                                        'assets/image/flutter.png',
-                                        width: 50,
-                                      ),
-                                      title: const Text(
-                                        'Book : Flutter Apprentice (First Edition)',
-                                        style: TextStyle(fontSize: 15),
-                                      ),
-                                      subtitle: Text('400 Pages'),
-                                      trailing: Column(
-                                        children: [
-                                          SizedBox(height: 40),
-                                          Text(
-                                            'Free >',
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                                Padding(
-                                  padding:
-                                      const EdgeInsets.fromLTRB(324, 14, 0, 0),
-                                  child: Container(
-                                      decoration: BoxDecoration(
-                                          color:
-                                              Color.fromRGBO(245, 236, 224, 1),
-                                          border: Border.all(
-                                            color: Color.fromRGBO(
-                                                245, 236, 224, 1),
-                                          ),
-                                          borderRadius:
-                                              BorderRadius.circular(30)),
-                                      width: 35,
-                                      height: 35,
-                                      child: FavoriteButton(
-                                        iconSize: 30.0,
-                                        isFavorite: true,
-                                        valueChanged: (_isFavorite) {},
-                                      )),
-                                ),
-                              ],
-                            ),
-                            Stack(
-                              children: [
-                                Padding(
-                                  padding: EdgeInsets.fromLTRB(4, 30, 0, 0),
-                                  child: Container(
-                                    height: 75,
-                                    width: 345,
-                                    decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(20),
-                                      color: Color.fromARGB(255, 217, 217, 217),
-                                    ),
-                                    child: ListTile(
-                                      leading: Image.asset(
-                                        'assets/image/flutter.png',
-                                        width: 50,
-                                      ),
-                                      title: const Text(
-                                        'Book : Flutter Apprentice (First Edition)',
-                                        style: TextStyle(fontSize: 15),
-                                      ),
-                                      subtitle: Text('400 Pages'),
-                                      trailing: Column(
-                                        children: [
-                                          SizedBox(height: 40),
-                                          Text(
-                                            'Free >',
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                                Padding(
-                                  padding:
-                                      const EdgeInsets.fromLTRB(324, 14, 0, 0),
-                                  child: Container(
-                                      decoration: BoxDecoration(
-                                          color:
-                                              Color.fromRGBO(245, 236, 224, 1),
-                                          border: Border.all(
-                                            color: Color.fromRGBO(
-                                                245, 236, 224, 1),
-                                          ),
-                                          borderRadius:
-                                              BorderRadius.circular(30)),
-                                      width: 35,
-                                      height: 35,
-                                      child: FavoriteButton(
-                                        iconSize: 30.0,
-                                        isFavorite: true,
-                                        valueChanged: (_isFavorite) {},
-                                      )),
                                 ),
                               ],
                             ),

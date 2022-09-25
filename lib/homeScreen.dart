@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:resowl/aboutUsScreen.dart';
+
+import 'resourceScreen.dart';
+import 'sub-levelScreen.dart';
+import 'subjectSreen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -27,14 +32,16 @@ class _HomeScreenFState extends State<HomeScreenF> {
         child: Scaffold(
             appBar: AppBar(
               backgroundColor: Color.fromARGB(255, 255, 252, 242),
-              leading: IconButton(
-                onPressed: () {},
-                icon: Icon(Icons.list),
-              ),
               actions: [
-                Image.asset(
-                  'assets/image/comp.png',
-                  scale: 2,
+                GestureDetector(
+                  onTap: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => AboutUsScreen()));
+                  },
+                  child: Image.asset(
+                    'assets/image/5.png',
+                    scale: 2,
+                  ),
                 ),
               ],
             ),
@@ -79,16 +86,22 @@ class _HomeScreenFState extends State<HomeScreenF> {
                         ),
                         Padding(
                           padding: const EdgeInsets.fromLTRB(18, 60, 0, 0),
-                          child: Container(
-                              width: 120,
-                              height: 120,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(12),
-                                image: DecorationImage(
-                                    image:
-                                        AssetImage('assets/image/flutter.png'),
-                                    fit: BoxFit.cover),
-                              )),
+                          child: GestureDetector(
+                            onTap: () {
+                              Navigator.of(context).push(MaterialPageRoute(
+                                  builder: (context) => SubLevelScreen()));
+                            },
+                            child: Container(
+                                width: 120,
+                                height: 120,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(12),
+                                  image: DecorationImage(
+                                      image: AssetImage(
+                                          'assets/image/flutter.png'),
+                                      fit: BoxFit.cover),
+                                )),
+                          ),
                         ),
                         Padding(
                           padding: const EdgeInsets.fromLTRB(245, 60, 0, 0),
@@ -96,7 +109,10 @@ class _HomeScreenFState extends State<HomeScreenF> {
                               width: 120,
                               height: 120,
                               child: IconButton(
-                                onPressed: () {},
+                                onPressed: () {
+                                  Navigator.of(context).push(MaterialPageRoute(
+                                      builder: (context) => SubLevelScreen()));
+                                },
                                 icon: Icon(
                                   Icons.chevron_right_sharp,
                                   color: Colors.white,
@@ -146,7 +162,10 @@ class _HomeScreenFState extends State<HomeScreenF> {
                             Padding(
                               padding: const EdgeInsets.fromLTRB(150, 10, 0, 0),
                               child: TextButton(
-                                onPressed: () {},
+                                onPressed: () {
+                                  Navigator.of(context).push(MaterialPageRoute(
+                                      builder: (context) => SubjectScreen()));
+                                },
                                 child: Text(
                                   'See More >',
                                   style: TextStyle(
@@ -171,44 +190,50 @@ class _HomeScreenFState extends State<HomeScreenF> {
                           children: [
                             Padding(
                               padding: EdgeInsets.fromLTRB(13, 10, 0, 0),
-                              child: Container(
-                                width: 93,
-                                height: 110,
-                                decoration: BoxDecoration(
-                                  boxShadow: [
-                                    BoxShadow(
-                                        color: Color(0xffDDDDDD),
-                                        offset: Offset(0.0, 0.0),
-                                        blurRadius: 6.0,
-                                        spreadRadius: 2.0),
-                                  ],
-                                  image: DecorationImage(
-                                      image: AssetImage(
-                                          'assets/image/flutter.png'),
-                                      fit: BoxFit.cover),
-                                ),
-                                child: Stack(children: [
-                                  Align(
-                                    alignment: Alignment.bottomCenter,
-                                    child: Container(
-                                        width: 93,
-                                        height: 9,
-                                        decoration: BoxDecoration(boxShadow: [
-                                          BoxShadow(
-                                            color: Colors.black,
-                                            blurRadius: 15.0,
-                                          )
-                                        ])),
+                              child: GestureDetector(
+                                onTap: () {
+                                  Navigator.of(context).push(MaterialPageRoute(
+                                      builder: (context) => SubLevelScreen()));
+                                },
+                                child: Container(
+                                  width: 93,
+                                  height: 110,
+                                  decoration: BoxDecoration(
+                                    boxShadow: [
+                                      BoxShadow(
+                                          color: Color(0xffDDDDDD),
+                                          offset: Offset(0.0, 0.0),
+                                          blurRadius: 6.0,
+                                          spreadRadius: 2.0),
+                                    ],
+                                    image: DecorationImage(
+                                        image:
+                                            AssetImage('assets/image/git.png'),
+                                        fit: BoxFit.cover),
                                   ),
-                                  Align(
-                                    alignment: Alignment.bottomCenter,
-                                    child: Text(
-                                      'Flutter Sub',
-                                      style: TextStyle(
-                                          color: Colors.white, fontSize: 14),
+                                  child: Stack(children: [
+                                    Align(
+                                      alignment: Alignment.bottomCenter,
+                                      child: Container(
+                                          width: 93,
+                                          height: 9,
+                                          decoration: BoxDecoration(boxShadow: [
+                                            BoxShadow(
+                                              color: Colors.black,
+                                              blurRadius: 15.0,
+                                            )
+                                          ])),
                                     ),
-                                  ),
-                                ]),
+                                    Align(
+                                      alignment: Alignment.bottomCenter,
+                                      child: Text(
+                                        'Flutter Sub',
+                                        style: TextStyle(
+                                            color: Colors.white, fontSize: 14),
+                                      ),
+                                    ),
+                                  ]),
+                                ),
                               ),
                             ),
                           ],
@@ -220,44 +245,50 @@ class _HomeScreenFState extends State<HomeScreenF> {
                           children: [
                             Padding(
                               padding: EdgeInsets.fromLTRB(13, 10, 0, 0),
-                              child: Container(
-                                width: 93,
-                                height: 110,
-                                decoration: BoxDecoration(
-                                  boxShadow: [
-                                    BoxShadow(
-                                        color: Color(0xffDDDDDD),
-                                        offset: Offset(0.0, 0.0),
-                                        blurRadius: 6.0,
-                                        spreadRadius: 2.0),
-                                  ],
-                                  image: DecorationImage(
-                                      image: AssetImage(
-                                          'assets/image/flutter.png'),
-                                      fit: BoxFit.cover),
-                                ),
-                                child: Stack(children: [
-                                  Align(
-                                    alignment: Alignment.bottomCenter,
-                                    child: Container(
-                                        width: 93,
-                                        height: 9,
-                                        decoration: BoxDecoration(boxShadow: [
-                                          BoxShadow(
-                                            color: Colors.black,
-                                            blurRadius: 15.0,
-                                          )
-                                        ])),
+                              child: GestureDetector(
+                                onTap: () {
+                                  Navigator.of(context).push(MaterialPageRoute(
+                                      builder: (context) => SubLevelScreen()));
+                                },
+                                child: Container(
+                                  width: 93,
+                                  height: 110,
+                                  decoration: BoxDecoration(
+                                    boxShadow: [
+                                      BoxShadow(
+                                          color: Color(0xffDDDDDD),
+                                          offset: Offset(0.0, 0.0),
+                                          blurRadius: 6.0,
+                                          spreadRadius: 2.0),
+                                    ],
+                                    image: DecorationImage(
+                                        image:
+                                            AssetImage('assets/image/c++.png'),
+                                        fit: BoxFit.cover),
                                   ),
-                                  Align(
-                                    alignment: Alignment.bottomCenter,
-                                    child: Text(
-                                      'Flutter Sub',
-                                      style: TextStyle(
-                                          color: Colors.white, fontSize: 14),
+                                  child: Stack(children: [
+                                    Align(
+                                      alignment: Alignment.bottomCenter,
+                                      child: Container(
+                                          width: 93,
+                                          height: 9,
+                                          decoration: BoxDecoration(boxShadow: [
+                                            BoxShadow(
+                                              color: Colors.black,
+                                              blurRadius: 15.0,
+                                            )
+                                          ])),
                                     ),
-                                  ),
-                                ]),
+                                    Align(
+                                      alignment: Alignment.bottomCenter,
+                                      child: Text(
+                                        'Flutter Sub',
+                                        style: TextStyle(
+                                            color: Colors.white, fontSize: 14),
+                                      ),
+                                    ),
+                                  ]),
+                                ),
                               ),
                             ),
                           ],
@@ -269,44 +300,50 @@ class _HomeScreenFState extends State<HomeScreenF> {
                           children: [
                             Padding(
                               padding: EdgeInsets.fromLTRB(13, 10, 0, 0),
-                              child: Container(
-                                width: 93,
-                                height: 110,
-                                decoration: BoxDecoration(
-                                  boxShadow: [
-                                    BoxShadow(
-                                        color: Color(0xffDDDDDD),
-                                        offset: Offset(0.0, 0.0),
-                                        blurRadius: 6.0,
-                                        spreadRadius: 2.0),
-                                  ],
-                                  image: DecorationImage(
-                                      image: AssetImage(
-                                          'assets/image/flutter.png'),
-                                      fit: BoxFit.cover),
-                                ),
-                                child: Stack(children: [
-                                  Align(
-                                    alignment: Alignment.bottomCenter,
-                                    child: Container(
-                                        width: 93,
-                                        height: 9,
-                                        decoration: BoxDecoration(boxShadow: [
-                                          BoxShadow(
-                                            color: Colors.black,
-                                            blurRadius: 15.0,
-                                          )
-                                        ])),
+                              child: GestureDetector(
+                                onTap: () {
+                                  Navigator.of(context).push(MaterialPageRoute(
+                                      builder: (context) => SubLevelScreen()));
+                                },
+                                child: Container(
+                                  width: 93,
+                                  height: 110,
+                                  decoration: BoxDecoration(
+                                    boxShadow: [
+                                      BoxShadow(
+                                          color: Color(0xffDDDDDD),
+                                          offset: Offset(0.0, 0.0),
+                                          blurRadius: 6.0,
+                                          spreadRadius: 2.0),
+                                    ],
+                                    image: DecorationImage(
+                                        image:
+                                            AssetImage('assets/image/c#.png'),
+                                        fit: BoxFit.cover),
                                   ),
-                                  Align(
-                                    alignment: Alignment.bottomCenter,
-                                    child: Text(
-                                      'Flutter Sub',
-                                      style: TextStyle(
-                                          color: Colors.white, fontSize: 14),
+                                  child: Stack(children: [
+                                    Align(
+                                      alignment: Alignment.bottomCenter,
+                                      child: Container(
+                                          width: 93,
+                                          height: 9,
+                                          decoration: BoxDecoration(boxShadow: [
+                                            BoxShadow(
+                                              color: Colors.black,
+                                              blurRadius: 15.0,
+                                            )
+                                          ])),
                                     ),
-                                  ),
-                                ]),
+                                    Align(
+                                      alignment: Alignment.bottomCenter,
+                                      child: Text(
+                                        'Flutter Sub',
+                                        style: TextStyle(
+                                            color: Colors.white, fontSize: 14),
+                                      ),
+                                    ),
+                                  ]),
+                                ),
                               ),
                             ),
                           ],
@@ -318,44 +355,50 @@ class _HomeScreenFState extends State<HomeScreenF> {
                           children: [
                             Padding(
                               padding: EdgeInsets.fromLTRB(13, 10, 0, 0),
-                              child: Container(
-                                width: 93,
-                                height: 110,
-                                decoration: BoxDecoration(
-                                  boxShadow: [
-                                    BoxShadow(
-                                        color: Color(0xffDDDDDD),
-                                        offset: Offset(0.0, 0.0),
-                                        blurRadius: 6.0,
-                                        spreadRadius: 2.0),
-                                  ],
-                                  image: DecorationImage(
-                                      image: AssetImage(
-                                          'assets/image/flutter.png'),
-                                      fit: BoxFit.cover),
-                                ),
-                                child: Stack(children: [
-                                  Align(
-                                    alignment: Alignment.bottomCenter,
-                                    child: Container(
-                                        width: 93,
-                                        height: 9,
-                                        decoration: BoxDecoration(boxShadow: [
-                                          BoxShadow(
-                                            color: Colors.black,
-                                            blurRadius: 15.0,
-                                          )
-                                        ])),
+                              child: GestureDetector(
+                                onTap: () {
+                                  Navigator.of(context).push(MaterialPageRoute(
+                                      builder: (context) => SubLevelScreen()));
+                                },
+                                child: Container(
+                                  width: 93,
+                                  height: 110,
+                                  decoration: BoxDecoration(
+                                    boxShadow: [
+                                      BoxShadow(
+                                          color: Color(0xffDDDDDD),
+                                          offset: Offset(0.0, 0.0),
+                                          blurRadius: 6.0,
+                                          spreadRadius: 2.0),
+                                    ],
+                                    image: DecorationImage(
+                                        image: AssetImage(
+                                            'assets/image/python.png'),
+                                        fit: BoxFit.cover),
                                   ),
-                                  Align(
-                                    alignment: Alignment.bottomCenter,
-                                    child: Text(
-                                      'Flutter Sub',
-                                      style: TextStyle(
-                                          color: Colors.white, fontSize: 14),
+                                  child: Stack(children: [
+                                    Align(
+                                      alignment: Alignment.bottomCenter,
+                                      child: Container(
+                                          width: 93,
+                                          height: 9,
+                                          decoration: BoxDecoration(boxShadow: [
+                                            BoxShadow(
+                                              color: Colors.black,
+                                              blurRadius: 15.0,
+                                            )
+                                          ])),
                                     ),
-                                  ),
-                                ]),
+                                    Align(
+                                      alignment: Alignment.bottomCenter,
+                                      child: Text(
+                                        'Flutter Sub',
+                                        style: TextStyle(
+                                            color: Colors.white, fontSize: 14),
+                                      ),
+                                    ),
+                                  ]),
+                                ),
                               ),
                             ),
                           ],
@@ -403,7 +446,12 @@ class _HomeScreenFState extends State<HomeScreenF> {
                                         padding: const EdgeInsets.fromLTRB(
                                             150, 10, 0, 0),
                                         child: TextButton(
-                                          onPressed: () {},
+                                          onPressed: () {
+                                            Navigator.of(context).push(
+                                                MaterialPageRoute(
+                                                    builder: (context) =>
+                                                        SubjectScreen()));
+                                          },
                                           child: Text(
                                             'See More >',
                                             style: TextStyle(
@@ -430,46 +478,56 @@ class _HomeScreenFState extends State<HomeScreenF> {
                                       Padding(
                                         padding:
                                             EdgeInsets.fromLTRB(13, 10, 0, 0),
-                                        child: Container(
-                                          width: 93,
-                                          height: 110,
-                                          decoration: BoxDecoration(
-                                            boxShadow: [
-                                              BoxShadow(
-                                                  color: Color(0xffDDDDDD),
-                                                  offset: Offset(0.0, 0.0),
-                                                  blurRadius: 6.0,
-                                                  spreadRadius: 2.0),
-                                            ],
-                                            image: DecorationImage(
-                                                image: AssetImage(
-                                                    'assets/image/flutter.png'),
-                                                fit: BoxFit.cover),
-                                          ),
-                                          child: Stack(children: [
-                                            Align(
-                                              alignment: Alignment.bottomCenter,
-                                              child: Container(
-                                                  width: 93,
-                                                  height: 9,
-                                                  decoration:
-                                                      BoxDecoration(boxShadow: [
-                                                    BoxShadow(
-                                                      color: Colors.black,
-                                                      blurRadius: 15.0,
-                                                    )
-                                                  ])),
+                                        child: GestureDetector(
+                                          onTap: () {
+                                            Navigator.of(context).push(
+                                                MaterialPageRoute(
+                                                    builder: (context) =>
+                                                        SubLevelScreen()));
+                                          },
+                                          child: Container(
+                                            width: 93,
+                                            height: 110,
+                                            decoration: BoxDecoration(
+                                              boxShadow: [
+                                                BoxShadow(
+                                                    color: Color(0xffDDDDDD),
+                                                    offset: Offset(0.0, 0.0),
+                                                    blurRadius: 6.0,
+                                                    spreadRadius: 2.0),
+                                              ],
+                                              image: DecorationImage(
+                                                  image: AssetImage(
+                                                      'assets/image/python.png'),
+                                                  fit: BoxFit.cover),
                                             ),
-                                            Align(
-                                              alignment: Alignment.bottomCenter,
-                                              child: Text(
-                                                'Flutter Sub',
-                                                style: TextStyle(
-                                                    color: Colors.white,
-                                                    fontSize: 14),
+                                            child: Stack(children: [
+                                              Align(
+                                                alignment:
+                                                    Alignment.bottomCenter,
+                                                child: Container(
+                                                    width: 93,
+                                                    height: 9,
+                                                    decoration: BoxDecoration(
+                                                        boxShadow: [
+                                                          BoxShadow(
+                                                            color: Colors.black,
+                                                            blurRadius: 15.0,
+                                                          )
+                                                        ])),
                                               ),
-                                            ),
-                                          ]),
+                                              Align(
+                                                alignment:
+                                                    Alignment.bottomCenter,
+                                                child: Text(
+                                                  'Flutter Sub',
+                                                  style: TextStyle(
+                                                      color: Colors.white,
+                                                      fontSize: 14),
+                                                ),
+                                              ),
+                                            ]),
+                                          ),
                                         ),
                                       ),
                                     ],
@@ -482,46 +540,56 @@ class _HomeScreenFState extends State<HomeScreenF> {
                                       Padding(
                                         padding:
                                             EdgeInsets.fromLTRB(13, 10, 0, 0),
-                                        child: Container(
-                                          width: 93,
-                                          height: 110,
-                                          decoration: BoxDecoration(
-                                            boxShadow: [
-                                              BoxShadow(
-                                                  color: Color(0xffDDDDDD),
-                                                  offset: Offset(0.0, 0.0),
-                                                  blurRadius: 6.0,
-                                                  spreadRadius: 2.0),
-                                            ],
-                                            image: DecorationImage(
-                                                image: AssetImage(
-                                                    'assets/image/flutter.png'),
-                                                fit: BoxFit.cover),
-                                          ),
-                                          child: Stack(children: [
-                                            Align(
-                                              alignment: Alignment.bottomCenter,
-                                              child: Container(
-                                                  width: 93,
-                                                  height: 9,
-                                                  decoration:
-                                                      BoxDecoration(boxShadow: [
-                                                    BoxShadow(
-                                                      color: Colors.black,
-                                                      blurRadius: 15.0,
-                                                    )
-                                                  ])),
+                                        child: GestureDetector(
+                                          onTap: () {
+                                            Navigator.of(context).push(
+                                                MaterialPageRoute(
+                                                    builder: (context) =>
+                                                        SubLevelScreen()));
+                                          },
+                                          child: Container(
+                                            width: 93,
+                                            height: 110,
+                                            decoration: BoxDecoration(
+                                              boxShadow: [
+                                                BoxShadow(
+                                                    color: Color(0xffDDDDDD),
+                                                    offset: Offset(0.0, 0.0),
+                                                    blurRadius: 6.0,
+                                                    spreadRadius: 2.0),
+                                              ],
+                                              image: DecorationImage(
+                                                  image: AssetImage(
+                                                      'assets/image/c++.png'),
+                                                  fit: BoxFit.cover),
                                             ),
-                                            Align(
-                                              alignment: Alignment.bottomCenter,
-                                              child: Text(
-                                                'Flutter Sub',
-                                                style: TextStyle(
-                                                    color: Colors.white,
-                                                    fontSize: 14),
+                                            child: Stack(children: [
+                                              Align(
+                                                alignment:
+                                                    Alignment.bottomCenter,
+                                                child: Container(
+                                                    width: 93,
+                                                    height: 9,
+                                                    decoration: BoxDecoration(
+                                                        boxShadow: [
+                                                          BoxShadow(
+                                                            color: Colors.black,
+                                                            blurRadius: 15.0,
+                                                          )
+                                                        ])),
                                               ),
-                                            ),
-                                          ]),
+                                              Align(
+                                                alignment:
+                                                    Alignment.bottomCenter,
+                                                child: Text(
+                                                  'Flutter Sub',
+                                                  style: TextStyle(
+                                                      color: Colors.white,
+                                                      fontSize: 14),
+                                                ),
+                                              ),
+                                            ]),
+                                          ),
                                         ),
                                       ),
                                     ],
@@ -534,46 +602,56 @@ class _HomeScreenFState extends State<HomeScreenF> {
                                       Padding(
                                         padding:
                                             EdgeInsets.fromLTRB(13, 10, 0, 0),
-                                        child: Container(
-                                          width: 93,
-                                          height: 110,
-                                          decoration: BoxDecoration(
-                                            boxShadow: [
-                                              BoxShadow(
-                                                  color: Color(0xffDDDDDD),
-                                                  offset: Offset(0.0, 0.0),
-                                                  blurRadius: 6.0,
-                                                  spreadRadius: 2.0),
-                                            ],
-                                            image: DecorationImage(
-                                                image: AssetImage(
-                                                    'assets/image/flutter.png'),
-                                                fit: BoxFit.cover),
-                                          ),
-                                          child: Stack(children: [
-                                            Align(
-                                              alignment: Alignment.bottomCenter,
-                                              child: Container(
-                                                  width: 93,
-                                                  height: 9,
-                                                  decoration:
-                                                      BoxDecoration(boxShadow: [
-                                                    BoxShadow(
-                                                      color: Colors.black,
-                                                      blurRadius: 15.0,
-                                                    )
-                                                  ])),
+                                        child: GestureDetector(
+                                          onTap: () {
+                                            Navigator.of(context).push(
+                                                MaterialPageRoute(
+                                                    builder: (context) =>
+                                                        SubLevelScreen()));
+                                          },
+                                          child: Container(
+                                            width: 93,
+                                            height: 110,
+                                            decoration: BoxDecoration(
+                                              boxShadow: [
+                                                BoxShadow(
+                                                    color: Color(0xffDDDDDD),
+                                                    offset: Offset(0.0, 0.0),
+                                                    blurRadius: 6.0,
+                                                    spreadRadius: 2.0),
+                                              ],
+                                              image: DecorationImage(
+                                                  image: AssetImage(
+                                                      'assets/image/c#.png'),
+                                                  fit: BoxFit.cover),
                                             ),
-                                            Align(
-                                              alignment: Alignment.bottomCenter,
-                                              child: Text(
-                                                'Flutter Sub',
-                                                style: TextStyle(
-                                                    color: Colors.white,
-                                                    fontSize: 14),
+                                            child: Stack(children: [
+                                              Align(
+                                                alignment:
+                                                    Alignment.bottomCenter,
+                                                child: Container(
+                                                    width: 93,
+                                                    height: 9,
+                                                    decoration: BoxDecoration(
+                                                        boxShadow: [
+                                                          BoxShadow(
+                                                            color: Colors.black,
+                                                            blurRadius: 15.0,
+                                                          )
+                                                        ])),
                                               ),
-                                            ),
-                                          ]),
+                                              Align(
+                                                alignment:
+                                                    Alignment.bottomCenter,
+                                                child: Text(
+                                                  'Flutter Sub',
+                                                  style: TextStyle(
+                                                      color: Colors.white,
+                                                      fontSize: 14),
+                                                ),
+                                              ),
+                                            ]),
+                                          ),
                                         ),
                                       ),
                                     ],
@@ -586,46 +664,56 @@ class _HomeScreenFState extends State<HomeScreenF> {
                                       Padding(
                                         padding:
                                             EdgeInsets.fromLTRB(13, 10, 0, 0),
-                                        child: Container(
-                                          width: 93,
-                                          height: 110,
-                                          decoration: BoxDecoration(
-                                            boxShadow: [
-                                              BoxShadow(
-                                                  color: Color(0xffDDDDDD),
-                                                  offset: Offset(0.0, 0.0),
-                                                  blurRadius: 6.0,
-                                                  spreadRadius: 2.0),
-                                            ],
-                                            image: DecorationImage(
-                                                image: AssetImage(
-                                                    'assets/image/flutter.png'),
-                                                fit: BoxFit.cover),
-                                          ),
-                                          child: Stack(children: [
-                                            Align(
-                                              alignment: Alignment.bottomCenter,
-                                              child: Container(
-                                                  width: 93,
-                                                  height: 9,
-                                                  decoration:
-                                                      BoxDecoration(boxShadow: [
-                                                    BoxShadow(
-                                                      color: Colors.black,
-                                                      blurRadius: 15.0,
-                                                    )
-                                                  ])),
+                                        child: GestureDetector(
+                                          onTap: () {
+                                            Navigator.of(context).push(
+                                                MaterialPageRoute(
+                                                    builder: (context) =>
+                                                        SubLevelScreen()));
+                                          },
+                                          child: Container(
+                                            width: 93,
+                                            height: 110,
+                                            decoration: BoxDecoration(
+                                              boxShadow: [
+                                                BoxShadow(
+                                                    color: Color(0xffDDDDDD),
+                                                    offset: Offset(0.0, 0.0),
+                                                    blurRadius: 6.0,
+                                                    spreadRadius: 2.0),
+                                              ],
+                                              image: DecorationImage(
+                                                  image: AssetImage(
+                                                      'assets/image/c++.png'),
+                                                  fit: BoxFit.cover),
                                             ),
-                                            Align(
-                                              alignment: Alignment.bottomCenter,
-                                              child: Text(
-                                                'Flutter Sub',
-                                                style: TextStyle(
-                                                    color: Colors.white,
-                                                    fontSize: 14),
+                                            child: Stack(children: [
+                                              Align(
+                                                alignment:
+                                                    Alignment.bottomCenter,
+                                                child: Container(
+                                                    width: 93,
+                                                    height: 9,
+                                                    decoration: BoxDecoration(
+                                                        boxShadow: [
+                                                          BoxShadow(
+                                                            color: Colors.black,
+                                                            blurRadius: 15.0,
+                                                          )
+                                                        ])),
                                               ),
-                                            ),
-                                          ]),
+                                              Align(
+                                                alignment:
+                                                    Alignment.bottomCenter,
+                                                child: Text(
+                                                  'Flutter Sub',
+                                                  style: TextStyle(
+                                                      color: Colors.white,
+                                                      fontSize: 14),
+                                                ),
+                                              ),
+                                            ]),
+                                          ),
                                         ),
                                       ),
                                     ],
@@ -643,4 +731,3 @@ class _HomeScreenFState extends State<HomeScreenF> {
             )));
   }
 }
-

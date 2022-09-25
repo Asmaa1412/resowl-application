@@ -2,6 +2,10 @@ import 'dart:ffi';
 
 import 'package:flutter/material.dart';
 
+import 'HomeScreen.dart';
+import 'noviceScreen.dart';
+import 'subjectSreen.dart';
+
 class SubLevelScreen extends StatelessWidget {
   const SubLevelScreen({Key? key}) : super(key: key);
 
@@ -31,13 +35,22 @@ class _SubLevelScreenFState extends State<SubLevelScreenF> {
               elevation: 0.0,
               backgroundColor: Color.fromARGB(255, 174, 199, 167),
               leading: IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => SubjectScreen()));
+                },
                 icon: Icon(Icons.arrow_back_ios),
               ),
               actions: [
-                Image.asset(
-                  'assets/image/5.png',
-                  scale: 2,
+                GestureDetector(
+                  onTap: () {
+                    Navigator.of(context).push(
+                        MaterialPageRoute(builder: (context) => HomeScreen()));
+                  },
+                  child: Image.asset(
+                    'assets/image/5.png',
+                    scale: 2,
+                  ),
                 ),
               ],
             ),
@@ -89,135 +102,167 @@ class _SubLevelScreenFState extends State<SubLevelScreenF> {
                       child: ListView(
                           padding: EdgeInsets.fromLTRB(24, 45, 24, 10),
                           children: [
-                            Container(
-                                height: 100,
-                                decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(20),
-                                    color: Color.fromARGB(255, 217, 217, 217)),
-                                child: Row(
-                                  children: [
-                                    SizedBox(
-                                      width: 20,
-                                    ),
-                                    ClipRRect(
-                                        borderRadius: BorderRadius.circular(20),
-                                        child: Image.asset(
-                                          'assets/image/flutter.png',
-                                          width: 80,
-                                          height: 80,
-                                        )),
-                                    SizedBox(
-                                      width: 53,
-                                    ),
-                                    Text(
-                                      'Road Map',
-                                      style: TextStyle(
-                                          fontSize: 25,
-                                          fontWeight: FontWeight.w300,
-                                          color:
-                                              Color.fromARGB(255, 44, 70, 84)),
-                                    )
-                                  ],
-                                )),
+                            GestureDetector(
+                              onTap: () {
+                                Navigator.of(context).push(MaterialPageRoute(
+                                    builder: (context) => NoviceScreen()));
+                              },
+                              child: Container(
+                                  height: 100,
+                                  decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(20),
+                                      color:
+                                          Color.fromARGB(255, 217, 217, 217)),
+                                  child: Row(
+                                    children: [
+                                      SizedBox(
+                                        width: 20,
+                                      ),
+                                      ClipRRect(
+                                          borderRadius:
+                                              BorderRadius.circular(20),
+                                          child: Image.asset(
+                                            'assets/image/flutter.png',
+                                            width: 80,
+                                            height: 80,
+                                          )),
+                                      SizedBox(
+                                        width: 53,
+                                      ),
+                                      Text(
+                                        'Road Map',
+                                        style: TextStyle(
+                                            fontSize: 25,
+                                            fontWeight: FontWeight.w300,
+                                            color: Color.fromARGB(
+                                                255, 44, 70, 84)),
+                                      )
+                                    ],
+                                  )),
+                            ),
                             SizedBox(
                               height: 25,
                             ),
-                            Container(
-                                height: 100,
-                                decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(20),
-                                    color: Color.fromARGB(255, 217, 217, 217)),
-                                child: Row(
-                                  children: [
-                                    SizedBox(
-                                      width: 20,
-                                    ),
-                                    ClipRRect(
-                                        borderRadius: BorderRadius.circular(20),
-                                        child: Image.asset(
-                                          'assets/image/flutter.png',
-                                          width: 80,
-                                          height: 80,
-                                        )),
-                                    SizedBox(
-                                      width: 53,
-                                    ),
-                                    Text(
-                                      'Novice',
-                                      style: TextStyle(
-                                          fontSize: 25,
-                                          fontWeight: FontWeight.w300,
-                                          color:
-                                              Color.fromARGB(255, 44, 70, 84)),
-                                    )
-                                  ],
-                                )),
+                            GestureDetector(
+                              onTap: () {
+                                Navigator.of(context).push(MaterialPageRoute(
+                                    builder: (context) => NoviceScreen()));
+                              },
+                              child: Container(
+                                  height: 100,
+                                  decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(20),
+                                      color:
+                                          Color.fromARGB(255, 217, 217, 217)),
+                                  child: Row(
+                                    children: [
+                                      SizedBox(
+                                        width: 20,
+                                      ),
+                                      ClipRRect(
+                                          borderRadius:
+                                              BorderRadius.circular(20),
+                                          child: Image.asset(
+                                            'assets/image/flutter.png',
+                                            width: 80,
+                                            height: 80,
+                                          )),
+                                      SizedBox(
+                                        width: 53,
+                                      ),
+                                      Text(
+                                        'Novice',
+                                        style: TextStyle(
+                                            fontSize: 25,
+                                            fontWeight: FontWeight.w300,
+                                            color: Color.fromARGB(
+                                                255, 44, 70, 84)),
+                                      )
+                                    ],
+                                  )),
+                            ),
                             SizedBox(
                               height: 25,
                             ),
-                            Container(
-                                height: 100,
-                                decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(20),
-                                    color: Color.fromARGB(255, 217, 217, 217)),
-                                child: Row(
-                                  children: [
-                                    SizedBox(
-                                      width: 20,
-                                    ),
-                                    ClipRRect(
-                                        borderRadius: BorderRadius.circular(20),
-                                        child: Image.asset(
-                                          'assets/image/flutter.png',
-                                          width: 80,
-                                          height: 80,
-                                        )),
-                                    SizedBox(
-                                      width: 53,
-                                    ),
-                                    Text(
-                                      'Adv-Beginner',
-                                      style: TextStyle(
-                                          fontSize: 25,
-                                          fontWeight: FontWeight.w300,
-                                          color:
-                                              Color.fromARGB(255, 44, 70, 84)),
-                                    )
-                                  ],
-                                )),
+                            GestureDetector(
+                              onTap: () {
+                                Navigator.of(context).push(MaterialPageRoute(
+                                    builder: (context) => NoviceScreen()));
+                              },
+                              child: Container(
+                                  height: 100,
+                                  decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(20),
+                                      color:
+                                          Color.fromARGB(255, 217, 217, 217)),
+                                  child: Row(
+                                    children: [
+                                      SizedBox(
+                                        width: 20,
+                                      ),
+                                      ClipRRect(
+                                          borderRadius:
+                                              BorderRadius.circular(20),
+                                          child: Image.asset(
+                                            'assets/image/flutter.png',
+                                            width: 80,
+                                            height: 80,
+                                          )),
+                                      SizedBox(
+                                        width: 53,
+                                      ),
+                                      Text(
+                                        'Adv-Beginner',
+                                        style: TextStyle(
+                                            fontSize: 25,
+                                            fontWeight: FontWeight.w300,
+                                            color: Color.fromARGB(
+                                                255, 44, 70, 84)),
+                                      )
+                                    ],
+                                  )),
+                            ),
                             SizedBox(
                               height: 25,
                             ),
-                            Container(
-                                height: 100,
-                                decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(20),
-                                    color: Color.fromARGB(255, 217, 217, 217)),
-                                child: Row(
-                                  children: [
-                                    SizedBox(
-                                      width: 20,
-                                    ),
-                                    ClipRRect(
-                                        borderRadius: BorderRadius.circular(20),
-                                        child: Image.asset(
-                                          'assets/image/flutter.png',
-                                          width: 80,
-                                          height: 80,
-                                        )),
-                                    SizedBox(
-                                      width: 53,
-                                    ),
-                                    Text(
-                                      'Competent',
-                                      style: TextStyle(
-                                          fontSize: 25,
-                                          fontWeight: FontWeight.w300,
-                                          color:
-                                              Color.fromARGB(255, 44, 70, 84)),
-                                    )
-                                  ],
-                                )),
+                            GestureDetector(
+                              onTap: () {
+                                Navigator.of(context).push(MaterialPageRoute(
+                                    builder: (context) => NoviceScreen()));
+                              },
+                              child: Container(
+                                  height: 100,
+                                  decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(20),
+                                      color:
+                                          Color.fromARGB(255, 217, 217, 217)),
+                                  child: Row(
+                                    children: [
+                                      SizedBox(
+                                        width: 20,
+                                      ),
+                                      ClipRRect(
+                                          borderRadius:
+                                              BorderRadius.circular(20),
+                                          child: Image.asset(
+                                            'assets/image/flutter.png',
+                                            width: 80,
+                                            height: 80,
+                                          )),
+                                      SizedBox(
+                                        width: 53,
+                                      ),
+                                      Text(
+                                        'Competent',
+                                        style: TextStyle(
+                                            fontSize: 25,
+                                            fontWeight: FontWeight.w300,
+                                            color: Color.fromARGB(
+                                                255, 44, 70, 84)),
+                                      )
+                                    ],
+                                  )),
+                            ),
                           ])),
                 ),
               ]),

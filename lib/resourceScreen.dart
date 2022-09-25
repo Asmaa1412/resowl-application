@@ -1,6 +1,10 @@
 import 'package:favorite_button/favorite_button.dart';
+import 'package:flutter/cupertino.dart';
 
 import 'package:flutter/material.dart';
+import 'package:resowl/noviceScreen.dart';
+
+import 'HomeScreen.dart';
 
 int indexx = 0;
 
@@ -91,13 +95,22 @@ class _ResourceSacreenFState extends State<ResourceSacreenF> {
               Row(
                 children: [
                   IconButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => NoviceScreen()));
+                    },
                     icon: Icon(Icons.arrow_back_ios),
                   ),
                   SizedBox(width: 270),
-                  Image.asset(
-                    'assets/image/5.png',
-                    scale: 2,
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => HomeScreen()));
+                    },
+                    child: Image.asset(
+                      'assets/image/5.png',
+                      scale: 2,
+                    ),
                   ),
                 ],
               ),
@@ -114,26 +127,8 @@ class _ResourceSacreenFState extends State<ResourceSacreenF> {
                           image: DecorationImage(
                               image: AssetImage('assets/image/book.jfif'),
                               fit: BoxFit.cover),
-                          color: Colors.red,
                           borderRadius: BorderRadius.circular(20)),
                     ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(270, 165, 0, 0),
-                    child: Container(
-                        decoration: BoxDecoration(
-                            color: Color.fromRGBO(245, 236, 224, 1),
-                            border: Border.all(
-                              color: Color.fromRGBO(245, 236, 224, 1),
-                            ),
-                            borderRadius: BorderRadius.circular(30)),
-                        width: 35,
-                        height: 35,
-                        child: FavoriteButton(
-                          iconSize: 30.0,
-                          isFavorite: true,
-                          valueChanged: (_isFavorite) {},
-                        )),
                   ),
                 ],
               ),
@@ -223,12 +218,3 @@ class _ResourceSacreenFState extends State<ResourceSacreenF> {
     ));
   }
 }
-
-                 
-              /* Expanded(
-                      child: Container(
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  color: Color.fromARGB(255, 255, 252, 242),
-                )),
-                    )*/
