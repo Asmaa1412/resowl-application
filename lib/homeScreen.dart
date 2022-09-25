@@ -199,19 +199,109 @@ class _HomeScreenFState extends State<HomeScreenF> {
                                   width: 93,
                                   height: 110,
                                   decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.only(
+                                        topLeft: Radius.circular(10),
+                                        topRight: Radius.circular(10)),
                                     boxShadow: [
                                       BoxShadow(
-                                          color: Color(0xffDDDDDD),
-                                          offset: Offset(0.0, 0.0),
-                                          blurRadius: 6.0,
-                                          spreadRadius: 2.0),
+                                        color:
+                                            Color.fromARGB(255, 215, 206, 206),
+                                        blurRadius: 7.0,
+                                        spreadRadius: 1.0,
+                                      ),
                                     ],
                                     image: DecorationImage(
                                         image:
-                                            AssetImage('assets/image/git.png'),
+                                            AssetImage('assets/image/git.jpg'),
                                         fit: BoxFit.cover),
                                   ),
                                   child: Stack(children: [
+                                    Align(
+                                      alignment: Alignment.bottomCenter,
+                                      child: Container(
+                                          width: 93,
+                                          height: 9,
+                                          decoration: BoxDecoration(boxShadow: [
+                                            BoxShadow(
+                                              color: Color.fromARGB(
+                                                  255, 64, 63, 63),
+                                              blurRadius: 15.0,
+                                            )
+                                          ])),
+                                    ),
+                                    Align(
+                                      alignment: Alignment.bottomCenter,
+                                      child: Container(
+                                          width: 93,
+                                          height: 9,
+                                          decoration: BoxDecoration(boxShadow: [
+                                            BoxShadow(
+                                              color: Color.fromARGB(
+                                                  255, 207, 149, 149),
+                                              blurRadius: 15.0,
+                                            )
+                                          ])),
+                                    ),
+                                    Align(
+                                      alignment: Alignment.bottomCenter,
+                                      child: Text(
+                                        'Flutter Sub',
+                                        style: TextStyle(
+                                            color: Colors.white, fontSize: 14),
+                                      ),
+                                    ),
+                                  ]),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                        SizedBox(
+                          width: 30,
+                        ),
+                        Stack(
+                          children: [
+                            Padding(
+                              padding: EdgeInsets.fromLTRB(13, 10, 0, 0),
+                              child: GestureDetector(
+                                onTap: () {
+                                  Navigator.of(context).push(MaterialPageRoute(
+                                      builder: (context) => SubLevelScreen()));
+                                },
+                                child: Container(
+                                  width: 93,
+                                  height: 110,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.only(
+                                        topLeft: Radius.circular(10),
+                                        topRight: Radius.circular(10)),
+                                    boxShadow: [
+                                      BoxShadow(
+                                        color:
+                                            Color.fromARGB(255, 215, 206, 206),
+                                        blurRadius: 7.0,
+                                        spreadRadius: 1.0,
+                                      ),
+                                    ],
+                                    image: DecorationImage(
+                                        image:
+                                            AssetImage('assets/image/c++.jpg'),
+                                        fit: BoxFit.cover),
+                                  ),
+                                  child: Stack(children: [
+                                    Align(
+                                      alignment: Alignment.bottomCenter,
+                                      child: Container(
+                                          width: 93,
+                                          height: 9,
+                                          decoration: BoxDecoration(boxShadow: [
+                                            BoxShadow(
+                                              color: Color.fromARGB(
+                                                  255, 207, 149, 149),
+                                              blurRadius: 15.0,
+                                            )
+                                          ])),
+                                    ),
                                     Align(
                                       alignment: Alignment.bottomCenter,
                                       child: Container(
@@ -254,67 +344,16 @@ class _HomeScreenFState extends State<HomeScreenF> {
                                   width: 93,
                                   height: 110,
                                   decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.only(
+                                        topLeft: Radius.circular(10),
+                                        topRight: Radius.circular(10)),
                                     boxShadow: [
                                       BoxShadow(
-                                          color: Color(0xffDDDDDD),
-                                          offset: Offset(0.0, 0.0),
-                                          blurRadius: 6.0,
-                                          spreadRadius: 2.0),
-                                    ],
-                                    image: DecorationImage(
-                                        image:
-                                            AssetImage('assets/image/c++.png'),
-                                        fit: BoxFit.cover),
-                                  ),
-                                  child: Stack(children: [
-                                    Align(
-                                      alignment: Alignment.bottomCenter,
-                                      child: Container(
-                                          width: 93,
-                                          height: 9,
-                                          decoration: BoxDecoration(boxShadow: [
-                                            BoxShadow(
-                                              color: Colors.black,
-                                              blurRadius: 15.0,
-                                            )
-                                          ])),
-                                    ),
-                                    Align(
-                                      alignment: Alignment.bottomCenter,
-                                      child: Text(
-                                        'Flutter Sub',
-                                        style: TextStyle(
-                                            color: Colors.white, fontSize: 14),
+                                        color:
+                                            Color.fromARGB(255, 215, 206, 206),
+                                        blurRadius: 7.0,
+                                        spreadRadius: 1.0,
                                       ),
-                                    ),
-                                  ]),
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                        SizedBox(
-                          width: 30,
-                        ),
-                        Stack(
-                          children: [
-                            Padding(
-                              padding: EdgeInsets.fromLTRB(13, 10, 0, 0),
-                              child: GestureDetector(
-                                onTap: () {
-                                  Navigator.of(context).push(MaterialPageRoute(
-                                      builder: (context) => SubLevelScreen()));
-                                },
-                                child: Container(
-                                  width: 93,
-                                  height: 110,
-                                  decoration: BoxDecoration(
-                                    boxShadow: [
-                                      BoxShadow(
-                                          color: Color(0xffDDDDDD),
-                                          offset: Offset(0.0, 0.0),
-                                          blurRadius: 6.0,
-                                          spreadRadius: 2.0),
                                     ],
                                     image: DecorationImage(
                                         image:
@@ -329,6 +368,19 @@ class _HomeScreenFState extends State<HomeScreenF> {
                                           height: 9,
                                           decoration: BoxDecoration(boxShadow: [
                                             BoxShadow(
+                                              color: Color.fromARGB(
+                                                  255, 207, 149, 149),
+                                              blurRadius: 15.0,
+                                            )
+                                          ])),
+                                    ),
+                                    Align(
+                                      alignment: Alignment.bottomCenter,
+                                      child: Container(
+                                          width: 93,
+                                          height: 9,
+                                          decoration: BoxDecoration(boxShadow: [
+                                            BoxShadow(
                                               color: Colors.black,
                                               blurRadius: 15.0,
                                             )
@@ -337,7 +389,7 @@ class _HomeScreenFState extends State<HomeScreenF> {
                                     Align(
                                       alignment: Alignment.bottomCenter,
                                       child: Text(
-                                        'Flutter Sub',
+                                        'C# Sub',
                                         style: TextStyle(
                                             color: Colors.white, fontSize: 14),
                                       ),
@@ -364,19 +416,36 @@ class _HomeScreenFState extends State<HomeScreenF> {
                                   width: 93,
                                   height: 110,
                                   decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.only(
+                                        topLeft: Radius.circular(10),
+                                        topRight: Radius.circular(10)),
                                     boxShadow: [
                                       BoxShadow(
-                                          color: Color(0xffDDDDDD),
-                                          offset: Offset(0.0, 0.0),
-                                          blurRadius: 6.0,
-                                          spreadRadius: 2.0),
+                                        color:
+                                            Color.fromARGB(255, 215, 206, 206),
+                                        blurRadius: 7.0,
+                                        spreadRadius: 1.0,
+                                      ),
                                     ],
                                     image: DecorationImage(
                                         image: AssetImage(
-                                            'assets/image/python.png'),
+                                            'assets/image/python.jpg'),
                                         fit: BoxFit.cover),
                                   ),
                                   child: Stack(children: [
+                                    Align(
+                                      alignment: Alignment.bottomCenter,
+                                      child: Container(
+                                          width: 93,
+                                          height: 9,
+                                          decoration: BoxDecoration(boxShadow: [
+                                            BoxShadow(
+                                              color: Color.fromARGB(
+                                                  255, 207, 149, 149),
+                                              blurRadius: 15.0,
+                                            )
+                                          ])),
+                                    ),
                                     Align(
                                       alignment: Alignment.bottomCenter,
                                       child: Container(
@@ -403,6 +472,9 @@ class _HomeScreenFState extends State<HomeScreenF> {
                             ),
                           ],
                         ),
+                        SizedBox(
+                          width: 20,
+                        )
                       ],
                     ),
                   ),
@@ -421,7 +493,7 @@ class _HomeScreenFState extends State<HomeScreenF> {
                           ],
                           image: DecorationImage(
                               image: AssetImage('assets/image/green.jpg'),
-                              fit: BoxFit.cover),
+                              fit: BoxFit.none),
                         ),
                         child: Column(
                           children: [
@@ -489,19 +561,43 @@ class _HomeScreenFState extends State<HomeScreenF> {
                                             width: 93,
                                             height: 110,
                                             decoration: BoxDecoration(
+                                              borderRadius: BorderRadius.only(
+                                                  topLeft: Radius.circular(10),
+                                                  topRight:
+                                                      Radius.circular(10)),
                                               boxShadow: [
                                                 BoxShadow(
-                                                    color: Color(0xffDDDDDD),
-                                                    offset: Offset(0.0, 0.0),
-                                                    blurRadius: 6.0,
-                                                    spreadRadius: 2.0),
+                                                  color: Color.fromARGB(
+                                                      255, 215, 206, 206),
+                                                  blurRadius: 7.0,
+                                                  spreadRadius: 1.0,
+                                                ),
                                               ],
                                               image: DecorationImage(
                                                   image: AssetImage(
-                                                      'assets/image/python.png'),
+                                                      'assets/image/python.jpg'),
                                                   fit: BoxFit.cover),
                                             ),
                                             child: Stack(children: [
+                                              Align(
+                                                alignment:
+                                                    Alignment.bottomCenter,
+                                                child: Container(
+                                                    width: 93,
+                                                    height: 9,
+                                                    decoration: BoxDecoration(
+                                                        boxShadow: [
+                                                          BoxShadow(
+                                                            color:
+                                                                Color.fromARGB(
+                                                                    255,
+                                                                    207,
+                                                                    149,
+                                                                    149),
+                                                            blurRadius: 15.0,
+                                                          )
+                                                        ])),
+                                              ),
                                               Align(
                                                 alignment:
                                                     Alignment.bottomCenter,
@@ -520,7 +616,7 @@ class _HomeScreenFState extends State<HomeScreenF> {
                                                 alignment:
                                                     Alignment.bottomCenter,
                                                 child: Text(
-                                                  'Flutter Sub',
+                                                  'Python Sub',
                                                   style: TextStyle(
                                                       color: Colors.white,
                                                       fontSize: 14),
@@ -551,19 +647,43 @@ class _HomeScreenFState extends State<HomeScreenF> {
                                             width: 93,
                                             height: 110,
                                             decoration: BoxDecoration(
+                                              borderRadius: BorderRadius.only(
+                                                  topLeft: Radius.circular(10),
+                                                  topRight:
+                                                      Radius.circular(10)),
                                               boxShadow: [
                                                 BoxShadow(
-                                                    color: Color(0xffDDDDDD),
-                                                    offset: Offset(0.0, 0.0),
-                                                    blurRadius: 6.0,
-                                                    spreadRadius: 2.0),
+                                                  color: Color.fromARGB(
+                                                      255, 215, 206, 206),
+                                                  blurRadius: 7.0,
+                                                  spreadRadius: 1.0,
+                                                ),
                                               ],
                                               image: DecorationImage(
                                                   image: AssetImage(
-                                                      'assets/image/c++.png'),
+                                                      'assets/image/c++.jpg'),
                                                   fit: BoxFit.cover),
                                             ),
                                             child: Stack(children: [
+                                              Align(
+                                                alignment:
+                                                    Alignment.bottomCenter,
+                                                child: Container(
+                                                    width: 93,
+                                                    height: 9,
+                                                    decoration: BoxDecoration(
+                                                        boxShadow: [
+                                                          BoxShadow(
+                                                            color:
+                                                                Color.fromARGB(
+                                                                    255,
+                                                                    207,
+                                                                    149,
+                                                                    149),
+                                                            blurRadius: 15.0,
+                                                          )
+                                                        ])),
+                                              ),
                                               Align(
                                                 alignment:
                                                     Alignment.bottomCenter,
@@ -582,7 +702,7 @@ class _HomeScreenFState extends State<HomeScreenF> {
                                                 alignment:
                                                     Alignment.bottomCenter,
                                                 child: Text(
-                                                  'Flutter Sub',
+                                                  'C++ Sub',
                                                   style: TextStyle(
                                                       color: Colors.white,
                                                       fontSize: 14),
@@ -613,12 +733,17 @@ class _HomeScreenFState extends State<HomeScreenF> {
                                             width: 93,
                                             height: 110,
                                             decoration: BoxDecoration(
+                                              borderRadius: BorderRadius.only(
+                                                  topLeft: Radius.circular(10),
+                                                  topRight:
+                                                      Radius.circular(10)),
                                               boxShadow: [
                                                 BoxShadow(
-                                                    color: Color(0xffDDDDDD),
-                                                    offset: Offset(0.0, 0.0),
-                                                    blurRadius: 6.0,
-                                                    spreadRadius: 2.0),
+                                                  color: Color.fromARGB(
+                                                      255, 215, 206, 206),
+                                                  blurRadius: 7.0,
+                                                  spreadRadius: 1.0,
+                                                ),
                                               ],
                                               image: DecorationImage(
                                                   image: AssetImage(
@@ -635,6 +760,25 @@ class _HomeScreenFState extends State<HomeScreenF> {
                                                     decoration: BoxDecoration(
                                                         boxShadow: [
                                                           BoxShadow(
+                                                            color:
+                                                                Color.fromARGB(
+                                                                    255,
+                                                                    207,
+                                                                    149,
+                                                                    149),
+                                                            blurRadius: 15.0,
+                                                          )
+                                                        ])),
+                                              ),
+                                              Align(
+                                                alignment:
+                                                    Alignment.bottomCenter,
+                                                child: Container(
+                                                    width: 93,
+                                                    height: 9,
+                                                    decoration: BoxDecoration(
+                                                        boxShadow: [
+                                                          BoxShadow(
                                                             color: Colors.black,
                                                             blurRadius: 15.0,
                                                           )
@@ -644,7 +788,7 @@ class _HomeScreenFState extends State<HomeScreenF> {
                                                 alignment:
                                                     Alignment.bottomCenter,
                                                 child: Text(
-                                                  'Flutter Sub',
+                                                  'C# Sub',
                                                   style: TextStyle(
                                                       color: Colors.white,
                                                       fontSize: 14),
@@ -675,19 +819,43 @@ class _HomeScreenFState extends State<HomeScreenF> {
                                             width: 93,
                                             height: 110,
                                             decoration: BoxDecoration(
+                                              borderRadius: BorderRadius.only(
+                                                  topLeft: Radius.circular(10),
+                                                  topRight:
+                                                      Radius.circular(10)),
                                               boxShadow: [
                                                 BoxShadow(
-                                                    color: Color(0xffDDDDDD),
-                                                    offset: Offset(0.0, 0.0),
-                                                    blurRadius: 6.0,
-                                                    spreadRadius: 2.0),
+                                                  color: Color.fromARGB(
+                                                      255, 215, 206, 206),
+                                                  blurRadius: 7.0,
+                                                  spreadRadius: 1.0,
+                                                ),
                                               ],
                                               image: DecorationImage(
                                                   image: AssetImage(
-                                                      'assets/image/c++.png'),
+                                                      'assets/image/c++.jpg'),
                                                   fit: BoxFit.cover),
                                             ),
                                             child: Stack(children: [
+                                              Align(
+                                                alignment:
+                                                    Alignment.bottomCenter,
+                                                child: Container(
+                                                    width: 93,
+                                                    height: 9,
+                                                    decoration: BoxDecoration(
+                                                        boxShadow: [
+                                                          BoxShadow(
+                                                            color:
+                                                                Color.fromARGB(
+                                                                    255,
+                                                                    207,
+                                                                    149,
+                                                                    149),
+                                                            blurRadius: 15.0,
+                                                          )
+                                                        ])),
+                                              ),
                                               Align(
                                                 alignment:
                                                     Alignment.bottomCenter,
@@ -706,7 +874,7 @@ class _HomeScreenFState extends State<HomeScreenF> {
                                                 alignment:
                                                     Alignment.bottomCenter,
                                                 child: Text(
-                                                  'Flutter Sub',
+                                                  'C++ Sub',
                                                   style: TextStyle(
                                                       color: Colors.white,
                                                       fontSize: 14),
@@ -718,6 +886,9 @@ class _HomeScreenFState extends State<HomeScreenF> {
                                       ),
                                     ],
                                   ),
+                                  SizedBox(
+                                    width: 20,
+                                  )
                                 ],
                               ),
                             ),
