@@ -13,13 +13,19 @@ import 'sub-levelScreen.dart';
 import 'subjectSreen.dart';
 import 'verCodeScreen.dart';
 
-/*void main() {
-  runApp(const RegistrationScreen());
-}*/
+
+
+/* void main() {
+  runApp(const SplashScreen());
+} */
 
 void main() {
+  runApp(const RegistrationScreen());
+}
+
+/* void main() {
   runApp(const HomeScreen());
-} 
+}  */
 
 /* void main() {
   runApp(const SubjectScreen());
