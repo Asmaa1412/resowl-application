@@ -45,9 +45,75 @@ class _RegistrationScreenFState extends State<RegistrationScreenF> {
                 'Join Us, and start studying',
                 style: GoogleFonts.gentiumBasic(fontSize: 20),
               ),
+              SizedBox(
+                height: 30,
+              ),
               Image.asset(
                 'assets/image/welcom.PNG',
-              )
+              ),
+              SizedBox(
+                height: 60,
+              ),
+              SizedBox(
+                width: 250,
+                height: 40,
+                child: TextButton(
+                    onPressed: () {},
+                    child: Text(
+                      'LogIn',
+                      style: GoogleFonts.gentiumBasic(
+                          fontSize: 21,
+                          color: Color.fromARGB(210, 255, 255, 255),
+                          fontWeight: FontWeight.w900),
+                    ),
+                    style: TextButton.styleFrom(
+                        backgroundColor: Color.fromARGB(255, 2, 190, 167),
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(11)))),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              SizedBox(
+                width: 250,
+                height: 40,
+                child: TextButton(
+                    onPressed: () {},
+                    child: Text(
+                      'Sign Up',
+                      style: GoogleFonts.gentiumBasic(
+                          fontSize: 21,
+                          color: Color.fromARGB(255, 2, 190, 167),
+                          fontWeight: FontWeight.w600),
+                    ),
+                    style: TextButton.styleFrom(
+                        backgroundColor: Colors.white,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(11)),
+                        side: BorderSide(
+                            color: Color.fromARGB(255, 2, 190, 167),
+                            width: 2.6))),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              SizedBox(
+                width: 250,
+                height: 40,
+                child: TextButton(
+                    onPressed: () {},
+                    child: Text(
+                      'Browse',
+                      style: GoogleFonts.gentiumBasic(
+                          fontSize: 21,
+                          color: Color.fromARGB(210, 255, 255, 255),
+                          fontWeight: FontWeight.w900),
+                    ),
+                    style: TextButton.styleFrom(
+                        backgroundColor: Color.fromARGB(255, 2, 190, 167),
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(11)))),
+              ),
             ],
           ),
         ),
@@ -55,16 +121,3 @@ class _RegistrationScreenFState extends State<RegistrationScreenF> {
     );
   }
 }
- /*    child: TextButton(
-                                      onPressed: () {},
-                                      child: Text(
-                                        'LogIn',
-                                        style: TextStyle(
-                                            fontSize: 19,
-                                            color: Color.fromARGB(
-                                                210, 255, 255, 255),
-                                            fontWeight: FontWeight.bold),
-                                      ),
-                                      style: TextButton.styleFrom(
-                                          backgroundColor: Color.fromARGB(
-                                              210, 109, 139, 116))), */

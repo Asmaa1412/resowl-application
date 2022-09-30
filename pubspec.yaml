@@ -70,6 +70,9 @@ flutter:
   assets:
    - assets/image/
    - assets/image/book.jfif
+   - assets/image/welcom.PNG
+   - assets\image\back.jpg
+
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

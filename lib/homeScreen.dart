@@ -31,48 +31,35 @@ class _HomeScreenFState extends State<HomeScreenF> {
     return SafeArea(
         child: Scaffold(
             appBar: AppBar(
-              backgroundColor: Color.fromARGB(255, 255, 252, 242),
-              actions: [
-                GestureDetector(
-                  onTap: () {
-                    Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => AboutUsScreen()));
-                  },
-                  child: Image.asset(
-                    'assets/image/5.png',
-                    scale: 2,
-                  ),
-                ),
-              ],
+              backgroundColor: Colors.white,
+              leading: IconButton(
+                icon: Icon(Icons.menu),
+                onPressed: () {},
+              ),
             ),
             body: Container(
-              color: Color.fromARGB(255, 255, 252, 242),
+              color: Colors.white,
               child: SingleChildScrollView(
                 child: Column(children: [
-                  SizedBox(
-                    height: 25,
-                  ),
                   Container(
                     width: double.infinity,
                     child: Stack(
                       children: [
                         Container(
-                          width: 330,
+                          width: 490,
                           height: 250,
                           decoration: BoxDecoration(
-                              boxShadow: [
-                                BoxShadow(
-                                    color: Color(0xffDDDDDD),
-                                    offset: Offset(0.0, 0.0),
-                                    blurRadius: 6.0,
-                                    spreadRadius: 2.0),
-                              ],
-                              image: DecorationImage(
-                                  image: AssetImage('assets/image/green.jpg'),
-                                  fit: BoxFit.cover),
-                              borderRadius: BorderRadius.only(
-                                  topRight: Radius.circular(20),
-                                  bottomRight: Radius.circular(20))),
+                            boxShadow: [
+                              BoxShadow(
+                                  color: Color(0xffDDDDDD),
+                                  offset: Offset(0.0, 0.0),
+                                  blurRadius: 6.0,
+                                  spreadRadius: 2.0),
+                            ],
+                            image: DecorationImage(
+                                image: AssetImage('assets\image\back.jpg'),
+                                fit: BoxFit.cover),
+                          ),
                         ),
                         Padding(
                           padding: const EdgeInsets.fromLTRB(20, 20, 0, 0),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class VerCodeScreen extends StatelessWidget {
   const VerCodeScreen({Key? key}) : super(key: key);
@@ -24,80 +25,82 @@ class _VerCodeScreenFState extends State<VerCodeScreenF> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-        child: Scaffold(
-            appBar: AppBar(
-              backgroundColor: Color.fromARGB(255, 255, 252, 242),
-              leading: IconButton(
-                onPressed: () {},
-                icon: Icon(Icons.list),
+      child: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.white,
+          elevation: 0.0,
+          leading: IconButton(
+            icon: Icon(Icons.arrow_back_ios),
+            onPressed: () {},
+          ),
+        ),
+        body: Container(
+          width: double.infinity,
+          color: Colors.white,
+          child: Column(
+            children: [
+              SizedBox(
+                height: 20,
               ),
-              actions: [
-                Image.asset(
-                  ('assets/image/5.png'),
-                  scale: 2,
+              Padding(
+                padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
+                child: Align(
+                  alignment: Alignment.topLeft,
+                  child: Column(
+                    children: [
+                      Text(
+                        'Forget \nPassword',
+                        style: GoogleFonts.gentiumBasic(fontSize: 40),
+                      ),
+                      Text(
+                        'verification code',
+                        style: GoogleFonts.gentiumBasic(
+                            fontSize: 20,
+                            color: Color.fromARGB(255, 0, 91, 97)),
+                      )
+                    ],
+                  ),
                 ),
-              ],
-            ),
-            body: Container(
-                color: Color.fromARGB(255, 255, 252, 242),
-                child: Column(children: [
-                  SizedBox(
-                    height: 25,
-                  ),
-                  Container(
-                    height: 250,
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                          image: AssetImage('assets/image/green.jpg'),
-                          fit: BoxFit.cover),
-                    ),
-                    child: Center(
-                      child: Text(
-                        'Forget Password',
-                        style: TextStyle(color: Colors.white, fontSize: 30),
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(25, 25, 250, 0),
+              ),
+              SizedBox(
+                height: 100,
+              ),
+              SizedBox(
+                width: 360,
+                height: 50,
+                child: TextField(
+                    decoration: InputDecoration(
+                        label: Text('Code:'),
+                        filled: true,
+                        fillColor: Colors.white,
+                        enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(5),
+                        ))),
+              ),
+              SizedBox(
+                height: 80,
+              ),
+              SizedBox(
+                width: 250,
+                height: 40,
+                child: TextButton(
+                    onPressed: () {},
                     child: Text(
-                      'Enter Code :',
-                      style: TextStyle(fontSize: 17),
+                      'Send',
+                      style: GoogleFonts.gentiumBasic(
+                          fontSize: 21,
+                          color: Color.fromARGB(210, 255, 255, 255),
+                          fontWeight: FontWeight.w900),
                     ),
-                  ),
-                  SizedBox(
-                    height: 15,
-                  ),
-                  SizedBox(
-                    width: 330,
-                    child: TextField(
-                        decoration: InputDecoration(
-                            filled: true,
-                            fillColor: Color.fromARGB(255, 255, 252, 242),
-                            enabledBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(20),
-                            ))),
-                  ),
-                  SizedBox(
-                    height: 35,
-                  ),
-                  SizedBox(
-                    width: 150,
-                    height: 50,
-                    child: TextButton(
-                      onPressed: () {},
-                      child: Text(
-                        'Send',
-                        style: TextStyle(color: Colors.white, fontSize: 20),
-                      ),
-                      style: ButtonStyle(
-                        shape: MaterialStateProperty.all(RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20))),
-                        backgroundColor: MaterialStateProperty.all(
-                            Color.fromARGB(250, 109, 139, 116)),
-                      ),
-                    ),
-                  )
-                ]))));
+                    style: TextButton.styleFrom(
+                        backgroundColor: Color.fromARGB(255, 2, 190, 167),
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(11)))),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
   }
 }

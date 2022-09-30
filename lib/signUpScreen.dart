@@ -1,59 +1,59 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class EditProfileScreen extends StatelessWidget {
-  const EditProfileScreen({Key? key}) : super(key: key);
+class SignUpScreen extends StatelessWidget {
+  const SignUpScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Home Screen',
-      theme: ThemeData(primarySwatch: Colors.lightGreen),
-      home: EditProfileScreenF(),
+      title: 'LogIn screen',
+      theme: ThemeData(primarySwatch: Colors.blue),
+      home: SignUpScreenF(),
     );
   }
 }
 
-class EditProfileScreenF extends StatefulWidget {
-  const EditProfileScreenF({Key? key}) : super(key: key);
+class SignUpScreenF extends StatefulWidget {
+  const SignUpScreenF({Key? key}) : super(key: key);
 
   @override
-  State<EditProfileScreenF> createState() => _EditProfileScreenFState();
+  State<SignUpScreenF> createState() => _SignUpScreenFState();
 }
 
-class _EditProfileScreenFState extends State<EditProfileScreenF> {
+class _SignUpScreenFState extends State<SignUpScreenF> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-        child: Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-        elevation: 0.0,
-        leading: IconButton(
-          icon: Icon(Icons.menu),
-          onPressed: () {},
-        ),
-      ),
-      body: Container(
+      child: Scaffold(
+        body: Container(
+          width: double.infinity,
           color: Colors.white,
           child: Column(
             children: [
-              Padding(
-                padding: const EdgeInsets.fromLTRB(20, 20, 0, 0),
-                child: Align(
-                  alignment: Alignment.topLeft,
-                  child: Text(
-                    'Edit Account',
-                    style: GoogleFonts.gentiumBasic(
-                        color: Color.fromARGB(255, 0, 0, 0),
-                        fontSize: 30,
-                        fontWeight: FontWeight.w300),
-                  ),
-                ),
+              SizedBox(
+                height: 70,
               ),
               Image.asset(
-                'assets/image/profile.PNG',
-                width: 300,
+                'assets/image/5.png',
+              ),
+              SizedBox(
+                height: 40,
+              ),
+              Text(
+                'Sign Up',
+                style: GoogleFonts.gentiumBasic(fontSize: 40),
+              ),
+              SizedBox(
+                height: 5,
+              ),
+              Text(
+                'Please fill the details and create account',
+                style: GoogleFonts.gentiumBasic(
+                    fontSize: 20, color: Color.fromARGB(255, 0, 91, 97)),
+              ),
+              SizedBox(
+                height: 30,
               ),
               SizedBox(
                 width: 360,
@@ -101,7 +101,7 @@ class _EditProfileScreenFState extends State<EditProfileScreenF> {
                 height: 1,
               ),
               const SizedBox(
-                height: 40,
+                height: 80,
               ),
               SizedBox(
                 width: 250,
@@ -109,7 +109,7 @@ class _EditProfileScreenFState extends State<EditProfileScreenF> {
                 child: TextButton(
                     onPressed: () {},
                     child: Text(
-                      'Send',
+                      'Sign Up',
                       style: GoogleFonts.gentiumBasic(
                           fontSize: 21,
                           color: Color.fromARGB(210, 255, 255, 255),
@@ -120,8 +120,34 @@ class _EditProfileScreenFState extends State<EditProfileScreenF> {
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(11)))),
               ),
+              SizedBox(
+                height: 1,
+              ),
+              Row(
+                children: [
+                  SizedBox(
+                    width: 94,
+                  ),
+                  Text('Already have an account ?'),
+                  TextButton(
+                      onPressed: () {
+                        /*   Navigator.push(
+                                  (context),
+                                  MaterialPageRoute(
+                                      builder: ((context) => forgetPScreen()))); */
+                      },
+                      child: Text(
+                        'Log In',
+                        style: TextStyle(
+                          color: Color.fromARGB(255, 0, 91, 97),
+                        ),
+                      )),
+                ],
+              )
             ],
-          )),
-    ));
+          ),
+        ),
+      ),
+    );
   }
 }
