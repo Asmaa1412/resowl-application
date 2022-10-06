@@ -15,6 +15,7 @@ class AdvncedScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Home Screen',
       theme: ThemeData(primarySwatch: Colors.lightGreen),
       home: AdvncedScreenF(),
@@ -109,7 +110,7 @@ class _AdvncedScreenFState extends State<AdvncedScreenF> {
                   Padding(
                     padding: const EdgeInsets.fromLTRB(25, 0, 0, 0),
                     child: Text(
-                      'Every expert was once a \nbeginner.',
+                      'Every accomplishment starts\nwith the decision to try.',
                       style: GoogleFonts.gentiumBasic(
                           shadows: <Shadow>[
                             Shadow(
@@ -156,7 +157,7 @@ class _AdvncedScreenFState extends State<AdvncedScreenF> {
                               ),
                               child: ListTile(
                                 leading: Image.asset(
-                                  'assets/image/flutter.png',
+                                  'assets/image/book.jfif',
                                   width: 50,
                                 ),
                                 title: const Text(
@@ -219,7 +220,7 @@ class _AdvncedScreenFState extends State<AdvncedScreenF> {
                               ),
                               child: ListTile(
                                 leading: Image.asset(
-                                  'assets/image/flutter.png',
+                                  'assets/image/book.jfif',
                                   width: 50,
                                 ),
                                 title: const Text(
@@ -282,7 +283,7 @@ class _AdvncedScreenFState extends State<AdvncedScreenF> {
                               ),
                               child: ListTile(
                                 leading: Image.asset(
-                                  'assets/image/flutter.png',
+                                  'assets/image/book.jfif',
                                   width: 50,
                                 ),
                                 title: const Text(
@@ -345,7 +346,7 @@ class _AdvncedScreenFState extends State<AdvncedScreenF> {
                               ),
                               child: ListTile(
                                 leading: Image.asset(
-                                  'assets/image/flutter.png',
+                                  'assets/image/book.jfif',
                                   width: 50,
                                 ),
                                 title: const Text(
@@ -408,7 +409,7 @@ class _AdvncedScreenFState extends State<AdvncedScreenF> {
                               ),
                               child: ListTile(
                                 leading: Image.asset(
-                                  'assets/image/flutter.png',
+                                  'assets/image/book.jfif',
                                   width: 50,
                                 ),
                                 title: const Text(

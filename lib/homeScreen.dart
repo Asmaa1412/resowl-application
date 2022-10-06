@@ -21,6 +21,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Home Screen',
       theme: ThemeData(primarySwatch: Colors.lightGreen),
       home: HomeScreenF(),
@@ -215,8 +216,6 @@ class _HomeScreenFState extends State<HomeScreenF> {
                         ),
                       ]),
                 )),
-
-
             body: Container(
               color: Colors.white,
               child: Column(children: [
@@ -354,7 +353,146 @@ class _HomeScreenFState extends State<HomeScreenF> {
                                                               BoxDecoration(
                                                             image: DecorationImage(
                                                                 image: AssetImage(
-                                                                    'assets/image/c++.jpg'),
+                                                                    'assets/image/git.jpg'),
+                                                                fit: BoxFit
+                                                                    .fitWidth),
+                                                          ),
+                                                        ),
+                                                        SizedBox(
+                                                          width: 5,
+                                                        ),
+                                                        Column(
+                                                          children: [
+                                                            Padding(
+                                                              padding:
+                                                                  EdgeInsets
+                                                                      .fromLTRB(
+                                                                          6,
+                                                                          5,
+                                                                          0,
+                                                                          0),
+                                                              child: Align(
+                                                                alignment:
+                                                                    Alignment
+                                                                        .topLeft,
+                                                                child: Text(
+                                                                  'Git Sub',
+                                                                  style: GoogleFonts.gentiumBasic(
+                                                                      color: Colors
+                                                                          .black,
+                                                                      fontSize:
+                                                                          13),
+                                                                ),
+                                                              ),
+                                                            ),
+                                                            Row(
+                                                              children: [
+                                                                Padding(
+                                                                  padding: EdgeInsets
+                                                                      .fromLTRB(
+                                                                          7,
+                                                                          2,
+                                                                          0,
+                                                                          0),
+                                                                  child: Align(
+                                                                    alignment:
+                                                                        Alignment
+                                                                            .topLeft,
+                                                                    child: Text(
+                                                                      'Version control\nsystem',
+                                                                      style: GoogleFonts
+                                                                          .gentiumBasic(
+                                                                        color: Colors
+                                                                            .black,
+                                                                        fontSize:
+                                                                            10,
+                                                                      ),
+                                                                    ),
+                                                                  ),
+                                                                ),
+                                                                SizedBox(
+                                                                  width: 20,
+                                                                ),
+                                                                Align(
+                                                                  alignment:
+                                                                      Alignment
+                                                                          .bottomRight,
+                                                                  child: Icon(
+                                                                      size: 9,
+                                                                      Icons
+                                                                          .arrow_forward_ios_outlined),
+                                                                )
+                                                              ],
+                                                            ),
+                                                          ],
+                                                        ),
+                                                        SizedBox(
+                                                          width: 25,
+                                                        ),
+                                                      ]),
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    SizedBox(
+                                      width: 3,
+                                    ),
+                                    Stack(
+                                      children: [
+                                        Padding(
+                                          padding:
+                                              EdgeInsets.fromLTRB(13, 10, 0, 0),
+                                          child: GestureDetector(
+                                            onTap: () {
+                                              Navigator.of(context).push(
+                                                  MaterialPageRoute(
+                                                      builder: (context) =>
+                                                          SubLevelScreen()));
+                                            },
+                                            child: Column(
+                                              children: [
+                                                Container(
+                                                  width: 115,
+                                                  height: 120,
+                                                  decoration: BoxDecoration(
+                                                      color: Colors.white,
+                                                      boxShadow: [
+                                                        BoxShadow(
+                                                          color: Color.fromARGB(
+                                                              100, 0, 60, 52),
+                                                          blurRadius: 7.0,
+                                                          spreadRadius: 1.0,
+                                                          offset: Offset(
+                                                            -5,
+                                                            5,
+                                                          ),
+                                                        ),
+                                                      ],
+                                                      border: Border.all(
+                                                          width: 0.7,
+                                                          color: Color.fromARGB(
+                                                              255,
+                                                              103,
+                                                              103,
+                                                              103))),
+                                                  child: Column(
+                                                      crossAxisAlignment:
+                                                          CrossAxisAlignment
+                                                              .start,
+                                                      mainAxisSize:
+                                                          MainAxisSize.min,
+                                                      children: [
+                                                        Container(
+                                                          width: 260,
+                                                          height: 64,
+                                                          decoration:
+                                                              BoxDecoration(
+                                                            image: DecorationImage(
+                                                                image: AssetImage(
+                                                                    'assets/image/flutter.png'),
                                                                 fit: BoxFit
                                                                     .fitWidth),
                                                           ),
@@ -516,7 +654,7 @@ class _HomeScreenFState extends State<HomeScreenF> {
                                                                     Alignment
                                                                         .topLeft,
                                                                 child: Text(
-                                                                  'Flutter Sub',
+                                                                  'C++ Sub',
                                                                   style: GoogleFonts.gentiumBasic(
                                                                       color: Colors
                                                                           .black,
@@ -539,7 +677,7 @@ class _HomeScreenFState extends State<HomeScreenF> {
                                                                         Alignment
                                                                             .topLeft,
                                                                     child: Text(
-                                                                      'Mobile App\nToolKit',
+                                                                      'Programming\nLanguage',
                                                                       style: GoogleFonts
                                                                           .gentiumBasic(
                                                                         color: Colors
@@ -551,7 +689,7 @@ class _HomeScreenFState extends State<HomeScreenF> {
                                                                   ),
                                                                 ),
                                                                 SizedBox(
-                                                                  width: 45,
+                                                                  width: 30,
                                                                 ),
                                                                 Align(
                                                                   alignment:
@@ -632,146 +770,7 @@ class _HomeScreenFState extends State<HomeScreenF> {
                                                               BoxDecoration(
                                                             image: DecorationImage(
                                                                 image: AssetImage(
-                                                                    'assets/image/c++.jpg'),
-                                                                fit: BoxFit
-                                                                    .fitWidth),
-                                                          ),
-                                                        ),
-                                                        SizedBox(
-                                                          width: 5,
-                                                        ),
-                                                        Column(
-                                                          children: [
-                                                            Padding(
-                                                              padding:
-                                                                  EdgeInsets
-                                                                      .fromLTRB(
-                                                                          6,
-                                                                          5,
-                                                                          0,
-                                                                          0),
-                                                              child: Align(
-                                                                alignment:
-                                                                    Alignment
-                                                                        .topLeft,
-                                                                child: Text(
-                                                                  'Flutter Sub',
-                                                                  style: GoogleFonts.gentiumBasic(
-                                                                      color: Colors
-                                                                          .black,
-                                                                      fontSize:
-                                                                          13),
-                                                                ),
-                                                              ),
-                                                            ),
-                                                            Row(
-                                                              children: [
-                                                                Padding(
-                                                                  padding: EdgeInsets
-                                                                      .fromLTRB(
-                                                                          7,
-                                                                          2,
-                                                                          0,
-                                                                          0),
-                                                                  child: Align(
-                                                                    alignment:
-                                                                        Alignment
-                                                                            .topLeft,
-                                                                    child: Text(
-                                                                      'Mobile App\nToolKit',
-                                                                      style: GoogleFonts
-                                                                          .gentiumBasic(
-                                                                        color: Colors
-                                                                            .black,
-                                                                        fontSize:
-                                                                            10,
-                                                                      ),
-                                                                    ),
-                                                                  ),
-                                                                ),
-                                                                SizedBox(
-                                                                  width: 45,
-                                                                ),
-                                                                Align(
-                                                                  alignment:
-                                                                      Alignment
-                                                                          .bottomRight,
-                                                                  child: Icon(
-                                                                      size: 9,
-                                                                      Icons
-                                                                          .arrow_forward_ios_outlined),
-                                                                )
-                                                              ],
-                                                            ),
-                                                          ],
-                                                        ),
-                                                        SizedBox(
-                                                          width: 25,
-                                                        ),
-                                                      ]),
-                                                ),
-                                              ],
-                                            ),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                    SizedBox(
-                                      width: 3,
-                                    ),
-                                    Stack(
-                                      children: [
-                                        Padding(
-                                          padding:
-                                              EdgeInsets.fromLTRB(13, 10, 0, 0),
-                                          child: GestureDetector(
-                                            onTap: () {
-                                              Navigator.of(context).push(
-                                                  MaterialPageRoute(
-                                                      builder: (context) =>
-                                                          SubLevelScreen()));
-                                            },
-                                            child: Column(
-                                              children: [
-                                                Container(
-                                                  width: 115,
-                                                  height: 120,
-                                                  decoration: BoxDecoration(
-                                                      color: Colors.white,
-                                                      boxShadow: [
-                                                        BoxShadow(
-                                                          color: Color.fromARGB(
-                                                              100, 0, 60, 52),
-                                                          blurRadius: 7.0,
-                                                          spreadRadius: 1.0,
-                                                          offset: Offset(
-                                                            -5,
-                                                            5,
-                                                          ),
-                                                        ),
-                                                      ],
-                                                      border: Border.all(
-                                                          width: 0.7,
-                                                          color: Color.fromARGB(
-                                                              255,
-                                                              103,
-                                                              103,
-                                                              103))),
-                                                  child: Column(
-                                                      crossAxisAlignment:
-                                                          CrossAxisAlignment
-                                                              .start,
-                                                      mainAxisSize:
-                                                          MainAxisSize.min,
-                                                      children: [
-                                                        Container(
-                                                          width: 260,
-                                                          height: 64,
-                                                          decoration:
-                                                              BoxDecoration(
-                                                            image: DecorationImage(
-                                                                image: AssetImage(
-                                                                    'assets/image/c++.jpg'),
+                                                                    'assets/image/flutter.png'),
                                                                 fit: BoxFit
                                                                     .fitWidth),
                                                           ),
@@ -948,10 +947,10 @@ class _HomeScreenFState extends State<HomeScreenF> {
                                         decoration: BoxDecoration(
                                             borderRadius:
                                                 BorderRadius.circular(20),
-                                            color: Colors.red,
+                                            color: Colors.white,
                                             image: DecorationImage(
                                                 image: AssetImage(
-                                                    'assets/image/flutter.png'),
+                                                    'assets/image/c++.jpg'),
                                                 fit: BoxFit.fill)),
                                       ),
                                       SizedBox(
@@ -995,17 +994,17 @@ class _HomeScreenFState extends State<HomeScreenF> {
                                         decoration: BoxDecoration(
                                             borderRadius:
                                                 BorderRadius.circular(20),
-                                            color: Colors.red,
+                                            color: Colors.white,
                                             image: DecorationImage(
                                                 image: AssetImage(
                                                     'assets/image/flutter.png'),
                                                 fit: BoxFit.fill)),
                                       ),
                                       SizedBox(
-                                        width: 25,
+                                        width: 22,
                                       ),
                                       Text(
-                                        'C++ programming\nlanguage',
+                                        'Flutter mobile app\ntoolkit',
                                         style: GoogleFonts.gentiumBasic(
                                             fontSize: 20, color: Colors.white),
                                       ),
@@ -1021,7 +1020,7 @@ class _HomeScreenFState extends State<HomeScreenF> {
                                   )),
                             ),
                             SizedBox(
-                              height: 17,
+                              height: 15,
                             ),
                             GestureDetector(
                               onTap: () {
@@ -1042,17 +1041,17 @@ class _HomeScreenFState extends State<HomeScreenF> {
                                         decoration: BoxDecoration(
                                             borderRadius:
                                                 BorderRadius.circular(20),
-                                            color: Colors.red,
+                                            color: Colors.white,
                                             image: DecorationImage(
                                                 image: AssetImage(
-                                                    'assets/image/flutter.png'),
+                                                    'assets/image/git.jpg'),
                                                 fit: BoxFit.fill)),
                                       ),
                                       SizedBox(
-                                        width: 25,
+                                        width: 20,
                                       ),
                                       Text(
-                                        'C++ programming\nlanguage',
+                                        'Git Version control\nsystem',
                                         style: GoogleFonts.gentiumBasic(
                                             fontSize: 20, color: Colors.white),
                                       ),
@@ -1089,10 +1088,10 @@ class _HomeScreenFState extends State<HomeScreenF> {
                                         decoration: BoxDecoration(
                                             borderRadius:
                                                 BorderRadius.circular(20),
-                                            color: Colors.red,
+                                            color: Colors.white,
                                             image: DecorationImage(
                                                 image: AssetImage(
-                                                    'assets/image/flutter.png'),
+                                                    'assets/image/c++.jpg'),
                                                 fit: BoxFit.fill)),
                                       ),
                                       SizedBox(

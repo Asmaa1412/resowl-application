@@ -15,6 +15,7 @@ class NoviceScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Home Screen',
       theme: ThemeData(primarySwatch: Colors.lightGreen),
       home: NoviceScreenF(),
@@ -156,7 +157,7 @@ class _NoviceScreenFState extends State<NoviceScreenF> {
                               ),
                               child: ListTile(
                                 leading: Image.asset(
-                                  'assets/image/flutter.png',
+                                  'assets/image/book.jfif',
                                   width: 50,
                                 ),
                                 title: const Text(
@@ -219,7 +220,7 @@ class _NoviceScreenFState extends State<NoviceScreenF> {
                               ),
                               child: ListTile(
                                 leading: Image.asset(
-                                  'assets/image/flutter.png',
+                                  'assets/image/book.jfif',
                                   width: 50,
                                 ),
                                 title: const Text(
@@ -282,7 +283,7 @@ class _NoviceScreenFState extends State<NoviceScreenF> {
                               ),
                               child: ListTile(
                                 leading: Image.asset(
-                                  'assets/image/flutter.png',
+                                  'assets/image/book.jfif',
                                   width: 50,
                                 ),
                                 title: const Text(
@@ -345,7 +346,7 @@ class _NoviceScreenFState extends State<NoviceScreenF> {
                               ),
                               child: ListTile(
                                 leading: Image.asset(
-                                  'assets/image/flutter.png',
+                                  'assets/image/book.jfif',
                                   width: 50,
                                 ),
                                 title: const Text(
@@ -408,7 +409,7 @@ class _NoviceScreenFState extends State<NoviceScreenF> {
                               ),
                               child: ListTile(
                                 leading: Image.asset(
-                                  'assets/image/flutter.png',
+                                  'assets/image/book.jfif',
                                   width: 50,
                                 ),
                                 title: const Text(

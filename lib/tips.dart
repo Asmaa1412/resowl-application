@@ -13,6 +13,7 @@ class TipsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Home Screen',
       theme: ThemeData(primarySwatch: Colors.lightGreen),
       home: TipsScreenF(),
@@ -46,7 +47,7 @@ class _TipsScreenFState extends State<TipsScreenF> {
           },
         ),
         title: Padding(
-          padding: EdgeInsets.fromLTRB(100, 0, 0, 0),
+          padding: EdgeInsets.fromLTRB(110, 0, 0, 0),
           child: Text(
             'Tips',
             style: GoogleFonts.gentiumBasic(

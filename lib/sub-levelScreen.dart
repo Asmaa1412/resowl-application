@@ -1,4 +1,3 @@
-
 import 'package:favorite_button/favorite_button.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -16,6 +15,7 @@ class SubLevelScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Home Screen',
       theme: ThemeData(primarySwatch: Colors.lightGreen),
       home: SubLevelScreenF(),
@@ -239,7 +239,7 @@ class _SubLevelScreenFState extends State<SubLevelScreenF> {
                                         'assets/image/road.jpeg',
                                       ),
                                       fit: BoxFit.cover),
-                                  color: Colors.red),
+                                  color: Colors.white),
                             ),
                           ),
                         ],

@@ -14,6 +14,7 @@ class SubjectScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Home Screen',
       theme: ThemeData(primarySwatch: Colors.lightGreen),
       home: SubjectScreenF(),
@@ -102,7 +103,7 @@ class _SubjectScreenFState extends State<SubjectScreenF> {
                                       borderRadius: BorderRadius.circular(8),
                                       image: DecorationImage(
                                           image: AssetImage(
-                                              'assets/image/book.jfif'),
+                                              'assets/image/flutter.png'),
                                           fit: BoxFit.cover),
                                     ),
                                     child: Stack(children: [
@@ -169,6 +170,8 @@ class _SubjectScreenFState extends State<SubjectScreenF> {
                               builder: (context) => SubLevelScreen()));
                         },
                         child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisSize: MainAxisSize.min,
                           children: [
                             Stack(
                               children: [
@@ -181,7 +184,250 @@ class _SubjectScreenFState extends State<SubjectScreenF> {
                                       borderRadius: BorderRadius.circular(8),
                                       image: DecorationImage(
                                           image: AssetImage(
-                                              'assets/image/book.jfif'),
+                                              'assets/image/git.jpg'),
+                                          fit: BoxFit.cover),
+                                    ),
+                                    child: Stack(children: [
+                                      Align(
+                                        alignment: Alignment.bottomCenter,
+                                        child: Container(
+                                            width: 93,
+                                            height: 9,
+                                            decoration:
+                                                BoxDecoration(boxShadow: [
+                                              BoxShadow(
+                                                color: Colors.black,
+                                                blurRadius: 15.0,
+                                              )
+                                            ])),
+                                      ),
+                                      Padding(
+                                        padding: const EdgeInsets.fromLTRB(
+                                            85, 120, 0, 0),
+                                        child: Container(
+                                            decoration: BoxDecoration(
+                                                color: Color.fromRGBO(
+                                                    245, 236, 224, 1),
+                                                borderRadius:
+                                                    BorderRadius.circular(50)),
+                                            width: 26,
+                                            height: 26,
+                                            child: FavoriteButton(
+                                              isFavorite: false,
+                                              iconSize: 30,
+                                              valueChanged: (_isFavorite) {},
+                                            )),
+                                      ),
+                                      Align(
+                                        alignment: Alignment.bottomLeft,
+                                        child: Text(
+                                          ' Free',
+                                          style: TextStyle(
+                                              color: Colors.white,
+                                              fontSize: 14),
+                                        ),
+                                      ),
+                                    ]),
+                                  ),
+                                ),
+                              ],
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Padding(
+                              padding: EdgeInsets.fromLTRB(0, 1, 35, 0),
+                              child: Text(
+                                'Git Sub',
+                                style: TextStyle(fontSize: 14),
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) => SubLevelScreen()));
+                        },
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Stack(
+                              children: [
+                                Padding(
+                                  padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
+                                  child: Container(
+                                    width: 115,
+                                    height: 150,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(8),
+                                      image: DecorationImage(
+                                          image: AssetImage(
+                                              'assets/image/c++.jpg'),
+                                          fit: BoxFit.cover),
+                                    ),
+                                    child: Stack(children: [
+                                      Align(
+                                        alignment: Alignment.bottomCenter,
+                                        child: Container(
+                                            width: 93,
+                                            height: 9,
+                                            decoration:
+                                                BoxDecoration(boxShadow: [
+                                              BoxShadow(
+                                                color: Colors.black,
+                                                blurRadius: 15.0,
+                                              )
+                                            ])),
+                                      ),
+                                      Padding(
+                                        padding: const EdgeInsets.fromLTRB(
+                                            85, 120, 0, 0),
+                                        child: Container(
+                                            decoration: BoxDecoration(
+                                                color: Color.fromRGBO(
+                                                    245, 236, 224, 1),
+                                                borderRadius:
+                                                    BorderRadius.circular(50)),
+                                            width: 26,
+                                            height: 26,
+                                            child: FavoriteButton(
+                                              isFavorite: false,
+                                              iconSize: 30,
+                                              valueChanged: (_isFavorite) {},
+                                            )),
+                                      ),
+                                      Align(
+                                        alignment: Alignment.bottomLeft,
+                                        child: Text(
+                                          ' Free',
+                                          style: TextStyle(
+                                              color: Colors.white,
+                                              fontSize: 14),
+                                        ),
+                                      ),
+                                    ]),
+                                  ),
+                                ),
+                              ],
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Padding(
+                              padding: EdgeInsets.fromLTRB(0, 1, 30, 0),
+                              child: Text(
+                                'C++ Sub',
+                                style: TextStyle(fontSize: 14),
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) => SubLevelScreen()));
+                        },
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Stack(
+                              children: [
+                                Padding(
+                                  padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
+                                  child: Container(
+                                    width: 115,
+                                    height: 150,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(8),
+                                      image: DecorationImage(
+                                          image: AssetImage(
+                                              'assets/image/kotlin.png'),
+                                          fit: BoxFit.cover),
+                                    ),
+                                    child: Stack(children: [
+                                      Align(
+                                        alignment: Alignment.bottomCenter,
+                                        child: Container(
+                                            width: 93,
+                                            height: 9,
+                                            decoration:
+                                                BoxDecoration(boxShadow: [
+                                              BoxShadow(
+                                                color: Colors.black,
+                                                blurRadius: 15.0,
+                                              )
+                                            ])),
+                                      ),
+                                      Padding(
+                                        padding: const EdgeInsets.fromLTRB(
+                                            85, 120, 0, 0),
+                                        child: Container(
+                                            decoration: BoxDecoration(
+                                                color: Color.fromRGBO(
+                                                    245, 236, 224, 1),
+                                                borderRadius:
+                                                    BorderRadius.circular(50)),
+                                            width: 26,
+                                            height: 26,
+                                            child: FavoriteButton(
+                                              isFavorite: false,
+                                              iconSize: 30,
+                                              valueChanged: (_isFavorite) {},
+                                            )),
+                                      ),
+                                      Align(
+                                        alignment: Alignment.bottomLeft,
+                                        child: Text(
+                                          ' Free',
+                                          style: TextStyle(
+                                              color: Colors.white,
+                                              fontSize: 14),
+                                        ),
+                                      ),
+                                    ]),
+                                  ),
+                                ),
+                              ],
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Padding(
+                              padding: EdgeInsets.fromLTRB(0, 1, 30, 0),
+                              child: Text(
+                                'Kotlin Sub',
+                                style: TextStyle(fontSize: 14),
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) => SubLevelScreen()));
+                        },
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Stack(
+                              children: [
+                                Padding(
+                                  padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
+                                  child: Container(
+                                    width: 115,
+                                    height: 150,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(8),
+                                      image: DecorationImage(
+                                          image: AssetImage(
+                                              'assets/image/flutter.png'),
                                           fit: BoxFit.cover),
                                     ),
                                     child: Stack(children: [
@@ -248,6 +494,8 @@ class _SubjectScreenFState extends State<SubjectScreenF> {
                               builder: (context) => SubLevelScreen()));
                         },
                         child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisSize: MainAxisSize.min,
                           children: [
                             Stack(
                               children: [
@@ -259,8 +507,8 @@ class _SubjectScreenFState extends State<SubjectScreenF> {
                                     decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(8),
                                       image: DecorationImage(
-                                          image: AssetImage(
-                                              'assets/image/book.jfif'),
+                                          image:
+                                              AssetImage('assets/image/c#.png'),
                                           fit: BoxFit.cover),
                                     ),
                                     child: Stack(children: [
@@ -314,7 +562,169 @@ class _SubjectScreenFState extends State<SubjectScreenF> {
                             Padding(
                               padding: EdgeInsets.fromLTRB(0, 1, 30, 0),
                               child: Text(
-                                'Flutter Sub',
+                                'C# Sub',
+                                style: TextStyle(fontSize: 14),
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) => SubLevelScreen()));
+                        },
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Stack(
+                              children: [
+                                Padding(
+                                  padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
+                                  child: Container(
+                                    width: 115,
+                                    height: 150,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(8),
+                                      image: DecorationImage(
+                                          image: AssetImage(
+                                              'assets/image/sql.jpg'),
+                                          fit: BoxFit.cover),
+                                    ),
+                                    child: Stack(children: [
+                                      Align(
+                                        alignment: Alignment.bottomCenter,
+                                        child: Container(
+                                            width: 93,
+                                            height: 9,
+                                            decoration:
+                                                BoxDecoration(boxShadow: [
+                                              BoxShadow(
+                                                color: Colors.black,
+                                                blurRadius: 15.0,
+                                              )
+                                            ])),
+                                      ),
+                                      Padding(
+                                        padding: const EdgeInsets.fromLTRB(
+                                            85, 120, 0, 0),
+                                        child: Container(
+                                            decoration: BoxDecoration(
+                                                color: Color.fromRGBO(
+                                                    245, 236, 224, 1),
+                                                borderRadius:
+                                                    BorderRadius.circular(50)),
+                                            width: 26,
+                                            height: 26,
+                                            child: FavoriteButton(
+                                              isFavorite: false,
+                                              iconSize: 30,
+                                              valueChanged: (_isFavorite) {},
+                                            )),
+                                      ),
+                                      Align(
+                                        alignment: Alignment.bottomLeft,
+                                        child: Text(
+                                          ' Free',
+                                          style: TextStyle(
+                                              color: Colors.white,
+                                              fontSize: 14),
+                                        ),
+                                      ),
+                                    ]),
+                                  ),
+                                ),
+                              ],
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Padding(
+                              padding: EdgeInsets.fromLTRB(0, 1, 30, 0),
+                              child: Text(
+                                'SQL Sub',
+                                style: TextStyle(fontSize: 14),
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) => SubLevelScreen()));
+                        },
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Stack(
+                              children: [
+                                Padding(
+                                  padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
+                                  child: Container(
+                                    width: 115,
+                                    height: 150,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(8),
+                                      image: DecorationImage(
+                                          image: AssetImage(
+                                              'assets/image/git.jpg'),
+                                          fit: BoxFit.cover),
+                                    ),
+                                    child: Stack(children: [
+                                      Align(
+                                        alignment: Alignment.bottomCenter,
+                                        child: Container(
+                                            width: 93,
+                                            height: 9,
+                                            decoration:
+                                                BoxDecoration(boxShadow: [
+                                              BoxShadow(
+                                                color: Colors.black,
+                                                blurRadius: 15.0,
+                                              )
+                                            ])),
+                                      ),
+                                      Padding(
+                                        padding: const EdgeInsets.fromLTRB(
+                                            85, 120, 0, 0),
+                                        child: Container(
+                                            decoration: BoxDecoration(
+                                                color: Color.fromRGBO(
+                                                    245, 236, 224, 1),
+                                                borderRadius:
+                                                    BorderRadius.circular(50)),
+                                            width: 26,
+                                            height: 26,
+                                            child: FavoriteButton(
+                                              isFavorite: false,
+                                              iconSize: 30,
+                                              valueChanged: (_isFavorite) {},
+                                            )),
+                                      ),
+                                      Align(
+                                        alignment: Alignment.bottomLeft,
+                                        child: Text(
+                                          ' Free',
+                                          style: TextStyle(
+                                              color: Colors.white,
+                                              fontSize: 14),
+                                        ),
+                                      ),
+                                    ]),
+                                  ),
+                                ),
+                              ],
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Padding(
+                              padding: EdgeInsets.fromLTRB(0, 1, 30, 0),
+                              child: Text(
+                                'Git Sub',
                                 style: TextStyle(fontSize: 14),
                               ),
                             )
@@ -339,7 +749,7 @@ class _SubjectScreenFState extends State<SubjectScreenF> {
                                       borderRadius: BorderRadius.circular(8),
                                       image: DecorationImage(
                                           image: AssetImage(
-                                              'assets/image/book.jfif'),
+                                              'assets/image/python.jpg'),
                                           fit: BoxFit.cover),
                                     ),
                                     child: Stack(children: [
@@ -393,402 +803,7 @@ class _SubjectScreenFState extends State<SubjectScreenF> {
                             Padding(
                               padding: EdgeInsets.fromLTRB(0, 1, 30, 0),
                               child: Text(
-                                'Flutter Sub',
-                                style: TextStyle(fontSize: 14),
-                              ),
-                            )
-                          ],
-                        ),
-                      ),
-                      GestureDetector(
-                        onTap: () {
-                          Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) => SubLevelScreen()));
-                        },
-                        child: Column(
-                          children: [
-                            Stack(
-                              children: [
-                                Padding(
-                                  padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
-                                  child: Container(
-                                    width: 115,
-                                    height: 150,
-                                    decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(8),
-                                      image: DecorationImage(
-                                          image: AssetImage(
-                                              'assets/image/book.jfif'),
-                                          fit: BoxFit.cover),
-                                    ),
-                                    child: Stack(children: [
-                                      Align(
-                                        alignment: Alignment.bottomCenter,
-                                        child: Container(
-                                            width: 93,
-                                            height: 9,
-                                            decoration:
-                                                BoxDecoration(boxShadow: [
-                                              BoxShadow(
-                                                color: Colors.black,
-                                                blurRadius: 15.0,
-                                              )
-                                            ])),
-                                      ),
-                                      Padding(
-                                        padding: const EdgeInsets.fromLTRB(
-                                            85, 120, 0, 0),
-                                        child: Container(
-                                            decoration: BoxDecoration(
-                                                color: Color.fromRGBO(
-                                                    245, 236, 224, 1),
-                                                borderRadius:
-                                                    BorderRadius.circular(50)),
-                                            width: 26,
-                                            height: 26,
-                                            child: FavoriteButton(
-                                              isFavorite: false,
-                                              iconSize: 30,
-                                              valueChanged: (_isFavorite) {},
-                                            )),
-                                      ),
-                                      Align(
-                                        alignment: Alignment.bottomLeft,
-                                        child: Text(
-                                          ' Free',
-                                          style: TextStyle(
-                                              color: Colors.white,
-                                              fontSize: 14),
-                                        ),
-                                      ),
-                                    ]),
-                                  ),
-                                ),
-                              ],
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            Padding(
-                              padding: EdgeInsets.fromLTRB(0, 1, 30, 0),
-                              child: Text(
-                                'Flutter Sub',
-                                style: TextStyle(fontSize: 14),
-                              ),
-                            )
-                          ],
-                        ),
-                      ),
-                      GestureDetector(
-                        onTap: () {
-                          Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) => SubLevelScreen()));
-                        },
-                        child: Column(
-                          children: [
-                            Stack(
-                              children: [
-                                Padding(
-                                  padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
-                                  child: Container(
-                                    width: 115,
-                                    height: 150,
-                                    decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(8),
-                                      image: DecorationImage(
-                                          image: AssetImage(
-                                              'assets/image/book.jfif'),
-                                          fit: BoxFit.cover),
-                                    ),
-                                    child: Stack(children: [
-                                      Align(
-                                        alignment: Alignment.bottomCenter,
-                                        child: Container(
-                                            width: 93,
-                                            height: 9,
-                                            decoration:
-                                                BoxDecoration(boxShadow: [
-                                              BoxShadow(
-                                                color: Colors.black,
-                                                blurRadius: 15.0,
-                                              )
-                                            ])),
-                                      ),
-                                      Padding(
-                                        padding: const EdgeInsets.fromLTRB(
-                                            85, 120, 0, 0),
-                                        child: Container(
-                                            decoration: BoxDecoration(
-                                                color: Color.fromRGBO(
-                                                    245, 236, 224, 1),
-                                                borderRadius:
-                                                    BorderRadius.circular(50)),
-                                            width: 26,
-                                            height: 26,
-                                            child: FavoriteButton(
-                                              isFavorite: false,
-                                              iconSize: 30,
-                                              valueChanged: (_isFavorite) {},
-                                            )),
-                                      ),
-                                      Align(
-                                        alignment: Alignment.bottomLeft,
-                                        child: Text(
-                                          ' Free',
-                                          style: TextStyle(
-                                              color: Colors.white,
-                                              fontSize: 14),
-                                        ),
-                                      ),
-                                    ]),
-                                  ),
-                                ),
-                              ],
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            Padding(
-                              padding: EdgeInsets.fromLTRB(0, 1, 30, 0),
-                              child: Text(
-                                'Flutter Sub',
-                                style: TextStyle(fontSize: 14),
-                              ),
-                            )
-                          ],
-                        ),
-                      ),
-                      GestureDetector(
-                        onTap: () {
-                          Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) => SubLevelScreen()));
-                        },
-                        child: Column(
-                          children: [
-                            Stack(
-                              children: [
-                                Padding(
-                                  padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
-                                  child: Container(
-                                    width: 115,
-                                    height: 150,
-                                    decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(8),
-                                      image: DecorationImage(
-                                          image: AssetImage(
-                                              'assets/image/book.jfif'),
-                                          fit: BoxFit.cover),
-                                    ),
-                                    child: Stack(children: [
-                                      Align(
-                                        alignment: Alignment.bottomCenter,
-                                        child: Container(
-                                            width: 93,
-                                            height: 9,
-                                            decoration:
-                                                BoxDecoration(boxShadow: [
-                                              BoxShadow(
-                                                color: Colors.black,
-                                                blurRadius: 15.0,
-                                              )
-                                            ])),
-                                      ),
-                                      Padding(
-                                        padding: const EdgeInsets.fromLTRB(
-                                            85, 120, 0, 0),
-                                        child: Container(
-                                            decoration: BoxDecoration(
-                                                color: Color.fromRGBO(
-                                                    245, 236, 224, 1),
-                                                borderRadius:
-                                                    BorderRadius.circular(50)),
-                                            width: 26,
-                                            height: 26,
-                                            child: FavoriteButton(
-                                              isFavorite: false,
-                                              iconSize: 30,
-                                              valueChanged: (_isFavorite) {},
-                                            )),
-                                      ),
-                                      Align(
-                                        alignment: Alignment.bottomLeft,
-                                        child: Text(
-                                          ' Free',
-                                          style: TextStyle(
-                                              color: Colors.white,
-                                              fontSize: 14),
-                                        ),
-                                      ),
-                                    ]),
-                                  ),
-                                ),
-                              ],
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            Padding(
-                              padding: EdgeInsets.fromLTRB(0, 1, 30, 0),
-                              child: Text(
-                                'Flutter Sub',
-                                style: TextStyle(fontSize: 14),
-                              ),
-                            )
-                          ],
-                        ),
-                      ),
-                      GestureDetector(
-                        onTap: () {
-                          Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) => SubLevelScreen()));
-                        },
-                        child: Column(
-                          children: [
-                            Stack(
-                              children: [
-                                Padding(
-                                  padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
-                                  child: Container(
-                                    width: 115,
-                                    height: 150,
-                                    decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(8),
-                                      image: DecorationImage(
-                                          image: AssetImage(
-                                              'assets/image/book.jfif'),
-                                          fit: BoxFit.cover),
-                                    ),
-                                    child: Stack(children: [
-                                      Align(
-                                        alignment: Alignment.bottomCenter,
-                                        child: Container(
-                                            width: 93,
-                                            height: 9,
-                                            decoration:
-                                                BoxDecoration(boxShadow: [
-                                              BoxShadow(
-                                                color: Colors.black,
-                                                blurRadius: 15.0,
-                                              )
-                                            ])),
-                                      ),
-                                      Padding(
-                                        padding: const EdgeInsets.fromLTRB(
-                                            85, 120, 0, 0),
-                                        child: Container(
-                                            decoration: BoxDecoration(
-                                                color: Color.fromRGBO(
-                                                    245, 236, 224, 1),
-                                                borderRadius:
-                                                    BorderRadius.circular(50)),
-                                            width: 26,
-                                            height: 26,
-                                            child: FavoriteButton(
-                                              isFavorite: false,
-                                              iconSize: 30,
-                                              valueChanged: (_isFavorite) {},
-                                            )),
-                                      ),
-                                      Align(
-                                        alignment: Alignment.bottomLeft,
-                                        child: Text(
-                                          ' Free',
-                                          style: TextStyle(
-                                              color: Colors.white,
-                                              fontSize: 14),
-                                        ),
-                                      ),
-                                    ]),
-                                  ),
-                                ),
-                              ],
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            Padding(
-                              padding: EdgeInsets.fromLTRB(0, 1, 30, 0),
-                              child: Text(
-                                'Flutter Sub',
-                                style: TextStyle(fontSize: 14),
-                              ),
-                            )
-                          ],
-                        ),
-                      ),
-                      GestureDetector(
-                        onTap: () {
-                          Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) => SubLevelScreen()));
-                        },
-                        child: Column(
-                          children: [
-                            Stack(
-                              children: [
-                                Padding(
-                                  padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
-                                  child: Container(
-                                    width: 115,
-                                    height: 150,
-                                    decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(8),
-                                      image: DecorationImage(
-                                          image: AssetImage(
-                                              'assets/image/book.jfif'),
-                                          fit: BoxFit.cover),
-                                    ),
-                                    child: Stack(children: [
-                                      Align(
-                                        alignment: Alignment.bottomCenter,
-                                        child: Container(
-                                            width: 93,
-                                            height: 9,
-                                            decoration:
-                                                BoxDecoration(boxShadow: [
-                                              BoxShadow(
-                                                color: Colors.black,
-                                                blurRadius: 15.0,
-                                              )
-                                            ])),
-                                      ),
-                                      Padding(
-                                        padding: const EdgeInsets.fromLTRB(
-                                            85, 120, 0, 0),
-                                        child: Container(
-                                            decoration: BoxDecoration(
-                                                color: Color.fromRGBO(
-                                                    245, 236, 224, 1),
-                                                borderRadius:
-                                                    BorderRadius.circular(50)),
-                                            width: 26,
-                                            height: 26,
-                                            child: FavoriteButton(
-                                              isFavorite: false,
-                                              iconSize: 30,
-                                              valueChanged: (_isFavorite) {},
-                                            )),
-                                      ),
-                                      Align(
-                                        alignment: Alignment.bottomLeft,
-                                        child: Text(
-                                          ' Free',
-                                          style: TextStyle(
-                                              color: Colors.white,
-                                              fontSize: 14),
-                                        ),
-                                      ),
-                                    ]),
-                                  ),
-                                ),
-                              ],
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            Padding(
-                              padding: EdgeInsets.fromLTRB(0, 1, 30, 0),
-                              child: Text(
-                                'Flutter Sub',
+                                'Python Sub',
                                 style: TextStyle(fontSize: 14),
                               ),
                             )

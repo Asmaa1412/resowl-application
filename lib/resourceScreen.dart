@@ -18,6 +18,7 @@ class ResourceSacreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Home Screen',
       theme: ThemeData(primarySwatch: Colors.lightGreen),
       home: ResourceSacreenF(),
@@ -49,7 +50,7 @@ class _ResourceSacreenFState extends State<ResourceSacreenF> {
         height: 250,
         decoration: BoxDecoration(
           image: DecorationImage(
-              image: AssetImage('assets/image/flutter.png'), fit: BoxFit.cover),
+              image: AssetImage('assets/image/backk.jpg'), fit: BoxFit.cover),
         ),
       ),
       CustomPaint(
@@ -215,9 +216,43 @@ class _ResourceSacreenFState extends State<ResourceSacreenF> {
                                   color: Color.fromARGB(255, 21, 39, 68)),
                             ),
                             SizedBox(
-                              width: 20,
+                              width: 25,
                             ),
-                            //    RatingBar(minRating: 1,maxRating: 5,initialRating: 3,),
+                            Container(
+                              width: 160,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(20),
+                                  color: Color.fromARGB(255, 249, 243, 243)),
+                              child: Row(
+                                children: [
+                                  SizedBox(
+                                    width: 5,
+                                  ),
+                                  RatingBar(
+                                    itemSize: 30,
+                                    ratingWidget: RatingWidget(
+                                        empty: Icon(
+                                          Icons.star_border,
+                                          color: Colors.amber,
+                                        ),
+                                        full: Icon(
+                                          Icons.star,
+                                          color: Colors.amber,
+                                        ),
+                                        half: Icon(
+                                          Icons.star,
+                                          color: Colors.amber,
+                                        )),
+                                    minRating: 0,
+                                    maxRating: 5,
+                                    initialRating: 0,
+                                    onRatingUpdate: (rating) {
+                                      print(rating);
+                                    },
+                                  ),
+                                ],
+                              ),
+                            ),
                           ],
                         ),
                         Padding(
@@ -287,7 +322,7 @@ class _ResourceSacreenFState extends State<ResourceSacreenF> {
                                       CircleAvatar(
                                         radius: 40.0,
                                         backgroundImage: AssetImage(
-                                          'assets/image/flutter.png',
+                                          'assets/image/face.png',
                                         ),
                                       ),
                                       SizedBox(
@@ -302,7 +337,7 @@ class _ResourceSacreenFState extends State<ResourceSacreenF> {
                                             height: 7,
                                           ),
                                           Text(
-                                            'Wiliam Song Sam',
+                                            'Kevin D.Moore',
                                             style: GoogleFonts.gentiumBasic(
                                                 fontSize: 23,
                                                 color: Color.fromARGB(
@@ -312,7 +347,7 @@ class _ResourceSacreenFState extends State<ResourceSacreenF> {
                                             height: 10,
                                           ),
                                           Text(
-                                            'By Lorem Ispum',
+                                            'raywnderlich team',
                                             style: GoogleFonts.gentiumBasic(
                                                 fontSize: 13,
                                                 color: Color.fromARGB(
