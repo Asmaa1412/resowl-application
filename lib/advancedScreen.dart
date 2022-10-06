@@ -9,27 +9,27 @@ import 'sub-levelScreen.dart';
 
 int indexx = 0;
 
-class NoviceScreen extends StatelessWidget {
-  const NoviceScreen({Key? key}) : super(key: key);
+class AdvncedScreen extends StatelessWidget {
+  const AdvncedScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Home Screen',
       theme: ThemeData(primarySwatch: Colors.lightGreen),
-      home: NoviceScreenF(),
+      home: AdvncedScreenF(),
     );
   }
 }
 
-class NoviceScreenF extends StatefulWidget {
-  const NoviceScreenF({Key? key}) : super(key: key);
+class AdvncedScreenF extends StatefulWidget {
+  const AdvncedScreenF({Key? key}) : super(key: key);
 
   @override
-  State<NoviceScreenF> createState() => _NoviceScreenFState();
+  State<AdvncedScreenF> createState() => _AdvncedScreenFState();
 }
 
-class _NoviceScreenFState extends State<NoviceScreenF> {
+class _AdvncedScreenFState extends State<AdvncedScreenF> {
   void Findexx(int ind) {
     setState(() {
       indexx = ind;
@@ -92,7 +92,7 @@ class _NoviceScreenFState extends State<NoviceScreenF> {
                   Padding(
                     padding: const EdgeInsets.fromLTRB(25, 7, 0, 0),
                     child: Text(
-                      'Novice',
+                      'Advanced',
                       style: GoogleFonts.gentiumBasic(
                           shadows: <Shadow>[
                             Shadow(

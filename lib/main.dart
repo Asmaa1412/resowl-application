@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:resowl/splashScreen.dart';
-
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'HomeScreen.dart';
 import 'aboutUsScreen.dart';
+import 'authorScreen.dart';
 import 'editProfileScreen.dart';
 import 'favoredScreen.dart';
 import 'forgetPasswordScreen.dart';
@@ -13,15 +15,18 @@ import 'resourceScreen.dart';
 import 'signUpScreen.dart';
 import 'sub-levelScreen.dart';
 import 'subjectSreen.dart';
+import 'tips.dart';
 import 'verCodeScreen.dart';
 
 /* void main() {
   runApp(const SplashScreen());
 } */
 
-/* void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(const RegistrationScreen());
-} */
+}  
 
 /* void main() {
   runApp(const LogInScreen());
@@ -32,14 +37,14 @@ import 'verCodeScreen.dart';
 }
  */
 
- void main() {
+/*  void main() {
   runApp(const HomeScreen());
-}  
-
-/* void main() {
+}   */
+/* 
+  void main() {
   runApp(const SubjectScreen());
-}
- */
+} */
+
 /* 
  void main() {
   runApp(const AboutUsScreen());
@@ -49,18 +54,18 @@ import 'verCodeScreen.dart';
   runApp(const ForgetPasswordScreen());
 }   */
 
-/*void main() {
+/* void main() {
   runApp(const SubLevelScreen());
-}*/
+} */
 
 /* void main() {
   runApp(const NoviceScreen());
-}
- */
-/* void main() {
-  runApp(const ResourceSacreen());
 } */
 
+/*  void main() {
+  runApp(const ResourceSacreen());
+} 
+ */
 /* void main() {
   runApp(const EditProfileScreen());
 } */
@@ -68,7 +73,17 @@ import 'verCodeScreen.dart';
 /*  void main() {
   runApp(const VerCodeScreen());
 }  */
-
- /* void main() {
+/* 
+void main() {
   runApp(const FavoredScreen());
-}  */
+}   */
+
+/* 
+  void main() {
+runApp(const TipsScreen());
+}   */
+
+/* void main() { 
+  runApp(const AuthorScreen());
+} */
+

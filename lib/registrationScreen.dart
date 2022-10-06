@@ -1,5 +1,10 @@
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:resowl/homeScreen.dart';
+import 'package:resowl/logInScreen.dart';
+import 'package:resowl/signUpScreen.dart';
 
 class RegistrationScreen extends StatelessWidget {
   const RegistrationScreen({Key? key}) : super(key: key);
@@ -22,6 +27,11 @@ class RegistrationScreenF extends StatefulWidget {
 }
 
 class _RegistrationScreenFState extends State<RegistrationScreenF> {
+  Future<FirebaseApp> _initializeFirebase() async {
+    FirebaseApp firebaseApp = await Firebase.initializeApp();
+    return firebaseApp;
+  }
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -46,41 +56,40 @@ class _RegistrationScreenFState extends State<RegistrationScreenF> {
                 style: GoogleFonts.gentiumBasic(fontSize: 20),
               ),
               SizedBox(
-                height: 30,
+                height: 40,
               ),
-              Image.asset(
-                'assets/image/welcom.PNG',
-              ),
+              Container(
+                  width: 350,
+                  height: 350,
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                        image: AssetImage('assets/image/welcom.PNG'),
+                        fit: BoxFit.fill),
+                  )),
               SizedBox(
-                height: 60,
+                height: 90,
               ),
               SizedBox(
                 width: 250,
                 height: 40,
                 child: TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => LogInScreen()));
+                      /*   FutureBuilder(
+                          future: _initializeFirebase(),
+                          builder: (context, snapshot) {
+                            if (snapshot.connectionState ==
+                                ConnectionState.done) {
+                              return LogInScreen();
+                            }
+                            return Center(
+                              child: CircularProgressIndicator(),
+                            );
+                          }); */
+                    },
                     child: Text(
                       'LogIn',
-                      style: GoogleFonts.gentiumBasic(
-                          fontSize: 21,
-                          color: Color.fromARGB(210, 255, 255, 255),
-                          fontWeight: FontWeight.w900),
-                    ),
-                    style: TextButton.styleFrom(
-                        backgroundColor: Color.fromARGB(255, 2, 190, 167),
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(11)))),
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              SizedBox(
-                width: 250,
-                height: 40,
-                child: TextButton(
-                    onPressed: () {},
-                    child: Text(
-                      'Sign Up',
                       style: GoogleFonts.gentiumBasic(
                           fontSize: 21,
                           color: Color.fromARGB(255, 2, 190, 167),
@@ -101,18 +110,24 @@ class _RegistrationScreenFState extends State<RegistrationScreenF> {
                 width: 250,
                 height: 40,
                 child: TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => SignUpScreen()));
+                    },
                     child: Text(
-                      'Browse',
+                      'Sign Up',
                       style: GoogleFonts.gentiumBasic(
                           fontSize: 21,
-                          color: Color.fromARGB(210, 255, 255, 255),
+                          color: Color.fromARGB(244, 255, 255, 255),
                           fontWeight: FontWeight.w900),
                     ),
                     style: TextButton.styleFrom(
                         backgroundColor: Color.fromARGB(255, 2, 190, 167),
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(11)))),
+              ),
+              SizedBox(
+                height: 20,
               ),
             ],
           ),

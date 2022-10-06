@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "589694924195",
+    "project_id": "resowl-f979e",
+    "storage_bucket": "resowl-f979e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:589694924195:android:f1920a7b0f07cfee7b1616",
+        "android_client_info": {
+          "package_name": "com.example.resowl"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "589694924195-iijcclathh0tvaqset8ce7hnhcr9ekgu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCEkQHneDHaM8HCfifSwYtZxgo9LejqdsI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "589694924195-iijcclathh0tvaqset8ce7hnhcr9ekgu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

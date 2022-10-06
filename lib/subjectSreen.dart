@@ -1,5 +1,9 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:favorite_button/favorite_button.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import 'HomeScreen.dart';
 import 'sub-levelScreen.dart';
@@ -30,30 +34,45 @@ class _SubjectScreenFState extends State<SubjectScreenF> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          backgroundColor: Color.fromARGB(255, 255, 252, 242),
+          backgroundColor: Color.fromARGB(255, 3, 167, 148),
+          elevation: 5.0,
           leading: IconButton(
+            icon: Icon(
+              Icons.arrow_back_ios,
+              color: Colors.white,
+            ),
             onPressed: () {
-              Navigator.of(context, rootNavigator: true).pop(context);
+              Navigator.of(context)
+                  .push(MaterialPageRoute(builder: (context) => HomeScreen()));
             },
-            icon: Icon(Icons.arrow_back_ios),
+          ),
+          title: Padding(
+            padding: EdgeInsets.fromLTRB(70, 0, 0, 0),
+            child: Text(
+              'Our Cources',
+              style: GoogleFonts.gentiumBasic(
+                  color: Color.fromARGB(255, 255, 255, 255), fontSize: 23),
+            ),
           ),
           actions: [
-            GestureDetector(
-              onTap: () {
-                Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => HomeScreen()));
-              },
-              child: Image.asset(
-                'assets/image/5.png',
-                scale: 2,
-              ),
-            ),
+            IconButton(
+                onPressed: () {
+                  Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => HomeScreen()));
+                },
+                icon: Icon(
+                  Icons.home_filled,
+                  size: 30,
+                  color: Colors.white,
+                )),
           ],
         ),
         body: Stack(
           children: [
             Container(
-              color: Color.fromARGB(255, 255, 252, 242),
+              height: double.infinity,
+              width: double.infinity,
+              color: Colors.white,
               child: SingleChildScrollView(
                 child: Wrap(
                     direction: Axis.horizontal,
@@ -63,22 +82,19 @@ class _SubjectScreenFState extends State<SubjectScreenF> {
                       Container(
                         child: SizedBox(
                           width: 400,
-                          height: 1,
                         ),
                       ),
-                      Column(
-                        children: [
-                          Stack(
-                            children: [
-                              Padding(
-                                padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
-                                child: GestureDetector(
-                                  onTap: () {
-                                    Navigator.of(context).push(
-                                        MaterialPageRoute(
-                                            builder: (context) =>
-                                                SubLevelScreen()));
-                                  },
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) => SubLevelScreen()));
+                        },
+                        child: Column(
+                          children: [
+                            Stack(
+                              children: [
+                                Padding(
+                                  padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
                                   child: Container(
                                     width: 115,
                                     height: 150,
@@ -103,6 +119,23 @@ class _SubjectScreenFState extends State<SubjectScreenF> {
                                               )
                                             ])),
                                       ),
+                                      Padding(
+                                        padding: const EdgeInsets.fromLTRB(
+                                            85, 120, 0, 0),
+                                        child: Container(
+                                            decoration: BoxDecoration(
+                                                color: Color.fromRGBO(
+                                                    245, 236, 224, 1),
+                                                borderRadius:
+                                                    BorderRadius.circular(50)),
+                                            width: 26,
+                                            height: 26,
+                                            child: FavoriteButton(
+                                              isFavorite: false,
+                                              iconSize: 30,
+                                              valueChanged: (_isFavorite) {},
+                                            )),
+                                      ),
                                       Align(
                                         alignment: Alignment.bottomLeft,
                                         child: Text(
@@ -115,34 +148,32 @@ class _SubjectScreenFState extends State<SubjectScreenF> {
                                     ]),
                                   ),
                                 ),
-                              ),
-                            ],
-                          ),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          Padding(
-                            padding: EdgeInsets.fromLTRB(0, 3, 10, 0),
-                            child: Text(
-                              'Flutter Sub',
-                              style: TextStyle(fontSize: 17),
+                              ],
                             ),
-                          )
-                        ],
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Padding(
+                              padding: EdgeInsets.fromLTRB(0, 1, 30, 0),
+                              child: Text(
+                                'Flutter Sub',
+                                style: TextStyle(fontSize: 14),
+                              ),
+                            )
+                          ],
+                        ),
                       ),
-                      Column(
-                        children: [
-                          Stack(
-                            children: [
-                              Padding(
-                                padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
-                                child: GestureDetector(
-                                  onTap: () {
-                                    Navigator.of(context).push(
-                                        MaterialPageRoute(
-                                            builder: (context) =>
-                                                SubLevelScreen()));
-                                  },
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) => SubLevelScreen()));
+                        },
+                        child: Column(
+                          children: [
+                            Stack(
+                              children: [
+                                Padding(
+                                  padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
                                   child: Container(
                                     width: 115,
                                     height: 150,
@@ -167,6 +198,23 @@ class _SubjectScreenFState extends State<SubjectScreenF> {
                                               )
                                             ])),
                                       ),
+                                      Padding(
+                                        padding: const EdgeInsets.fromLTRB(
+                                            85, 120, 0, 0),
+                                        child: Container(
+                                            decoration: BoxDecoration(
+                                                color: Color.fromRGBO(
+                                                    245, 236, 224, 1),
+                                                borderRadius:
+                                                    BorderRadius.circular(50)),
+                                            width: 26,
+                                            height: 26,
+                                            child: FavoriteButton(
+                                              isFavorite: false,
+                                              iconSize: 30,
+                                              valueChanged: (_isFavorite) {},
+                                            )),
+                                      ),
                                       Align(
                                         alignment: Alignment.bottomLeft,
                                         child: Text(
@@ -179,34 +227,32 @@ class _SubjectScreenFState extends State<SubjectScreenF> {
                                     ]),
                                   ),
                                 ),
-                              ),
-                            ],
-                          ),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          Padding(
-                            padding: EdgeInsets.fromLTRB(0, 3, 10, 0),
-                            child: Text(
-                              'Flutter Sub',
-                              style: TextStyle(fontSize: 17),
+                              ],
                             ),
-                          )
-                        ],
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Padding(
+                              padding: EdgeInsets.fromLTRB(0, 1, 30, 0),
+                              child: Text(
+                                'Flutter Sub',
+                                style: TextStyle(fontSize: 14),
+                              ),
+                            )
+                          ],
+                        ),
                       ),
-                      Column(
-                        children: [
-                          Stack(
-                            children: [
-                              Padding(
-                                padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
-                                child: GestureDetector(
-                                  onTap: () {
-                                    Navigator.of(context).push(
-                                        MaterialPageRoute(
-                                            builder: (context) =>
-                                                SubLevelScreen()));
-                                  },
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) => SubLevelScreen()));
+                        },
+                        child: Column(
+                          children: [
+                            Stack(
+                              children: [
+                                Padding(
+                                  padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
                                   child: Container(
                                     width: 115,
                                     height: 150,
@@ -231,6 +277,23 @@ class _SubjectScreenFState extends State<SubjectScreenF> {
                                               )
                                             ])),
                                       ),
+                                      Padding(
+                                        padding: const EdgeInsets.fromLTRB(
+                                            85, 120, 0, 0),
+                                        child: Container(
+                                            decoration: BoxDecoration(
+                                                color: Color.fromRGBO(
+                                                    245, 236, 224, 1),
+                                                borderRadius:
+                                                    BorderRadius.circular(50)),
+                                            width: 26,
+                                            height: 26,
+                                            child: FavoriteButton(
+                                              isFavorite: false,
+                                              iconSize: 30,
+                                              valueChanged: (_isFavorite) {},
+                                            )),
+                                      ),
                                       Align(
                                         alignment: Alignment.bottomLeft,
                                         child: Text(
@@ -243,34 +306,32 @@ class _SubjectScreenFState extends State<SubjectScreenF> {
                                     ]),
                                   ),
                                 ),
-                              ),
-                            ],
-                          ),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          Padding(
-                            padding: EdgeInsets.fromLTRB(0, 3, 10, 0),
-                            child: Text(
-                              'Flutter Sub',
-                              style: TextStyle(fontSize: 17),
+                              ],
                             ),
-                          )
-                        ],
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Padding(
+                              padding: EdgeInsets.fromLTRB(0, 1, 30, 0),
+                              child: Text(
+                                'Flutter Sub',
+                                style: TextStyle(fontSize: 14),
+                              ),
+                            )
+                          ],
+                        ),
                       ),
-                      Column(
-                        children: [
-                          Stack(
-                            children: [
-                              Padding(
-                                padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
-                                child: GestureDetector(
-                                  onTap: () {
-                                    Navigator.of(context).push(
-                                        MaterialPageRoute(
-                                            builder: (context) =>
-                                                SubLevelScreen()));
-                                  },
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) => SubLevelScreen()));
+                        },
+                        child: Column(
+                          children: [
+                            Stack(
+                              children: [
+                                Padding(
+                                  padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
                                   child: Container(
                                     width: 115,
                                     height: 150,
@@ -295,6 +356,23 @@ class _SubjectScreenFState extends State<SubjectScreenF> {
                                               )
                                             ])),
                                       ),
+                                      Padding(
+                                        padding: const EdgeInsets.fromLTRB(
+                                            85, 120, 0, 0),
+                                        child: Container(
+                                            decoration: BoxDecoration(
+                                                color: Color.fromRGBO(
+                                                    245, 236, 224, 1),
+                                                borderRadius:
+                                                    BorderRadius.circular(50)),
+                                            width: 26,
+                                            height: 26,
+                                            child: FavoriteButton(
+                                              isFavorite: false,
+                                              iconSize: 30,
+                                              valueChanged: (_isFavorite) {},
+                                            )),
+                                      ),
                                       Align(
                                         alignment: Alignment.bottomLeft,
                                         child: Text(
@@ -307,34 +385,32 @@ class _SubjectScreenFState extends State<SubjectScreenF> {
                                     ]),
                                   ),
                                 ),
-                              ),
-                            ],
-                          ),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          Padding(
-                            padding: EdgeInsets.fromLTRB(0, 3, 10, 0),
-                            child: Text(
-                              'Flutter Sub',
-                              style: TextStyle(fontSize: 17),
+                              ],
                             ),
-                          )
-                        ],
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Padding(
+                              padding: EdgeInsets.fromLTRB(0, 1, 30, 0),
+                              child: Text(
+                                'Flutter Sub',
+                                style: TextStyle(fontSize: 14),
+                              ),
+                            )
+                          ],
+                        ),
                       ),
-                      Column(
-                        children: [
-                          Stack(
-                            children: [
-                              Padding(
-                                padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
-                                child: GestureDetector(
-                                  onTap: () {
-                                    Navigator.of(context).push(
-                                        MaterialPageRoute(
-                                            builder: (context) =>
-                                                SubLevelScreen()));
-                                  },
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) => SubLevelScreen()));
+                        },
+                        child: Column(
+                          children: [
+                            Stack(
+                              children: [
+                                Padding(
+                                  padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
                                   child: Container(
                                     width: 115,
                                     height: 150,
@@ -359,6 +435,23 @@ class _SubjectScreenFState extends State<SubjectScreenF> {
                                               )
                                             ])),
                                       ),
+                                      Padding(
+                                        padding: const EdgeInsets.fromLTRB(
+                                            85, 120, 0, 0),
+                                        child: Container(
+                                            decoration: BoxDecoration(
+                                                color: Color.fromRGBO(
+                                                    245, 236, 224, 1),
+                                                borderRadius:
+                                                    BorderRadius.circular(50)),
+                                            width: 26,
+                                            height: 26,
+                                            child: FavoriteButton(
+                                              isFavorite: false,
+                                              iconSize: 30,
+                                              valueChanged: (_isFavorite) {},
+                                            )),
+                                      ),
                                       Align(
                                         alignment: Alignment.bottomLeft,
                                         child: Text(
@@ -371,34 +464,32 @@ class _SubjectScreenFState extends State<SubjectScreenF> {
                                     ]),
                                   ),
                                 ),
-                              ),
-                            ],
-                          ),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          Padding(
-                            padding: EdgeInsets.fromLTRB(0, 3, 10, 0),
-                            child: Text(
-                              'Flutter Sub',
-                              style: TextStyle(fontSize: 17),
+                              ],
                             ),
-                          )
-                        ],
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Padding(
+                              padding: EdgeInsets.fromLTRB(0, 1, 30, 0),
+                              child: Text(
+                                'Flutter Sub',
+                                style: TextStyle(fontSize: 14),
+                              ),
+                            )
+                          ],
+                        ),
                       ),
-                      Column(
-                        children: [
-                          Stack(
-                            children: [
-                              Padding(
-                                padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
-                                child: GestureDetector(
-                                  onTap: () {
-                                    Navigator.of(context).push(
-                                        MaterialPageRoute(
-                                            builder: (context) =>
-                                                SubLevelScreen()));
-                                  },
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) => SubLevelScreen()));
+                        },
+                        child: Column(
+                          children: [
+                            Stack(
+                              children: [
+                                Padding(
+                                  padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
                                   child: Container(
                                     width: 115,
                                     height: 150,
@@ -423,6 +514,23 @@ class _SubjectScreenFState extends State<SubjectScreenF> {
                                               )
                                             ])),
                                       ),
+                                      Padding(
+                                        padding: const EdgeInsets.fromLTRB(
+                                            85, 120, 0, 0),
+                                        child: Container(
+                                            decoration: BoxDecoration(
+                                                color: Color.fromRGBO(
+                                                    245, 236, 224, 1),
+                                                borderRadius:
+                                                    BorderRadius.circular(50)),
+                                            width: 26,
+                                            height: 26,
+                                            child: FavoriteButton(
+                                              isFavorite: false,
+                                              iconSize: 30,
+                                              valueChanged: (_isFavorite) {},
+                                            )),
+                                      ),
                                       Align(
                                         alignment: Alignment.bottomLeft,
                                         child: Text(
@@ -435,34 +543,32 @@ class _SubjectScreenFState extends State<SubjectScreenF> {
                                     ]),
                                   ),
                                 ),
-                              ),
-                            ],
-                          ),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          Padding(
-                            padding: EdgeInsets.fromLTRB(0, 3, 10, 0),
-                            child: Text(
-                              'Flutter Sub',
-                              style: TextStyle(fontSize: 17),
+                              ],
                             ),
-                          )
-                        ],
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Padding(
+                              padding: EdgeInsets.fromLTRB(0, 1, 30, 0),
+                              child: Text(
+                                'Flutter Sub',
+                                style: TextStyle(fontSize: 14),
+                              ),
+                            )
+                          ],
+                        ),
                       ),
-                      Column(
-                        children: [
-                          Stack(
-                            children: [
-                              Padding(
-                                padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
-                                child: GestureDetector(
-                                  onTap: () {
-                                    Navigator.of(context).push(
-                                        MaterialPageRoute(
-                                            builder: (context) =>
-                                                SubLevelScreen()));
-                                  },
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) => SubLevelScreen()));
+                        },
+                        child: Column(
+                          children: [
+                            Stack(
+                              children: [
+                                Padding(
+                                  padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
                                   child: Container(
                                     width: 115,
                                     height: 150,
@@ -487,6 +593,23 @@ class _SubjectScreenFState extends State<SubjectScreenF> {
                                               )
                                             ])),
                                       ),
+                                      Padding(
+                                        padding: const EdgeInsets.fromLTRB(
+                                            85, 120, 0, 0),
+                                        child: Container(
+                                            decoration: BoxDecoration(
+                                                color: Color.fromRGBO(
+                                                    245, 236, 224, 1),
+                                                borderRadius:
+                                                    BorderRadius.circular(50)),
+                                            width: 26,
+                                            height: 26,
+                                            child: FavoriteButton(
+                                              isFavorite: false,
+                                              iconSize: 30,
+                                              valueChanged: (_isFavorite) {},
+                                            )),
+                                      ),
                                       Align(
                                         alignment: Alignment.bottomLeft,
                                         child: Text(
@@ -499,34 +622,32 @@ class _SubjectScreenFState extends State<SubjectScreenF> {
                                     ]),
                                   ),
                                 ),
-                              ),
-                            ],
-                          ),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          Padding(
-                            padding: EdgeInsets.fromLTRB(0, 3, 10, 0),
-                            child: Text(
-                              'Flutter Sub',
-                              style: TextStyle(fontSize: 17),
+                              ],
                             ),
-                          )
-                        ],
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Padding(
+                              padding: EdgeInsets.fromLTRB(0, 1, 30, 0),
+                              child: Text(
+                                'Flutter Sub',
+                                style: TextStyle(fontSize: 14),
+                              ),
+                            )
+                          ],
+                        ),
                       ),
-                      Column(
-                        children: [
-                          Stack(
-                            children: [
-                              Padding(
-                                padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
-                                child: GestureDetector(
-                                  onTap: () {
-                                    Navigator.of(context).push(
-                                        MaterialPageRoute(
-                                            builder: (context) =>
-                                                SubLevelScreen()));
-                                  },
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) => SubLevelScreen()));
+                        },
+                        child: Column(
+                          children: [
+                            Stack(
+                              children: [
+                                Padding(
+                                  padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
                                   child: Container(
                                     width: 115,
                                     height: 150,
@@ -551,6 +672,23 @@ class _SubjectScreenFState extends State<SubjectScreenF> {
                                               )
                                             ])),
                                       ),
+                                      Padding(
+                                        padding: const EdgeInsets.fromLTRB(
+                                            85, 120, 0, 0),
+                                        child: Container(
+                                            decoration: BoxDecoration(
+                                                color: Color.fromRGBO(
+                                                    245, 236, 224, 1),
+                                                borderRadius:
+                                                    BorderRadius.circular(50)),
+                                            width: 26,
+                                            height: 26,
+                                            child: FavoriteButton(
+                                              isFavorite: false,
+                                              iconSize: 30,
+                                              valueChanged: (_isFavorite) {},
+                                            )),
+                                      ),
                                       Align(
                                         alignment: Alignment.bottomLeft,
                                         child: Text(
@@ -563,34 +701,32 @@ class _SubjectScreenFState extends State<SubjectScreenF> {
                                     ]),
                                   ),
                                 ),
-                              ),
-                            ],
-                          ),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          Padding(
-                            padding: EdgeInsets.fromLTRB(0, 3, 10, 0),
-                            child: Text(
-                              'Flutter Sub',
-                              style: TextStyle(fontSize: 17),
+                              ],
                             ),
-                          )
-                        ],
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Padding(
+                              padding: EdgeInsets.fromLTRB(0, 1, 30, 0),
+                              child: Text(
+                                'Flutter Sub',
+                                style: TextStyle(fontSize: 14),
+                              ),
+                            )
+                          ],
+                        ),
                       ),
-                      Column(
-                        children: [
-                          Stack(
-                            children: [
-                              Padding(
-                                padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
-                                child: GestureDetector(
-                                  onTap: () {
-                                    Navigator.of(context).push(
-                                        MaterialPageRoute(
-                                            builder: (context) =>
-                                                SubLevelScreen()));
-                                  },
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) => SubLevelScreen()));
+                        },
+                        child: Column(
+                          children: [
+                            Stack(
+                              children: [
+                                Padding(
+                                  padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
                                   child: Container(
                                     width: 115,
                                     height: 150,
@@ -615,69 +751,22 @@ class _SubjectScreenFState extends State<SubjectScreenF> {
                                               )
                                             ])),
                                       ),
-                                      Align(
-                                        alignment: Alignment.bottomLeft,
-                                        child: Text(
-                                          ' Free',
-                                          style: TextStyle(
-                                              color: Colors.white,
-                                              fontSize: 14),
-                                        ),
-                                      ),
-                                    ]),
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          Padding(
-                            padding: EdgeInsets.fromLTRB(0, 3, 10, 0),
-                            child: Text(
-                              'Flutter Sub',
-                              style: TextStyle(fontSize: 17),
-                            ),
-                          )
-                        ],
-                      ),
-                      Column(
-                        children: [
-                          Stack(
-                            children: [
-                              Padding(
-                                padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
-                                child: GestureDetector(
-                                  onTap: () {
-                                    Navigator.of(context).push(
-                                        MaterialPageRoute(
-                                            builder: (context) =>
-                                                SubLevelScreen()));
-                                  },
-                                  child: Container(
-                                    width: 115,
-                                    height: 150,
-                                    decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(8),
-                                      image: DecorationImage(
-                                          image: AssetImage(
-                                              'assets/image/book.jfif'),
-                                          fit: BoxFit.cover),
-                                    ),
-                                    child: Stack(children: [
-                                      Align(
-                                        alignment: Alignment.bottomCenter,
+                                      Padding(
+                                        padding: const EdgeInsets.fromLTRB(
+                                            85, 120, 0, 0),
                                         child: Container(
-                                            width: 93,
-                                            height: 9,
-                                            decoration:
-                                                BoxDecoration(boxShadow: [
-                                              BoxShadow(
-                                                color: Colors.black,
-                                                blurRadius: 15.0,
-                                              )
-                                            ])),
+                                            decoration: BoxDecoration(
+                                                color: Color.fromRGBO(
+                                                    245, 236, 224, 1),
+                                                borderRadius:
+                                                    BorderRadius.circular(50)),
+                                            width: 26,
+                                            height: 26,
+                                            child: FavoriteButton(
+                                              isFavorite: false,
+                                              iconSize: 30,
+                                              valueChanged: (_isFavorite) {},
+                                            )),
                                       ),
                                       Align(
                                         alignment: Alignment.bottomLeft,
@@ -691,20 +780,20 @@ class _SubjectScreenFState extends State<SubjectScreenF> {
                                     ]),
                                   ),
                                 ),
-                              ),
-                            ],
-                          ),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          Padding(
-                            padding: EdgeInsets.fromLTRB(0, 3, 10, 0),
-                            child: Text(
-                              'Flutter Sub',
-                              style: TextStyle(fontSize: 17),
+                              ],
                             ),
-                          )
-                        ],
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Padding(
+                              padding: EdgeInsets.fromLTRB(0, 1, 30, 0),
+                              child: Text(
+                                'Flutter Sub',
+                                style: TextStyle(fontSize: 14),
+                              ),
+                            )
+                          ],
+                        ),
                       ),
                     ]),
               ),
