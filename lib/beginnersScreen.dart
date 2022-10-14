@@ -93,7 +93,7 @@ class _NoviceScreenFState extends State<NoviceScreenF> {
                   Padding(
                     padding: const EdgeInsets.fromLTRB(25, 7, 0, 0),
                     child: Text(
-                      'Novice',
+                      'Beginner',
                       style: GoogleFonts.gentiumBasic(
                           shadows: <Shadow>[
                             Shadow(

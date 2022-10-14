@@ -6,7 +6,8 @@ import 'package:resowl/tips.dart';
 import 'HomeScreen.dart';
 import 'advBeginnerScreen.dart';
 import 'advancedScreen.dart';
-import 'noviceScreen.dart';
+import 'authorScreen.dart';
+import 'beginnersScreen.dart';
 import 'subjectSreen.dart';
 
 class SubLevelScreen extends StatelessWidget {
@@ -274,17 +275,17 @@ class _SubLevelScreenFState extends State<SubLevelScreenF> {
                                       color: Colors.black),
                                 ),
                                 SizedBox(
-                                  width: 25,
+                                  width: 20,
                                 ),
                                 Text(
-                                  'Novice',
+                                  'Beginner',
                                   style: GoogleFonts.gentiumBasic(
                                       fontSize: 25,
                                       fontWeight: FontWeight.w500,
                                       color: Colors.black),
                                 ),
                                 SizedBox(
-                                  width: 170,
+                                  width: 160,
                                 ),
                                 Align(
                                   alignment: Alignment.centerRight,
@@ -401,6 +402,87 @@ class _SubLevelScreenFState extends State<SubLevelScreenF> {
                     SizedBox(
                       height: 20,
                     ),
+
+                    /*  GestureDetector(
+                          onTap: () {
+                            Navigator.of(context).push(MaterialPageRoute(
+                                builder: (context) => AuthorScreen()));
+                          },
+                          child: Padding(
+                            padding: const EdgeInsets.fromLTRB(0, 20, 0, 20),
+                            child: Stack(
+                              children: [
+                                CustomPaint(
+                                  child: Container(
+                                    width: 400,
+                                    height: 110,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(17),
+                                      color: Color.fromARGB(255, 167, 204, 214),
+                                    ),
+                                  ),
+                                ),
+                                Padding(
+                                  padding:
+                                      const EdgeInsets.fromLTRB(0, 15, 30, 0),
+                                  child: Row(
+                                    children: [
+                                      SizedBox(
+                                        width: 15,
+                                      ),
+                                      CircleAvatar(
+                                        radius: 40.0,
+                                        backgroundImage: AssetImage(
+                                          'assets/image/face.png',
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        width: 10,
+                                      ),
+                                      Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        mainAxisSize: MainAxisSize.min,
+                                        children: [
+                                          SizedBox(
+                                            height: 7,
+                                          ),
+                                          Text(
+                                            'Kevin D.Moore',
+                                            style: GoogleFonts.gentiumBasic(
+                                                fontSize: 23,
+                                                color: Color.fromARGB(
+                                                    255, 21, 39, 68)),
+                                          ),
+                                          SizedBox(
+                                            height: 10,
+                                          ),
+                                          Text(
+                                            'raywnderlich team',
+                                            style: GoogleFonts.gentiumBasic(
+                                                fontSize: 13,
+                                                color: Color.fromARGB(
+                                                    255, 21, 39, 68)),
+                                          ),
+                                          Padding(
+                                            padding: EdgeInsets.fromLTRB(
+                                                180, 0, 0, 0),
+                                            child: Icon(
+                                              Icons.arrow_forward_ios_outlined,
+                                              size: 15,
+                                            ),
+                                          ),
+                                        ],
+                                      )
+                                    ],
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
+                   
+ */
                   ],
                 ),
               ),

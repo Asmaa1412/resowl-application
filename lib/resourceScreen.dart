@@ -5,7 +5,7 @@ import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:resowl/authorScreen.dart';
-import 'package:resowl/noviceScreen.dart';
+import 'package:resowl/beginnersScreen.dart';
 
 import 'HomeScreen.dart';
 import 'tips.dart';
@@ -380,3 +380,44 @@ class _ResourceSacreenFState extends State<ResourceSacreenF> {
     ])));
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -9,7 +9,7 @@ import 'editProfileScreen.dart';
 import 'favoredScreen.dart';
 import 'forgetPasswordScreen.dart';
 import 'logInScreen.dart';
-import 'noviceScreen.dart';
+import 'beginnersScreen.dart';
 import 'registrationScreen.dart';
 import 'resourceScreen.dart';
 import 'signUpScreen.dart';
