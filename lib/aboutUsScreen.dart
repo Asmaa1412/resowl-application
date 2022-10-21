@@ -13,7 +13,7 @@ class AboutUsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Home Screen',
+      title: 'About Us Screen',
       theme: ThemeData(primarySwatch: Colors.lightGreen),
       home: AboutUsScreenF(),
     );

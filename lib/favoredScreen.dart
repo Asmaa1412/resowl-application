@@ -17,7 +17,7 @@ class FavoredScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Home Screen',
+      title: 'Favored Screen',
       theme: ThemeData(primarySwatch: Colors.lightGreen),
       home: FavoredScreenF(),
     );

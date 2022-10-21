@@ -8,7 +8,7 @@ class VerCodeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Home Screen',
+      title: 'VerCode Screen',
       theme: ThemeData(primarySwatch: Colors.lightGreen),
       home: VerCodeScreenF(),
     );

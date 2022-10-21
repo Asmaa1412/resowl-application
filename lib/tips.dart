@@ -14,7 +14,7 @@ class TipsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Home Screen',
+      title: 'Tips Screen',
       theme: ThemeData(primarySwatch: Colors.lightGreen),
       home: TipsScreenF(),
     );

@@ -23,6 +23,64 @@ class RegistrationScreen extends StatelessWidget {
   }
 }
 
+class SplashScreen extends StatefulWidget {
+  const SplashScreen({Key? key}) : super(key: key);
+
+  @override
+  State<SplashScreen> createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen> {
+  @override
+  void initState() {
+    super.initState();
+    Timer(
+        Duration(seconds: 5),
+        () => Navigator.pushReplacement(context,
+            MaterialPageRoute(builder: (context) => RegistrationScreenF())));
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return SafeArea(
+      child: Scaffold(
+        body: Container(
+            width: 600,
+            color: Colors.white,
+            child: Center(
+              child: Column(
+                children: [
+                  SizedBox(
+                    height: 220,
+                  ),
+                  Image.asset(
+                    'assets/image/5.png',
+                    width: 130,
+                  ),
+                  SizedBox(
+                    height: 70,
+                  ),
+                  Text(
+                    'Resowl',
+                    style: GoogleFonts.gentiumBasic(
+                        fontSize: 27,
+                        color: Color.fromARGB(255, 26, 131, 118),
+                        fontWeight: FontWeight.bold),
+                  ),
+                  Text('a good   resource   for  you ',
+                      style: GoogleFonts.gentiumBasic(
+                        fontSize: 22,
+                        color: Color.fromARGB(255, 26, 131, 118),
+                        fontWeight: FontWeight.w300,
+                      )),
+                ],
+              ),
+            )),
+      ),
+    );
+  }
+}
+
 class RegistrationScreenF extends StatefulWidget {
   const RegistrationScreenF({Key? key}) : super(key: key);
 
@@ -136,64 +194,6 @@ class _RegistrationScreenFState extends State<RegistrationScreenF> {
             ],
           ),
         ),
-      ),
-    );
-  }
-}
-
-class SplashScreen extends StatefulWidget {
-  const SplashScreen({Key? key}) : super(key: key);
-
-  @override
-  State<SplashScreen> createState() => _SplashScreenState();
-}
-
-class _SplashScreenState extends State<SplashScreen> {
-  @override
-  void initState() {
-    super.initState();
-    Timer(
-        Duration(seconds: 5),
-        () => Navigator.pushReplacement(context,
-            MaterialPageRoute(builder: (context) => RegistrationScreenF())));
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        body: Container(
-            width: 600,
-            color: Colors.white,
-            child: Center(
-              child: Column(
-                children: [
-                  SizedBox(
-                    height: 220,
-                  ),
-                  Image.asset(
-                    'assets/image/5.png',
-                    width: 130,
-                  ),
-                  SizedBox(
-                    height: 70,
-                  ),
-                  Text(
-                    'Resowl',
-                    style: GoogleFonts.gentiumBasic(
-                        fontSize: 27,
-                        color: Color.fromARGB(255, 26, 131, 118),
-                        fontWeight: FontWeight.bold),
-                  ),
-                  Text('a good   resource   for  you ',
-                      style: GoogleFonts.gentiumBasic(
-                        fontSize: 22,
-                        color: Color.fromARGB(255, 26, 131, 118),
-                        fontWeight: FontWeight.w300,
-                      )),
-                ],
-              ),
-            )),
       ),
     );
   }

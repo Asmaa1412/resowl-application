@@ -12,7 +12,7 @@ class SignUpScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'LogIn screen',
+      title: 'SignUp Screen',
       theme: ThemeData(primarySwatch: Colors.blue),
       home: SignUpScreenF(),
     );

@@ -17,7 +17,7 @@ class SubLevelScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Home Screen',
+      title: 'Sub Level Screen',
       theme: ThemeData(primarySwatch: Colors.lightGreen),
       home: SubLevelScreenF(),
     );
@@ -254,7 +254,7 @@ class _SubLevelScreenFState extends State<SubLevelScreenF> {
                       child: GestureDetector(
                         onTap: () {
                           Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) => NoviceScreen()));
+                              builder: (context) => BeginnerScreen()));
                         },
                         child: Container(
                             height: 80,

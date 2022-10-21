@@ -13,7 +13,7 @@ class EditProfileScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Home Screen',
+      title: 'Edit Profile Screen',
       theme: ThemeData(primarySwatch: Colors.lightGreen),
       home: EditProfileScreenF(),
     );

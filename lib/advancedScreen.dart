@@ -16,7 +16,7 @@ class AdvncedScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Home Screen',
+      title: 'Advnced Screen',
       theme: ThemeData(primarySwatch: Colors.lightGreen),
       home: AdvncedScreenF(),
     );

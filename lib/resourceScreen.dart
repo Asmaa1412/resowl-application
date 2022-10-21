@@ -19,7 +19,7 @@ class ResourceSacreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Home Screen',
+      title: 'Resource Sacreen',
       theme: ThemeData(primarySwatch: Colors.lightGreen),
       home: ResourceSacreenF(),
     );
@@ -69,8 +69,8 @@ class _ResourceSacreenFState extends State<ResourceSacreenF> {
               IconButton(
                 icon: Icon(Icons.arrow_back_ios_new),
                 onPressed: () {
-                  Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => NoviceScreen()));
+                  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => BeginnerScreen()));
                 },
               ),
               SizedBox(
@@ -380,44 +380,3 @@ class _ResourceSacreenFState extends State<ResourceSacreenF> {
     ])));
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

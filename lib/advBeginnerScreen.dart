@@ -16,7 +16,7 @@ class AdvBScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Home Screen',
+      title: 'AdvB Screen',
       theme: ThemeData(primarySwatch: Colors.lightGreen),
       home: AdvBScreenF(),
     );
