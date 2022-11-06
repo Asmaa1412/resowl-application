@@ -12,19 +12,6 @@ import 'tips.dart';
 
 int indexx = 0;
 
-class ResourceSacreen extends StatelessWidget {
-  const ResourceSacreen({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Resource Sacreen',
-      theme: ThemeData(primarySwatch: Colors.lightGreen),
-      home: ResourceSacreenF(),
-    );
-  }
-}
 
 class ResourceSacreenF extends StatefulWidget {
   const ResourceSacreenF({Key? key}) : super(key: key);
@@ -69,8 +56,8 @@ class _ResourceSacreenFState extends State<ResourceSacreenF> {
               IconButton(
                 icon: Icon(Icons.arrow_back_ios_new),
                 onPressed: () {
-                  Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) => BeginnerScreen()));
+                   Navigator.pop(context);
+
                 },
               ),
               SizedBox(
@@ -79,7 +66,7 @@ class _ResourceSacreenFState extends State<ResourceSacreenF> {
               IconButton(
                   onPressed: () {
                     Navigator.of(context).push(
-                        MaterialPageRoute(builder: (context) => HomeScreen()));
+                        MaterialPageRoute(builder: (context) => HomeScreenF()));
                   },
                   icon: Icon(
                     Icons.home_filled,
@@ -295,7 +282,7 @@ class _ResourceSacreenFState extends State<ResourceSacreenF> {
                         GestureDetector(
                           onTap: () {
                             Navigator.of(context).push(MaterialPageRoute(
-                                builder: (context) => AuthorScreen()));
+                                builder: (context) => AuthorScreenF()));
                           },
                           child: Padding(
                             padding: const EdgeInsets.fromLTRB(0, 20, 0, 20),

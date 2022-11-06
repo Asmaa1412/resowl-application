@@ -9,19 +9,7 @@ import 'sub-levelScreen.dart';
 
 int indexx = 0;
 
-class AdvBScreen extends StatelessWidget {
-  const AdvBScreen({Key? key}) : super(key: key);
 
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'AdvB Screen',
-      theme: ThemeData(primarySwatch: Colors.lightGreen),
-      home: AdvBScreenF(),
-    );
-  }
-}
 
 class AdvBScreenF extends StatefulWidget {
   const AdvBScreenF({Key? key}) : super(key: key);
@@ -71,8 +59,8 @@ class _AdvBScreenFState extends State<AdvBScreenF> {
                       IconButton(
                         icon: Icon(Icons.arrow_back_ios_new),
                         onPressed: () {
-                          Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) => SubLevelScreen()));
+                           Navigator.pop(context);
+
                         },
                       ),
                       SizedBox(
@@ -81,7 +69,7 @@ class _AdvBScreenFState extends State<AdvBScreenF> {
                       IconButton(
                           onPressed: () {
                             Navigator.of(context).push(MaterialPageRoute(
-                                builder: (context) => HomeScreen()));
+                                builder: (context) => HomeScreenF()));
                           },
                           icon: Icon(
                             Icons.home_filled,
@@ -146,7 +134,7 @@ class _AdvBScreenFState extends State<AdvBScreenF> {
                           child: GestureDetector(
                             onTap: () {
                               Navigator.of(context).push(MaterialPageRoute(
-                                  builder: (context) => ResourceSacreen()));
+                                  builder: (context) => ResourceSacreenF()));
                             },
                             child: Container(
                               height: 75,
@@ -209,7 +197,7 @@ class _AdvBScreenFState extends State<AdvBScreenF> {
                           child: GestureDetector(
                             onTap: () {
                               Navigator.of(context).push(MaterialPageRoute(
-                                  builder: (context) => ResourceSacreen()));
+                                  builder: (context) => ResourceSacreenF()));
                             },
                             child: Container(
                               height: 75,
@@ -272,7 +260,7 @@ class _AdvBScreenFState extends State<AdvBScreenF> {
                           child: GestureDetector(
                             onTap: () {
                               Navigator.of(context).push(MaterialPageRoute(
-                                  builder: (context) => ResourceSacreen()));
+                                  builder: (context) => ResourceSacreenF()));
                             },
                             child: Container(
                               height: 75,
@@ -335,7 +323,7 @@ class _AdvBScreenFState extends State<AdvBScreenF> {
                           child: GestureDetector(
                             onTap: () {
                               Navigator.of(context).push(MaterialPageRoute(
-                                  builder: (context) => ResourceSacreen()));
+                                  builder: (context) => ResourceSacreenF()));
                             },
                             child: Container(
                               height: 75,
@@ -398,7 +386,7 @@ class _AdvBScreenFState extends State<AdvBScreenF> {
                           child: GestureDetector(
                             onTap: () {
                               Navigator.of(context).push(MaterialPageRoute(
-                                  builder: (context) => ResourceSacreen()));
+                                  builder: (context) => ResourceSacreenF()));
                             },
                             child: Container(
                               height: 75,

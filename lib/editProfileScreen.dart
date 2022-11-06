@@ -48,7 +48,7 @@ class _EditProfileScreenFState extends State<EditProfileScreenF> {
           IconButton(
               onPressed: () {
                 Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => HomeScreen()));
+                    MaterialPageRoute(builder: (context) => HomeScreenF()));
               },
               icon: Icon(
                 Icons.home_filled,
@@ -88,7 +88,7 @@ class _EditProfileScreenFState extends State<EditProfileScreenF> {
                             GestureDetector(
                               onTap: () {
                                 Navigator.of(context).push(MaterialPageRoute(
-                                    builder: (context) => AboutUsScreen()));
+                                    builder: (context) => AboutUsScreenF()));
                               },
                               child: Text(
                                 'Resowl',
@@ -104,7 +104,7 @@ class _EditProfileScreenFState extends State<EditProfileScreenF> {
                             GestureDetector(
                               onTap: () {
                                 Navigator.of(context).push(MaterialPageRoute(
-                                    builder: (context) => AboutUsScreen()));
+                                    builder: (context) => AboutUsScreenF()));
                               },
                               child: Text(
                                 'A good resource for you',
@@ -136,7 +136,7 @@ class _EditProfileScreenFState extends State<EditProfileScreenF> {
                         GestureDetector(
                           onTap: () {
                             Navigator.of(context).push(MaterialPageRoute(
-                                builder: (context) => AboutUsScreen()));
+                                builder: (context) => AboutUsScreenF()));
                           },
                           child: Text(
                             'About Us',

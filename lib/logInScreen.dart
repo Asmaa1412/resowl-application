@@ -7,18 +7,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 
 import 'forgetPasswordScreen.dart';
 
-class LogInScreen extends StatelessWidget {
-  const LogInScreen({Key? key}) : super(key: key);
 
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'LogIn screen',
-      theme: ThemeData(primarySwatch: Colors.blue),
-      home: LogInScreenF(),
-    );
-  }
-}
 
 class LogInScreenF extends StatefulWidget {
   const LogInScreenF({Key? key}) : super(key: key);
@@ -96,7 +85,7 @@ Future signIn() async {
                 IconButton(
                   icon: Icon(Icons.arrow_back_ios_new),
                   onPressed: () {
-                    Navigator.of(context, rootNavigator: true).pop(context);
+  Navigator.pop(context);
                   },
                 ),
                 Padding(
@@ -176,7 +165,7 @@ Future signIn() async {
                                     (context),
                                     MaterialPageRoute(
                                         builder: ((context) =>
-                                            ForgetPasswordScreen())));
+                                            ForgetPasswordScreenF())));
                               },
                               child: Text(
                                 'Forget Password ?',
@@ -202,7 +191,7 @@ Future signIn() async {
                                   Navigator.of(context).pushReplacement(
                                       MaterialPageRoute(
                                           builder: ((context) =>
-                                              HomeScreen())));
+                                              HomeScreenF())));
                                 }
                               },
                               child: Text(
@@ -237,7 +226,7 @@ Future signIn() async {
                                       (context),
                                       MaterialPageRoute(
                                           builder: ((context) =>
-                                              SignUpScreen())));
+                                              SignUpScreenF())));
                                 },
                                 child: Text(
                                   'Sign Up',

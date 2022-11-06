@@ -73,7 +73,7 @@ class _FavoredScreenFState extends State<FavoredScreenF> {
                               GestureDetector(
                                 onTap: () {
                                   Navigator.of(context).push(MaterialPageRoute(
-                                      builder: (context) => AboutUsScreen()));
+                                      builder: (context) => AboutUsScreenF()));
                                 },
                                 child: Text(
                                   'Resowl',
@@ -89,7 +89,7 @@ class _FavoredScreenFState extends State<FavoredScreenF> {
                               GestureDetector(
                                 onTap: () {
                                   Navigator.of(context).push(MaterialPageRoute(
-                                      builder: (context) => AboutUsScreen()));
+                                      builder: (context) => AboutUsScreenF()));
                                 },
                                 child: Text(
                                   'A good resource for you',
@@ -121,7 +121,7 @@ class _FavoredScreenFState extends State<FavoredScreenF> {
                           GestureDetector(
                             onTap: () {
                               Navigator.of(context).push(MaterialPageRoute(
-                                  builder: (context) => AboutUsScreen()));
+                                  builder: (context) => AboutUsScreenF()));
                             },
                             child: Text(
                               'About Us',
@@ -200,7 +200,7 @@ class _FavoredScreenFState extends State<FavoredScreenF> {
             IconButton(
                 onPressed: () {
                   Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => HomeScreen()));
+                      MaterialPageRoute(builder: (context) => HomeScreenF()));
                 },
                 icon: Icon(
                   Icons.home_filled,
@@ -229,7 +229,7 @@ class _FavoredScreenFState extends State<FavoredScreenF> {
                       GestureDetector(
                         onTap: () {
                           Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) => SubLevelScreen()));
+                              builder: (context) => SubLevelScreenF()));
                         },
                         child: Column(
                           children: [
@@ -308,7 +308,7 @@ class _FavoredScreenFState extends State<FavoredScreenF> {
                       GestureDetector(
                         onTap: () {
                           Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) => SubLevelScreen()));
+                              builder: (context) => SubLevelScreenF()));
                         },
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -389,7 +389,7 @@ class _FavoredScreenFState extends State<FavoredScreenF> {
                       GestureDetector(
                         onTap: () {
                           Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) => SubLevelScreen()));
+                              builder: (context) => SubLevelScreenF()));
                         },
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -470,7 +470,7 @@ class _FavoredScreenFState extends State<FavoredScreenF> {
                       GestureDetector(
                         onTap: () {
                           Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) => SubLevelScreen()));
+                              builder: (context) => SubLevelScreenF()));
                         },
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -551,7 +551,7 @@ class _FavoredScreenFState extends State<FavoredScreenF> {
                       GestureDetector(
                         onTap: () {
                           Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) => SubLevelScreen()));
+                              builder: (context) => SubLevelScreenF()));
                         },
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -632,7 +632,7 @@ class _FavoredScreenFState extends State<FavoredScreenF> {
                       GestureDetector(
                         onTap: () {
                           Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) => SubLevelScreen()));
+                              builder: (context) => SubLevelScreenF()));
                         },
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -713,7 +713,7 @@ class _FavoredScreenFState extends State<FavoredScreenF> {
                       GestureDetector(
                         onTap: () {
                           Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) => SubLevelScreen()));
+                              builder: (context) => SubLevelScreenF()));
                         },
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -794,7 +794,7 @@ class _FavoredScreenFState extends State<FavoredScreenF> {
                       GestureDetector(
                         onTap: () {
                           Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) => SubLevelScreen()));
+                              builder: (context) => SubLevelScreenF()));
                         },
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -875,7 +875,7 @@ class _FavoredScreenFState extends State<FavoredScreenF> {
                       GestureDetector(
                         onTap: () {
                           Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) => SubLevelScreen()));
+                              builder: (context) => SubLevelScreenF()));
                         },
                         child: Column(
                           children: [

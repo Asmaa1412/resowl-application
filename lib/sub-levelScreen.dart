@@ -10,19 +10,7 @@ import 'authorScreen.dart';
 import 'beginnersScreen.dart';
 import 'subjectSreen.dart';
 
-class SubLevelScreen extends StatelessWidget {
-  const SubLevelScreen({Key? key}) : super(key: key);
 
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Sub Level Screen',
-      theme: ThemeData(primarySwatch: Colors.lightGreen),
-      home: SubLevelScreenF(),
-    );
-  }
-}
 
 class SubLevelScreenF extends StatefulWidget {
   const SubLevelScreenF({Key? key}) : super(key: key);
@@ -67,8 +55,8 @@ class _SubLevelScreenFState extends State<SubLevelScreenF> {
                         IconButton(
                           icon: Icon(Icons.arrow_back_ios_new),
                           onPressed: () {
-                            Navigator.of(context).push(MaterialPageRoute(
-                                builder: (context) => HomeScreen()));
+                             Navigator.pop(context);
+
                           },
                         ),
                         SizedBox(
@@ -77,7 +65,7 @@ class _SubLevelScreenFState extends State<SubLevelScreenF> {
                         IconButton(
                             onPressed: () {
                               Navigator.of(context).push(MaterialPageRoute(
-                                  builder: (context) => HomeScreen()));
+                                  builder: (context) => HomeScreenF()));
                             },
                             icon: Icon(
                               Icons.home_filled,
@@ -143,7 +131,7 @@ class _SubLevelScreenFState extends State<SubLevelScreenF> {
                               child: IconButton(
                                 onPressed: () {
                                   Navigator.of(context).push(MaterialPageRoute(
-                                      builder: (context) => TipsScreen()));
+                                      builder: (context) => TipsScreenF()));
                                 },
                                 icon: Icon(
                                   Icons.chat_rounded,
@@ -254,7 +242,7 @@ class _SubLevelScreenFState extends State<SubLevelScreenF> {
                       child: GestureDetector(
                         onTap: () {
                           Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) => BeginnerScreen()));
+                              builder: (context) => BeginnerScreenF()));
                         },
                         child: Container(
                             height: 80,
@@ -305,7 +293,7 @@ class _SubLevelScreenFState extends State<SubLevelScreenF> {
                       child: GestureDetector(
                         onTap: () {
                           Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) => AdvBScreen()));
+                              builder: (context) => AdvBScreenF()));
                         },
                         child: Container(
                             height: 80,
@@ -356,7 +344,7 @@ class _SubLevelScreenFState extends State<SubLevelScreenF> {
                       child: GestureDetector(
                         onTap: () {
                           Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) => AdvncedScreen()));
+                              builder: (context) => AdvncedScreenF()));
                         },
                         child: Container(
                             height: 80,

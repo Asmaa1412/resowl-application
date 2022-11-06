@@ -7,19 +7,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 
 import 'HomeScreen.dart';
 
-class TipsScreen extends StatelessWidget {
-  const TipsScreen({Key? key}) : super(key: key);
 
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Tips Screen',
-      theme: ThemeData(primarySwatch: Colors.lightGreen),
-      home: TipsScreenF(),
-    );
-  }
-}
 
 class TipsScreenF extends StatefulWidget {
   const TipsScreenF({Key? key}) : super(key: key);
@@ -42,8 +30,8 @@ class _TipsScreenFState extends State<TipsScreenF> {
             color: Colors.white,
           ),
           onPressed: () {
-            Navigator.of(context).push(
-                MaterialPageRoute(builder: (context) => SubLevelScreen()));
+             Navigator.pop(context);
+
           },
         ),
         title: Padding(
@@ -58,7 +46,7 @@ class _TipsScreenFState extends State<TipsScreenF> {
           IconButton(
               onPressed: () {
                 Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => HomeScreen()));
+                    MaterialPageRoute(builder: (context) => HomeScreenF()));
               },
               icon: Icon(
                 Icons.home_filled,

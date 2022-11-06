@@ -1,19 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class ForgetPasswordScreen extends StatelessWidget {
-  const ForgetPasswordScreen({Key? key}) : super(key: key);
 
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Forget Password Screen',
-      theme: ThemeData(primarySwatch: Colors.lightGreen),
-      home: ForgetPasswordScreenF(),
-    );
-  }
-}
 
 class ForgetPasswordScreenF extends StatefulWidget {
   const ForgetPasswordScreenF({Key? key}) : super(key: key);
@@ -32,7 +20,10 @@ class _ForgetPasswordScreenFState extends State<ForgetPasswordScreenF> {
           elevation: 0.0,
           leading: IconButton(
             icon: Icon(Icons.arrow_back_ios),
-            onPressed: () {},
+            onPressed: () {
+                Navigator.pop(context);
+
+            },
           ),
         ),
         body: Container(

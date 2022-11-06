@@ -1,19 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class VerCodeScreen extends StatelessWidget {
-  const VerCodeScreen({Key? key}) : super(key: key);
 
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'VerCode Screen',
-      theme: ThemeData(primarySwatch: Colors.lightGreen),
-      home: VerCodeScreenF(),
-    );
-  }
-}
 
 class VerCodeScreenF extends StatefulWidget {
   const VerCodeScreenF({Key? key}) : super(key: key);
@@ -32,7 +20,8 @@ class _VerCodeScreenFState extends State<VerCodeScreenF> {
           elevation: 0.0,
           leading: IconButton(
             icon: Icon(Icons.arrow_back_ios),
-            onPressed: () {},
+            onPressed: () {  Navigator.pop(context);
+},
           ),
         ),
         body: Container(

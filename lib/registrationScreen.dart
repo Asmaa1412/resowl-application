@@ -137,7 +137,7 @@ class _RegistrationScreenFState extends State<RegistrationScreenF> {
                 child: TextButton(
                     onPressed: () {
                       Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => LogInScreen()));
+                          builder: (context) => LogInScreenF()));
                       /*   FutureBuilder(
                           future: _initializeFirebase(),
                           builder: (context, snapshot) {
@@ -174,7 +174,7 @@ class _RegistrationScreenFState extends State<RegistrationScreenF> {
                 child: TextButton(
                     onPressed: () {
                       Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => SignUpScreen()));
+                          builder: (context) => SignUpScreenF()));
                     },
                     child: Text(
                       'Sign Up',

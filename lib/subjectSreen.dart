@@ -8,19 +8,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'HomeScreen.dart';
 import 'sub-levelScreen.dart';
 
-class SubjectScreen extends StatelessWidget {
-  const SubjectScreen({Key? key}) : super(key: key);
 
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Subject Screen',
-      theme: ThemeData(primarySwatch: Colors.lightGreen),
-      home: SubjectScreenF(),
-    );
-  }
-}
 
 class SubjectScreenF extends StatefulWidget {
   const SubjectScreenF({Key? key}) : super(key: key);
@@ -43,8 +31,8 @@ class _SubjectScreenFState extends State<SubjectScreenF> {
               color: Colors.white,
             ),
             onPressed: () {
-              Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (context) => HomeScreen()));
+              Navigator.pop(context);
+
             },
           ),
           title: Padding(
@@ -59,7 +47,7 @@ class _SubjectScreenFState extends State<SubjectScreenF> {
             IconButton(
                 onPressed: () {
                   Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => HomeScreen()));
+                      MaterialPageRoute(builder: (context) => HomeScreenF()));
                 },
                 icon: Icon(
                   Icons.home_filled,
@@ -88,7 +76,7 @@ class _SubjectScreenFState extends State<SubjectScreenF> {
                       GestureDetector(
                         onTap: () {
                           Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) => SubLevelScreen()));
+                              builder: (context) => SubLevelScreenF()));
                         },
                         child: Column(
                           children: [
@@ -167,7 +155,7 @@ class _SubjectScreenFState extends State<SubjectScreenF> {
                       GestureDetector(
                         onTap: () {
                           Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) => SubLevelScreen()));
+                              builder: (context) => SubLevelScreenF()));
                         },
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -248,7 +236,7 @@ class _SubjectScreenFState extends State<SubjectScreenF> {
                       GestureDetector(
                         onTap: () {
                           Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) => SubLevelScreen()));
+                              builder: (context) => SubLevelScreenF()));
                         },
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -329,7 +317,7 @@ class _SubjectScreenFState extends State<SubjectScreenF> {
                       GestureDetector(
                         onTap: () {
                           Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) => SubLevelScreen()));
+                              builder: (context) => SubLevelScreenF()));
                         },
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -410,7 +398,7 @@ class _SubjectScreenFState extends State<SubjectScreenF> {
                       GestureDetector(
                         onTap: () {
                           Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) => SubLevelScreen()));
+                              builder: (context) => SubLevelScreenF()));
                         },
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -491,7 +479,7 @@ class _SubjectScreenFState extends State<SubjectScreenF> {
                       GestureDetector(
                         onTap: () {
                           Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) => SubLevelScreen()));
+                              builder: (context) => SubLevelScreenF()));
                         },
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -572,7 +560,7 @@ class _SubjectScreenFState extends State<SubjectScreenF> {
                       GestureDetector(
                         onTap: () {
                           Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) => SubLevelScreen()));
+                              builder: (context) => SubLevelScreenF()));
                         },
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -653,7 +641,7 @@ class _SubjectScreenFState extends State<SubjectScreenF> {
                       GestureDetector(
                         onTap: () {
                           Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) => SubLevelScreen()));
+                              builder: (context) => SubLevelScreenF()));
                         },
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -734,7 +722,7 @@ class _SubjectScreenFState extends State<SubjectScreenF> {
                       GestureDetector(
                         onTap: () {
                           Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) => SubLevelScreen()));
+                              builder: (context) => SubLevelScreenF()));
                         },
                         child: Column(
                           children: [

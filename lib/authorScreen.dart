@@ -12,19 +12,7 @@ import 'tips.dart';
 
 int indexx = 0;
 
-class AuthorScreen extends StatelessWidget {
-  const AuthorScreen({Key? key}) : super(key: key);
 
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Author Screen',
-      theme: ThemeData(primarySwatch: Colors.lightGreen),
-      home: AuthorScreenF(),
-    );
-  }
-}
 
 class AuthorScreenF extends StatefulWidget {
   const AuthorScreenF({Key? key}) : super(key: key);
@@ -72,8 +60,8 @@ class _AuthorScreenFState extends State<AuthorScreenF> {
                     IconButton(
                       icon: Icon(Icons.arrow_back_ios_new),
                       onPressed: () {
-                        Navigator.of(context).push(MaterialPageRoute(
-                            builder: (context) => ResourceSacreen()));
+                       Navigator.pop(context);
+
                       },
                     ),
                     SizedBox(
@@ -82,7 +70,7 @@ class _AuthorScreenFState extends State<AuthorScreenF> {
                     IconButton(
                         onPressed: () {
                           Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) => HomeScreen()));
+                              builder: (context) => HomeScreenF()));
                         },
                         icon: Icon(
                           Icons.home_filled,
@@ -200,7 +188,7 @@ class _AuthorScreenFState extends State<AuthorScreenF> {
                               child: GestureDetector(
                                 onTap: () {
                                   Navigator.of(context).push(MaterialPageRoute(
-                                      builder: (context) => SubLevelScreen()));
+                                      builder: (context) => SubLevelScreenF()));
                                 },
                                 child: Column(
                                   children: [
@@ -313,7 +301,7 @@ class _AuthorScreenFState extends State<AuthorScreenF> {
                               child: GestureDetector(
                                 onTap: () {
                                   Navigator.of(context).push(MaterialPageRoute(
-                                      builder: (context) => SubLevelScreen()));
+                                      builder: (context) => SubLevelScreenF()));
                                 },
                                 child: Column(
                                   children: [
@@ -426,7 +414,7 @@ class _AuthorScreenFState extends State<AuthorScreenF> {
                               child: GestureDetector(
                                 onTap: () {
                                   Navigator.of(context).push(MaterialPageRoute(
-                                      builder: (context) => SubLevelScreen()));
+                                      builder: (context) => SubLevelScreenF()));
                                 },
                                 child: Column(
                                   children: [
@@ -539,7 +527,7 @@ class _AuthorScreenFState extends State<AuthorScreenF> {
                               child: GestureDetector(
                                 onTap: () {
                                   Navigator.of(context).push(MaterialPageRoute(
-                                      builder: (context) => SubLevelScreen()));
+                                      builder: (context) => SubLevelScreenF()));
                                 },
                                 child: Column(
                                   children: [

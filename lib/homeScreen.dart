@@ -15,19 +15,7 @@ import 'resourceScreen.dart';
 import 'sub-levelScreen.dart';
 import 'subjectSreen.dart';
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({Key? key}) : super(key: key);
 
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Home Screen',
-      theme: ThemeData(primarySwatch: Colors.lightGreen),
-      home: HomeScreenF(),
-    );
-  }
-}
 
 class HomeScreenF extends StatefulWidget {
   const HomeScreenF({Key? key}) : super(key: key);
@@ -49,7 +37,7 @@ class _HomeScreenFState extends State<HomeScreenF> {
                 IconButton(
                     onPressed: () {
                       Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => HomeScreen()));
+                          builder: (context) => HomeScreenF()));
                     },
                     icon: Icon(
                       Icons.home_filled,
@@ -92,7 +80,7 @@ class _HomeScreenFState extends State<HomeScreenF> {
                                       Navigator.of(context).push(
                                           MaterialPageRoute(
                                               builder: (context) =>
-                                                  AboutUsScreen()));
+                                                  AboutUsScreenF()));
                                     },
                                     child: Text(
                                       'Resowl',
@@ -111,7 +99,7 @@ class _HomeScreenFState extends State<HomeScreenF> {
                                       Navigator.of(context).push(
                                           MaterialPageRoute(
                                               builder: (context) =>
-                                                  AboutUsScreen()));
+                                                  AboutUsScreenF()));
                                     },
                                     child: Text(
                                       'A good resource for you',
@@ -144,7 +132,7 @@ class _HomeScreenFState extends State<HomeScreenF> {
                               GestureDetector(
                                 onTap: () {
                                   Navigator.of(context).push(MaterialPageRoute(
-                                      builder: (context) => AboutUsScreen()));
+                                      builder: (context) => AboutUsScreenF()));
                                 },
                                 child: Text(
                                   'About Us',
@@ -311,7 +299,7 @@ class _HomeScreenFState extends State<HomeScreenF> {
                                               Navigator.of(context).push(
                                                   MaterialPageRoute(
                                                       builder: (context) =>
-                                                          SubLevelScreen()));
+                                                          SubLevelScreenF()));
                                             },
                                             child: Column(
                                               children: [
@@ -450,7 +438,7 @@ class _HomeScreenFState extends State<HomeScreenF> {
                                               Navigator.of(context).push(
                                                   MaterialPageRoute(
                                                       builder: (context) =>
-                                                          SubLevelScreen()));
+                                                          SubLevelScreenF()));
                                             },
                                             child: Column(
                                               children: [
@@ -589,7 +577,7 @@ class _HomeScreenFState extends State<HomeScreenF> {
                                               Navigator.of(context).push(
                                                   MaterialPageRoute(
                                                       builder: (context) =>
-                                                          SubLevelScreen()));
+                                                          SubLevelScreenF()));
                                             },
                                             child: Column(
                                               children: [
@@ -728,7 +716,7 @@ class _HomeScreenFState extends State<HomeScreenF> {
                                               Navigator.of(context).push(
                                                   MaterialPageRoute(
                                                       builder: (context) =>
-                                                          SubLevelScreen()));
+                                                          SubLevelScreenF()));
                                             },
                                             child: Column(
                                               children: [
@@ -870,7 +858,7 @@ class _HomeScreenFState extends State<HomeScreenF> {
                                       Navigator.of(context).push(
                                           MaterialPageRoute(
                                               builder: (context) =>
-                                                  SubjectScreen()));
+                                                  SubjectScreenF()));
                                     },
                                     child: Text(
                                       'See More',
@@ -909,7 +897,7 @@ class _HomeScreenFState extends State<HomeScreenF> {
                     child: TextButton(
                       onPressed: () {
                         Navigator.of(context).push(MaterialPageRoute(
-                            builder: (context) => SubjectScreen()));
+                            builder: (context) => SubjectScreenF()));
                       },
                       child: Text(
                         'See More',
@@ -931,7 +919,7 @@ class _HomeScreenFState extends State<HomeScreenF> {
                             GestureDetector(
                               onTap: () {
                                 Navigator.of(context).push(MaterialPageRoute(
-                                    builder: (context) => SubLevelScreen()));
+                                    builder: (context) => SubLevelScreenF()));
                               },
                               child: Container(
                                   height: 95,
@@ -978,7 +966,7 @@ class _HomeScreenFState extends State<HomeScreenF> {
                             GestureDetector(
                               onTap: () {
                                 Navigator.of(context).push(MaterialPageRoute(
-                                    builder: (context) => SubLevelScreen()));
+                                    builder: (context) => SubLevelScreenF()));
                               },
                               child: Container(
                                   height: 95,
@@ -1025,7 +1013,7 @@ class _HomeScreenFState extends State<HomeScreenF> {
                             GestureDetector(
                               onTap: () {
                                 Navigator.of(context).push(MaterialPageRoute(
-                                    builder: (context) => SubLevelScreen()));
+                                    builder: (context) => SubLevelScreenF()));
                               },
                               child: Container(
                                   height: 95,
@@ -1072,7 +1060,7 @@ class _HomeScreenFState extends State<HomeScreenF> {
                             GestureDetector(
                               onTap: () {
                                 Navigator.of(context).push(MaterialPageRoute(
-                                    builder: (context) => SubLevelScreen()));
+                                    builder: (context) => SubLevelScreenF()));
                               },
                               child: Container(
                                   height: 95,

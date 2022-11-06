@@ -6,19 +6,7 @@ import 'editProfileScreen.dart';
 import 'favoredScreen.dart';
 import 'registrationScreen.dart';
 
-class AboutUsScreen extends StatelessWidget {
-  const AboutUsScreen({Key? key}) : super(key: key);
 
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'About Us Screen',
-      theme: ThemeData(primarySwatch: Colors.lightGreen),
-      home: AboutUsScreenF(),
-    );
-  }
-}
 
 class AboutUsScreenF extends StatefulWidget {
   const AboutUsScreenF({Key? key}) : super(key: key);
@@ -48,7 +36,7 @@ class _AboutUsScreenFState extends State<AboutUsScreenF> {
           IconButton(
               onPressed: () {
                 Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => HomeScreen()));
+                    MaterialPageRoute(builder: (context) => HomeScreenF()));
               },
               icon: Icon(
                 Icons.home_filled,
@@ -88,7 +76,7 @@ class _AboutUsScreenFState extends State<AboutUsScreenF> {
                             GestureDetector(
                               onTap: () {
                                 Navigator.of(context).push(MaterialPageRoute(
-                                    builder: (context) => AboutUsScreen()));
+                                    builder: (context) => AboutUsScreenF()));
                               },
                               child: Text(
                                 'Resowl',
@@ -104,7 +92,7 @@ class _AboutUsScreenFState extends State<AboutUsScreenF> {
                             GestureDetector(
                               onTap: () {
                                 Navigator.of(context).push(MaterialPageRoute(
-                                    builder: (context) => AboutUsScreen()));
+                                    builder: (context) => AboutUsScreenF()));
                               },
                               child: Text(
                                 'A good resource for you',
@@ -136,7 +124,7 @@ class _AboutUsScreenFState extends State<AboutUsScreenF> {
                         GestureDetector(
                           onTap: () {
                             Navigator.of(context).push(MaterialPageRoute(
-                                builder: (context) => AboutUsScreen()));
+                                builder: (context) => AboutUsScreenF()));
                           },
                           child: Text(
                             'About Us',

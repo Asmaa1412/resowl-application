@@ -5,19 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:resowl/homeScreen.dart';
 import 'package:resowl/logInScreen.dart';
 
-class SignUpScreen extends StatelessWidget {
-  const SignUpScreen({Key? key}) : super(key: key);
 
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'SignUp Screen',
-      theme: ThemeData(primarySwatch: Colors.blue),
-      home: SignUpScreenF(),
-    );
-  }
-}
 
 class SignUpScreenF extends StatefulWidget {
   const SignUpScreenF({Key? key}) : super(key: key);
@@ -74,7 +62,7 @@ class _SignUpScreenFState extends State<SignUpScreenF> {
                 IconButton(
                   icon: Icon(Icons.arrow_back_ios_new),
                   onPressed: () {
-                    Navigator.of(context, rootNavigator: true).pop(context);
+  Navigator.pop(context);
                   },
                 ),
                 Padding(
@@ -181,7 +169,7 @@ class _SignUpScreenFState extends State<SignUpScreenF> {
                                   Navigator.push(
                                       context,
                                       MaterialPageRoute(
-                                          builder: (context) => HomeScreen()));
+                                          builder: (context) => HomeScreenF()));
                                 }).onError((error, stackTrace) {
                                   print("Error ${error.toString()}");
                                 });
@@ -216,7 +204,7 @@ class _SignUpScreenFState extends State<SignUpScreenF> {
                                       (context),
                                       MaterialPageRoute(
                                           builder: ((context) =>
-                                              LogInScreen())));
+                                              LogInScreenF())));
                                 },
                                 child: Text(
                                   'Log In',
