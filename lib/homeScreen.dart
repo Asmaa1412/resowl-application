@@ -32,6 +32,7 @@ class _HomeScreenFState extends State<HomeScreenF> {
     return SafeArea(
         child: Scaffold(
             appBar: AppBar(
+              iconTheme: IconThemeData(color: Colors.black),
               backgroundColor: Colors.white,
               actions: [
                 IconButton(

@@ -1,11 +1,8 @@
 import 'dart:async';
 
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:resowl/homeScreen.dart';
 import 'package:resowl/logInScreen.dart';
 import 'package:resowl/signUpScreen.dart';
 
@@ -18,7 +15,7 @@ class RegistrationScreen extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Registration screen',
       theme: ThemeData(primarySwatch: Colors.blue),
-      home: SplashScreen(),
+      home: const SplashScreen(),
     );
   }
 }
@@ -35,9 +32,11 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     Timer(
-        Duration(seconds: 5),
-        () => Navigator.pushReplacement(context,
-            MaterialPageRoute(builder: (context) => RegistrationScreenF())));
+        const Duration(seconds: 5),
+        () => Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(
+                builder: (context) => const RegistrationScreenF())));
   }
 
   @override
@@ -50,27 +49,27 @@ class _SplashScreenState extends State<SplashScreen> {
             child: Center(
               child: Column(
                 children: [
-                  SizedBox(
+                  const SizedBox(
                     height: 220,
                   ),
                   Image.asset(
                     'assets/image/5.png',
                     width: 130,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 70,
                   ),
                   Text(
                     'Resowl',
                     style: GoogleFonts.gentiumBasic(
                         fontSize: 27,
-                        color: Color.fromARGB(255, 26, 131, 118),
+                        color: const Color.fromARGB(255, 26, 131, 118),
                         fontWeight: FontWeight.bold),
                   ),
                   Text('a good   resource   for  you ',
                       style: GoogleFonts.gentiumBasic(
                         fontSize: 22,
-                        color: Color.fromARGB(255, 26, 131, 118),
+                        color: const Color.fromARGB(255, 26, 131, 118),
                         fontWeight: FontWeight.w300,
                       )),
                 ],
@@ -90,7 +89,7 @@ class RegistrationScreenF extends StatefulWidget {
 
 class _RegistrationScreenFState extends State<RegistrationScreenF> {
   Future<FirebaseApp> _initializeFirebase() async {
-    FirebaseApp firebaseApp = await Firebase.initializeApp();
+    FirebaseApp firebaseApp = await Firebase.initializeApp(); //delete it ?
     return firebaseApp;
   }
 
@@ -103,32 +102,32 @@ class _RegistrationScreenFState extends State<RegistrationScreenF> {
           color: Colors.white,
           child: Column(
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 70,
               ),
               Text(
                 'Welcome',
                 style: GoogleFonts.gentiumBasic(fontSize: 40),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 5,
               ),
               Text(
                 'Join Us, and start studying',
                 style: GoogleFonts.gentiumBasic(fontSize: 20),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 40,
               ),
               Container(
                   width: 350,
                   height: 350,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     image: DecorationImage(
                         image: AssetImage('assets/image/welcom.PNG'),
                         fit: BoxFit.fill),
                   )),
-              SizedBox(
+              const SizedBox(
                 height: 90,
               ),
               SizedBox(
@@ -137,7 +136,7 @@ class _RegistrationScreenFState extends State<RegistrationScreenF> {
                 child: TextButton(
                     onPressed: () {
                       Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => LogInScreenF()));
+                          builder: (context) => const LogInScreenF()));
                       /*   FutureBuilder(
                           future: _initializeFirebase(),
                           builder: (context, snapshot) {
@@ -150,22 +149,22 @@ class _RegistrationScreenFState extends State<RegistrationScreenF> {
                             );
                           }); */
                     },
-                    child: Text(
-                      'LogIn',
-                      style: GoogleFonts.gentiumBasic(
-                          fontSize: 21,
-                          color: Color.fromARGB(255, 2, 190, 167),
-                          fontWeight: FontWeight.w600),
-                    ),
                     style: TextButton.styleFrom(
                         backgroundColor: Colors.white,
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(11)),
-                        side: BorderSide(
+                        side: const BorderSide(
                             color: Color.fromARGB(255, 2, 190, 167),
-                            width: 2.6))),
+                            width: 2.6)),
+                    child: Text(
+                      'LogIn',
+                      style: GoogleFonts.gentiumBasic(
+                          fontSize: 21,
+                          color: const Color.fromARGB(255, 2, 190, 167),
+                          fontWeight: FontWeight.w600),
+                    )),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               SizedBox(
@@ -174,21 +173,21 @@ class _RegistrationScreenFState extends State<RegistrationScreenF> {
                 child: TextButton(
                     onPressed: () {
                       Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => SignUpScreenF()));
+                          builder: (context) => const SignUpScreenF()));
                     },
+                    style: TextButton.styleFrom(
+                        backgroundColor: const Color.fromARGB(255, 2, 190, 167),
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(11))),
                     child: Text(
                       'Sign Up',
                       style: GoogleFonts.gentiumBasic(
                           fontSize: 21,
-                          color: Color.fromARGB(244, 255, 255, 255),
+                          color: const Color.fromARGB(244, 255, 255, 255),
                           fontWeight: FontWeight.w900),
-                    ),
-                    style: TextButton.styleFrom(
-                        backgroundColor: Color.fromARGB(255, 2, 190, 167),
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(11)))),
+                    )),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
             ],
