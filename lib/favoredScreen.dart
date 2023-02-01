@@ -169,7 +169,7 @@ class _FavoredScreenFState extends State<FavoredScreenF> {
                           GestureDetector(
                             onTap: () {
                               Navigator.of(context).push(MaterialPageRoute(
-                                  builder: (context) => RegistrationScreen()));
+                                  builder: (context) => SplashScreen()));
                             },
                             child: Text(
                               'Log Out',

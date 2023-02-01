@@ -184,7 +184,7 @@ class _EditProfileScreenFState extends State<EditProfileScreenF> {
                         GestureDetector(
                           onTap: () {
                             Navigator.of(context).push(MaterialPageRoute(
-                                builder: (context) => RegistrationScreen()));
+                                builder: (context) => SplashScreen()));
                           },
                           child: Text(
                             'Log Out',

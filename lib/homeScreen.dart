@@ -15,8 +15,6 @@ import 'resourceScreen.dart';
 import 'sub-levelScreen.dart';
 import 'subjectSreen.dart';
 
-
-
 class HomeScreenF extends StatefulWidget {
   const HomeScreenF({Key? key}) : super(key: key);
 
@@ -188,7 +186,7 @@ class _HomeScreenFState extends State<HomeScreenF> {
                                           context,
                                           MaterialPageRoute(
                                               builder: (context) =>
-                                                  RegistrationScreen()));
+                                                  SplashScreen()));
                                     },
                                   );
                                 },

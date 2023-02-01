@@ -6,8 +6,6 @@ import 'editProfileScreen.dart';
 import 'favoredScreen.dart';
 import 'registrationScreen.dart';
 
-
-
 class AboutUsScreenF extends StatefulWidget {
   const AboutUsScreenF({Key? key}) : super(key: key);
 
@@ -172,7 +170,7 @@ class _AboutUsScreenFState extends State<AboutUsScreenF> {
                         GestureDetector(
                           onTap: () {
                             Navigator.of(context).push(MaterialPageRoute(
-                                builder: (context) => RegistrationScreen()));
+                                builder: (context) => SplashScreen()));
                           },
                           child: Text(
                             'Log Out',

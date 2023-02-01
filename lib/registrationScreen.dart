@@ -6,20 +6,6 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:resowl/logInScreen.dart';
 import 'package:resowl/signUpScreen.dart';
 
-class RegistrationScreen extends StatelessWidget {
-  const RegistrationScreen({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Registration screen',
-      theme: ThemeData(primarySwatch: Colors.blue),
-      home: const SplashScreen(),
-    );
-  }
-}
-
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
 
