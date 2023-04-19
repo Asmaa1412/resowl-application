@@ -3,13 +3,13 @@ import 'dart:developer';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:resowl/aboutUsScreen.dart';
-import 'package:resowl/editProfileScreen.dart';
-import 'package:resowl/favoredScreen.dart';
+import 'about_us_screen.dart';
+import 'package:resowl/Screen/editProfileScreen.dart';
+import 'package:resowl/Screen/favoredScreen.dart';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-import 'package:resowl/registrationScreen.dart';
+import 'package:resowl/Screen/registrationScreen.dart';
 
 import 'resourceScreen.dart';
 import 'sub-levelScreen.dart';

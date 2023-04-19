@@ -1,35 +1,49 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:resowl/homeScreen.dart';
+import 'package:resowl/Screen/homeScreen.dart';
 
-import 'editProfileScreen.dart';
+import 'about_us_screen.dart';
 import 'favoredScreen.dart';
 import 'registrationScreen.dart';
 
-class AboutUsScreenF extends StatefulWidget {
-  const AboutUsScreenF({Key? key}) : super(key: key);
+class EditProfileScreen extends StatelessWidget {
+  const EditProfileScreen({Key? key}) : super(key: key);
 
   @override
-  State<AboutUsScreenF> createState() => _AboutUsScreenFState();
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Edit Profile Screen',
+      theme: ThemeData(primarySwatch: Colors.lightGreen),
+      home: EditProfileScreenF(),
+    );
+  }
 }
 
-class _AboutUsScreenFState extends State<AboutUsScreenF> {
+class EditProfileScreenF extends StatefulWidget {
+  const EditProfileScreenF({Key? key}) : super(key: key);
+
+  @override
+  State<EditProfileScreenF> createState() => _EditProfileScreenFState();
+}
+
+class _EditProfileScreenFState extends State<EditProfileScreenF> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
       appBar: AppBar(
+        iconTheme: IconThemeData(color: Colors.white),
         backgroundColor: Color.fromARGB(255, 3, 167, 148),
         elevation: 5.0,
         title: Padding(
-          padding: EdgeInsets.fromLTRB(85, 0, 0, 0),
+          padding: EdgeInsets.fromLTRB(70, 0, 0, 0),
           child: Text(
-            'About Us',
+            'Edit Account',
             style: GoogleFonts.gentiumBasic(
                 color: Color.fromARGB(255, 255, 255, 255), fontSize: 23),
           ),
         ),
-        iconTheme: IconThemeData(color: Colors.white),
         actions: [
           IconButton(
               onPressed: () {
@@ -185,97 +199,130 @@ class _AboutUsScreenFState extends State<AboutUsScreenF> {
                   ),
                 ]),
           )),
-      body: Container(
-        color: Colors.white,
-        child: Column(
-          children: [
-            SizedBox(
-              height: 30,
-            ),
-            Image.asset(
-              'assets/image/welcom.PNG',
-              width: 270,
-            ),
-            Padding(
-              padding: const EdgeInsets.fromLTRB(30, 20, 20, 23),
-              child: Text(
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,',
-                style: GoogleFonts.gentiumBasic(
-                    color: Color.fromARGB(255, 0, 0, 0),
-                    fontSize: 18,
-                    fontWeight: FontWeight.w300),
-              ),
-            ),
-            Divider(
-              color: Colors.grey,
-              thickness: 2.0,
-              indent: 19,
-              endIndent: 220,
-            ),
-            SizedBox(
-              height: 18,
-            ),
-            Row(
+      body: SingleChildScrollView(
+        child: Container(
+            color: Colors.white,
+            child: Stack(
               children: [
-                SizedBox(
-                  width: 25,
+                Container(
+                  width: 490,
+                  height: 250,
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                        image: AssetImage('assets/image/reg.jpg'),
+                        fit: BoxFit.cover),
+                  ),
                 ),
-                Icon(
-                  Icons.mail_outline_outlined,
-                  size: 27,
-                  color: Color.fromARGB(255, 40, 151, 137),
+                CustomPaint(
+                  child: Container(
+                    width: double.infinity,
+                    height: 300,
+                    color: Color.fromARGB(99, 21, 112, 102),
+                  ),
                 ),
-                SizedBox(
-                  width: 18,
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(135, 60, 0, 0),
+                  child: CircleAvatar(
+                    radius: 70.0,
+                    backgroundImage: AssetImage('assets/image/profile.PNG'),
+                  ),
                 ),
-                TextButton(
-                    onPressed: () {
-                      /*   Navigator.push(
-                                  (context),
-                                  MaterialPageRoute(
-                                      builder: ((context) => forgetPScreen()))); */
-                    },
-                    child: Text(
-                      'Flutter @is an .open ',
-                      style: GoogleFonts.gentiumBasic(
-                        color: Color.fromARGB(200, 0, 0, 0),
-                        fontSize: 14,
-                      ),
-                    )),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(0, 240, 0, 0),
+                  child: Container(
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(20),
+                            topRight: Radius.circular(20))),
+                    child: Column(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.fromLTRB(20, 40, 0, 0),
+                          child: Align(
+                            alignment: Alignment.center,
+                            child: Text(
+                              '',
+                              style: GoogleFonts.gentiumBasic(
+                                  color: Color.fromARGB(255, 0, 0, 0),
+                                  fontSize: 30,
+                                  fontWeight: FontWeight.w300),
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          width: 360,
+                          height: 50,
+                          child: TextField(
+                              decoration: InputDecoration(
+                                  label: Text('Name:'),
+                                  filled: true,
+                                  fillColor: Colors.white,
+                                  enabledBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(5),
+                                  ))),
+                        ),
+                        SizedBox(
+                          height: 30,
+                        ),
+                        SizedBox(
+                          width: 360,
+                          height: 50,
+                          child: TextField(
+                              decoration: InputDecoration(
+                                  label: Text('Email:'),
+                                  filled: true,
+                                  fillColor: Colors.white,
+                                  enabledBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(5),
+                                  ))),
+                        ),
+                        SizedBox(
+                          height: 30,
+                        ),
+                        SizedBox(
+                          width: 360,
+                          height: 50,
+                          child: TextField(
+                              decoration: InputDecoration(
+                                  label: Text('Password:'),
+                                  filled: true,
+                                  fillColor: Colors.white,
+                                  enabledBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(5),
+                                  ))),
+                        ),
+                        SizedBox(
+                          height: 1,
+                        ),
+                        const SizedBox(
+                          height: 70,
+                        ),
+                        SizedBox(
+                          width: 350,
+                          height: 40,
+                          child: TextButton(
+                              onPressed: () {},
+                              child: Text(
+                                'Send',
+                                style: GoogleFonts.gentiumBasic(
+                                    fontSize: 21,
+                                    color: Color.fromARGB(245, 255, 255, 255),
+                                    fontWeight: FontWeight.w900),
+                              ),
+                              style: TextButton.styleFrom(
+                                  backgroundColor:
+                                      Color.fromARGB(255, 2, 190, 167),
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius:
+                                          BorderRadius.circular(11)))),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
               ],
-            ),
-            SizedBox(
-              height: 5,
-            ),
-            Row(
-              children: [
-                SizedBox(
-                  width: 25,
-                ),
-                Icon(
-                  Icons.facebook,
-                  color: Color.fromARGB(255, 40, 151, 137),
-                  size: 27,
-                ),
-                SizedBox(
-                  width: 18,
-                ),
-                TextButton(
-                    onPressed: () {
-                      /*   Navigator.push(
-                                  (context),
-                                  MaterialPageRoute(
-                                      builder: ((context) => forgetPScreen()))); */
-                    },
-                    child: Text(
-                      'https//dartp ad.dev/?',
-                      style:
-                          TextStyle(fontSize: 14, fontWeight: FontWeight.w300),
-                    )),
-              ],
-            ),
-          ],
-        ),
+            )),
       ),
     ));
   }

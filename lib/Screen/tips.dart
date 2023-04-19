@@ -1,13 +1,11 @@
 import 'package:favorite_button/favorite_button.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:resowl/sub-levelScreen.dart';
+import 'package:resowl/Screen/sub-levelScreen.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
-import 'HomeScreen.dart';
-
-
+import 'homeScreen.dart';
 
 class TipsScreenF extends StatefulWidget {
   const TipsScreenF({Key? key}) : super(key: key);
@@ -30,8 +28,7 @@ class _TipsScreenFState extends State<TipsScreenF> {
             color: Colors.white,
           ),
           onPressed: () {
-             Navigator.pop(context);
-
+            Navigator.pop(context);
           },
         ),
         title: Padding(

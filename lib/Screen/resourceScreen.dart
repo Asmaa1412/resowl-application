@@ -4,14 +4,13 @@ import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:resowl/authorScreen.dart';
-import 'package:resowl/beginnersScreen.dart';
+import 'package:resowl/Screen/authorScreen.dart';
+import 'package:resowl/Screen/beginnersScreen.dart';
 
-import 'HomeScreen.dart';
+import 'homeScreen.dart';
 import 'tips.dart';
 
 int indexx = 0;
-
 
 class ResourceSacreenF extends StatefulWidget {
   const ResourceSacreenF({Key? key}) : super(key: key);
@@ -56,12 +55,11 @@ class _ResourceSacreenFState extends State<ResourceSacreenF> {
               IconButton(
                 icon: Icon(Icons.arrow_back_ios_new),
                 onPressed: () {
-                   Navigator.pop(context);
-
+                  Navigator.pop(context);
                 },
               ),
               SizedBox(
-                width: 310,
+                width: 290,
               ),
               IconButton(
                   onPressed: () {

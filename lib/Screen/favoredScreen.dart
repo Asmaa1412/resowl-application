@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:favorite_button/favorite_button.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:resowl/registrationScreen.dart';
+import 'package:resowl/Screen/registrationScreen.dart';
 
-import 'HomeScreen.dart';
-import 'aboutUsScreen.dart';
+import 'about_us_screen.dart';
 import 'editProfileScreen.dart';
+import 'homeScreen.dart';
 import 'sub-levelScreen.dart';
 
 int indexx = 0;

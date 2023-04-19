@@ -1,13 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:resowl/homeScreen.dart';
-import 'package:resowl/signUpScreen.dart';
+import 'package:resowl/Screen/homeScreen.dart';
+import 'package:resowl/Screen/signUpScreen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
+import '../component/textStyle.dart';
 import 'forgetPasswordScreen.dart';
-
-
 
 class LogInScreenF extends StatefulWidget {
   const LogInScreenF({Key? key}) : super(key: key);
@@ -85,7 +84,7 @@ Future signIn() async {
                 IconButton(
                   icon: Icon(Icons.arrow_back_ios_new),
                   onPressed: () {
-  Navigator.pop(context);
+                    Navigator.pop(context);
                   },
                 ),
                 Padding(
@@ -230,9 +229,7 @@ Future signIn() async {
                                 },
                                 child: Text(
                                   'Sign Up',
-                                  style: TextStyle(
-                                    color: Color.fromARGB(255, 0, 91, 97),
-                                  ),
+                                  style: ResowlTextTheme.blackText.bodyLarge,
                                 )),
                           ],
                         )

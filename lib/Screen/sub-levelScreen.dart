@@ -1,16 +1,12 @@
 import 'package:favorite_button/favorite_button.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:resowl/tips.dart';
+import 'package:resowl/Screen/tips.dart';
 
-import 'HomeScreen.dart';
+import 'homeScreen.dart';
 import 'advBeginnerScreen.dart';
-import 'advancedScreen.dart';
-import 'authorScreen.dart';
+import 'advanced_screen.dart';
 import 'beginnersScreen.dart';
-import 'subjectSreen.dart';
-
-
 
 class SubLevelScreenF extends StatefulWidget {
   const SubLevelScreenF({Key? key}) : super(key: key);
@@ -55,12 +51,11 @@ class _SubLevelScreenFState extends State<SubLevelScreenF> {
                         IconButton(
                           icon: Icon(Icons.arrow_back_ios_new),
                           onPressed: () {
-                             Navigator.pop(context);
-
+                            Navigator.pop(context);
                           },
                         ),
                         SizedBox(
-                          width: 310,
+                          width: 290,
                         ),
                         IconButton(
                             onPressed: () {

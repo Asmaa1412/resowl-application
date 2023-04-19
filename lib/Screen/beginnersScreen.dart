@@ -2,9 +2,9 @@ import 'package:favorite_button/favorite_button.dart';
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:resowl/resourceScreen.dart';
+import 'package:resowl/Screen/resourceScreen.dart';
 
-import 'HomeScreen.dart';
+import 'homeScreen.dart';
 import 'sub-levelScreen.dart';
 
 int indexx = 0;

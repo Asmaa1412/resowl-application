@@ -2,10 +2,8 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:resowl/homeScreen.dart';
-import 'package:resowl/logInScreen.dart';
-
-
+import 'package:resowl/Screen/homeScreen.dart';
+import 'package:resowl/Screen/logInScreen.dart';
 
 class SignUpScreenF extends StatefulWidget {
   const SignUpScreenF({Key? key}) : super(key: key);
@@ -62,7 +60,7 @@ class _SignUpScreenFState extends State<SignUpScreenF> {
                 IconButton(
                   icon: Icon(Icons.arrow_back_ios_new),
                   onPressed: () {
-  Navigator.pop(context);
+                    Navigator.pop(context);
                   },
                 ),
                 Padding(
@@ -152,7 +150,7 @@ class _SignUpScreenFState extends State<SignUpScreenF> {
                           height: 1,
                         ),
                         const SizedBox(
-                          height: 80,
+                          height: 20,
                         ),
                         SizedBox(
                           width: 350,

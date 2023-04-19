@@ -4,9 +4,9 @@ import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:resowl/beginnersScreen.dart';
-import 'package:resowl/resourceScreen.dart';
-import 'HomeScreen.dart';
+import 'package:resowl/Screen/beginnersScreen.dart';
+import 'package:resowl/Screen/resourceScreen.dart';
+import 'homeScreen.dart';
 import 'sub-levelScreen.dart';
 import 'tips.dart';
 

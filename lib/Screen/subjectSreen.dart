@@ -4,11 +4,10 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:resowl/util/image.dart';
 
-import 'HomeScreen.dart';
+import 'homeScreen.dart';
 import 'sub-levelScreen.dart';
-
-
 
 class SubjectScreenF extends StatefulWidget {
   const SubjectScreenF({Key? key}) : super(key: key);
@@ -32,7 +31,6 @@ class _SubjectScreenFState extends State<SubjectScreenF> {
             ),
             onPressed: () {
               Navigator.pop(context);
-
             },
           ),
           title: Padding(
@@ -90,8 +88,7 @@ class _SubjectScreenFState extends State<SubjectScreenF> {
                                     decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(8),
                                       image: DecorationImage(
-                                          image: AssetImage(
-                                              'assets/image/flutter.png'),
+                                          image: AssetImage(ImagePath.flutter),
                                           fit: BoxFit.cover),
                                     ),
                                     child: Stack(children: [
@@ -171,8 +168,7 @@ class _SubjectScreenFState extends State<SubjectScreenF> {
                                     decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(8),
                                       image: DecorationImage(
-                                          image: AssetImage(
-                                              'assets/image/git.jpg'),
+                                          image: AssetImage(ImagePath.git),
                                           fit: BoxFit.cover),
                                     ),
                                     child: Stack(children: [
@@ -252,8 +248,7 @@ class _SubjectScreenFState extends State<SubjectScreenF> {
                                     decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(8),
                                       image: DecorationImage(
-                                          image: AssetImage(
-                                              'assets/image/c++.jpg'),
+                                          image: AssetImage(ImagePath.cPlus),
                                           fit: BoxFit.cover),
                                     ),
                                     child: Stack(children: [
@@ -333,8 +328,7 @@ class _SubjectScreenFState extends State<SubjectScreenF> {
                                     decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(8),
                                       image: DecorationImage(
-                                          image: AssetImage(
-                                              'assets/image/kotlin.png'),
+                                          image: AssetImage(ImagePath.kotlin),
                                           fit: BoxFit.cover),
                                     ),
                                     child: Stack(children: [
@@ -414,8 +408,7 @@ class _SubjectScreenFState extends State<SubjectScreenF> {
                                     decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(8),
                                       image: DecorationImage(
-                                          image: AssetImage(
-                                              'assets/image/flutter.png'),
+                                          image: AssetImage(ImagePath.flutter),
                                           fit: BoxFit.cover),
                                     ),
                                     child: Stack(children: [
@@ -495,8 +488,7 @@ class _SubjectScreenFState extends State<SubjectScreenF> {
                                     decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(8),
                                       image: DecorationImage(
-                                          image:
-                                              AssetImage('assets/image/c#.png'),
+                                          image: AssetImage(ImagePath.cSharp),
                                           fit: BoxFit.cover),
                                     ),
                                     child: Stack(children: [
@@ -576,8 +568,7 @@ class _SubjectScreenFState extends State<SubjectScreenF> {
                                     decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(8),
                                       image: DecorationImage(
-                                          image: AssetImage(
-                                              'assets/image/sql.jpg'),
+                                          image: AssetImage(ImagePath.sql),
                                           fit: BoxFit.cover),
                                     ),
                                     child: Stack(children: [
@@ -657,8 +648,7 @@ class _SubjectScreenFState extends State<SubjectScreenF> {
                                     decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(8),
                                       image: DecorationImage(
-                                          image: AssetImage(
-                                              'assets/image/git.jpg'),
+                                          image: AssetImage(ImagePath.git),
                                           fit: BoxFit.cover),
                                     ),
                                     child: Stack(children: [
@@ -736,8 +726,7 @@ class _SubjectScreenFState extends State<SubjectScreenF> {
                                     decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(8),
                                       image: DecorationImage(
-                                          image: AssetImage(
-                                              'assets/image/python.jpg'),
+                                          image: AssetImage(ImagePath.python),
                                           fit: BoxFit.cover),
                                     ),
                                     child: Stack(children: [

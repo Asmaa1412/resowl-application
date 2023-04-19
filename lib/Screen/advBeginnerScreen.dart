@@ -2,23 +2,23 @@ import 'package:favorite_button/favorite_button.dart';
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:resowl/resourceScreen.dart';
+import 'package:resowl/Screen/resourceScreen.dart';
 
-import 'HomeScreen.dart';
+import 'homeScreen.dart';
 import 'sub-levelScreen.dart';
 
 int indexx = 0;
 
 
 
-class AdvncedScreenF extends StatefulWidget {
-  const AdvncedScreenF({Key? key}) : super(key: key);
+class AdvBScreenF extends StatefulWidget {
+  const AdvBScreenF({Key? key}) : super(key: key);
 
   @override
-  State<AdvncedScreenF> createState() => _AdvncedScreenFState();
+  State<AdvBScreenF> createState() => _AdvBScreenFState();
 }
 
-class _AdvncedScreenFState extends State<AdvncedScreenF> {
+class _AdvBScreenFState extends State<AdvBScreenF> {
   void Findexx(int ind) {
     setState(() {
       indexx = ind;
@@ -81,7 +81,7 @@ class _AdvncedScreenFState extends State<AdvncedScreenF> {
                   Padding(
                     padding: const EdgeInsets.fromLTRB(25, 7, 0, 0),
                     child: Text(
-                      'Advanced',
+                      'Adv-Beginner',
                       style: GoogleFonts.gentiumBasic(
                           shadows: <Shadow>[
                             Shadow(
@@ -98,7 +98,7 @@ class _AdvncedScreenFState extends State<AdvncedScreenF> {
                   Padding(
                     padding: const EdgeInsets.fromLTRB(25, 0, 0, 0),
                     child: Text(
-                      'Every accomplishment starts\nwith the decision to try.',
+                      'A little progress each day adds\nup to big results.',
                       style: GoogleFonts.gentiumBasic(
                           shadows: <Shadow>[
                             Shadow(

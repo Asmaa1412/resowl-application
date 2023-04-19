@@ -3,8 +3,8 @@ import 'dart:async';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:resowl/logInScreen.dart';
-import 'package:resowl/signUpScreen.dart';
+import 'package:resowl/Screen/logInScreen.dart';
+import 'package:resowl/Screen/signUpScreen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -89,7 +89,7 @@ class _RegistrationScreenFState extends State<RegistrationScreenF> {
           child: Column(
             children: [
               const SizedBox(
-                height: 70,
+                height: 50,
               ),
               Text(
                 'Welcome',
@@ -103,7 +103,7 @@ class _RegistrationScreenFState extends State<RegistrationScreenF> {
                 style: GoogleFonts.gentiumBasic(fontSize: 20),
               ),
               const SizedBox(
-                height: 40,
+                height: 20,
               ),
               Container(
                   width: 350,
@@ -114,7 +114,7 @@ class _RegistrationScreenFState extends State<RegistrationScreenF> {
                         fit: BoxFit.fill),
                   )),
               const SizedBox(
-                height: 90,
+                height: 50,
               ),
               SizedBox(
                 width: 250,
